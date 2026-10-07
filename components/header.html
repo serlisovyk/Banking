@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__logo">
+        <img src="/logo.svg" alt="Bank logo" class="header__logo-image" />
+      </div>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="/" class="header__nav-link"{{#if isHome}} aria-current="page"{{/if}}>Home</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="/pages/careers.html" class="header__nav-link"{{#if isCareers}} aria-current="page"{{/if}}>Careers</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="/pages/about.html" class="header__nav-link"{{#if isAbout}} aria-current="page"{{/if}}>About</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="/pages/security.html" class="header__nav-link"{{#if isSecurity}} aria-current="page"{{/if}}>Security</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

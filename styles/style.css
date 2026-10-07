@@ -1,0 +1,5 @@
+@import './general/reset.css';
+@import './general/fonts.css';
+@import './general/variables.css';
+@import './general/main.css';
+@import './components/header.css';

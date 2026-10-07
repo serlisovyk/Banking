@@ -1,0 +1,24 @@
+{
+  "name": "banking",
+  "version": "1.0.0",
+  "description": "HTML, CSS, and JavaScript multi-page banking website",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "banking",
+    "website",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "author": "Serhii Lisovyk",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "vite": "^8.3.3",
+    "vite-plugin-handlebars": "^2.0.3"
+  }
+}
