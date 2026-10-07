@@ -4,5 +4,5 @@
 @import './general/main.css';
 @import './ui/button.css';
 @import './ui/headings.css';
-@import './components/header.css';
-@import './components/products.css';
+@import './sections/header.css';
+@import './sections/products.css';
