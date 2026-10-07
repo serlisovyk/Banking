@@ -29,3 +29,15 @@
     background: var(--grey-15);
   }
 }
+
+.button--secondary {
+  background: var(--grey-11);
+  border: 1px solid var(--grey-15);
+  color: var(--white);
+
+  &:hover,
+  &:focus {
+    background: var(--grey-15);
+    border-color: var(--grey-11);
+  }
+}
