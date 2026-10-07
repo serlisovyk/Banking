@@ -6,7 +6,10 @@ export default defineConfig({
   publicDir: 'images',
   plugins: [
     handlebars({
-      partialDirectory: resolve(import.meta.dirname, 'sections'),
+      partialDirectory: [
+        resolve(import.meta.dirname, 'sections'),
+        resolve(import.meta.dirname, 'components'),
+      ],
       context(pagePath) {
         const page = pagePath.split('/').at(-1).replace('.html', '') || 'index'
 

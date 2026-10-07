@@ -19,3 +19,13 @@
     top: 2px;
   }
 }
+
+.button--empty {
+  background: transparent;
+  color: var(--white);
+
+  &:hover,
+  &:focus {
+    background: var(--grey-15);
+  }
+}

@@ -1,0 +1,23 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 0;
+
+  @media (width < 1024px) {
+    flex: none;
+  }
+}
+
+.product-card__title {
+  margin: 20px 0 30px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: var(--white);
+  text-align: center;
+}
+
+.product-card__text {
+  text-align: center;
+}

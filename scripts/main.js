@@ -1,3 +1,5 @@
+import './products.js'
+
 const menuButton = document.querySelector('#header-menu-toggle')
 const menu = document.querySelector('#header-navigation')
 

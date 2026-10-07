@@ -1,3 +1,7 @@
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   background: var(--grey-10);
   font-family: var(--font-family), system-ui, sans-serif;
