@@ -5,7 +5,7 @@
         <img src="/logo.svg" alt="Bank logo" class="header__logo-image" width="156" height="40" />
       </div>
 
-      <nav class="header__nav">
+      <nav class="header__nav" id="header-navigation" aria-label="Main navigation">
         <ul class="header__nav-list">
           <li class="header__nav-item">
             <a href="/" class="header__nav-link"{{#if isHome}} aria-current="page"{{/if}}>Home</a>
@@ -21,6 +21,19 @@
           </li>
         </ul>
       </nav>
+
+      <button
+        id="header-menu-toggle"
+        type="button"
+        class="header__menu-toggle"
+        aria-label="Open menu"
+        aria-controls="header-navigation"
+        aria-expanded="false"
+      >
+        <span class="header__menu-line" aria-hidden="true"></span>
+        <span class="header__menu-line" aria-hidden="true"></span>
+        <span class="header__menu-line" aria-hidden="true"></span>
+      </button>
     </div>
   </div>
 </header>
