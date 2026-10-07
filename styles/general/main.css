@@ -1,7 +1,9 @@
 body {
   background: var(--grey-10);
-  font-family: 'Lexend', system-ui, sans-serif;
-  font-weight: 400;
+  font-family: var(--font-family), system-ui, sans-serif;
+  font-weight: 300;
+  line-height: 150%;
+  color: var(--grey-70);
 }
 
 .wrapper {
@@ -13,4 +15,16 @@ body {
   max-width: 1640px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.section {
+  padding-block: 75px;
+
+  @media (width < 1024px) {
+    padding-block: 60px;
+  }
+
+  @media (width < 768px) {
+    padding-block: 40px;
+  }
 }

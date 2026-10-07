@@ -2,4 +2,7 @@
 @import './general/fonts.css';
 @import './general/variables.css';
 @import './general/main.css';
+@import './ui/button.css';
+@import './ui/headings.css';
 @import './components/header.css';
+@import './components/products.css';

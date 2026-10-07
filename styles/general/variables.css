@@ -24,6 +24,9 @@
   --grey-70: #b3b3b3;
   --grey-75: #bfbfbf;
 
-  --border-radius: 20px;
+  --font-family: 'Lexend';
+
+  --border-radius: 40px;
+
   --transition-duration: 0.2s;
 }

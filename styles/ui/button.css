@@ -1,0 +1,21 @@
+.button {
+  background: var(--green-60);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  padding: 14px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--grey-11);
+  transition: background var(--transition-duration);
+
+  &:hover,
+  &:focus {
+    background: var(--green-70);
+  }
+
+  &:active {
+    position: relative;
+    top: 2px;
+  }
+}

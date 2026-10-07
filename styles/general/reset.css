@@ -17,6 +17,13 @@ img {
   height: auto;
 }
 
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
