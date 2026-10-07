@@ -20,10 +20,24 @@
   display: flex;
   align-items: center;
   gap: 7vw;
+
+  @media (width < 1440px) {
+    align-items: start;
+  }
+
+  @media (width < 1024px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 }
 
 .cases__item--inverted {
   flex-direction: row-reverse;
+
+  @media (width < 1024px) {
+    flex-direction: column;
+  }
 }
 
 .cases__icons {
@@ -43,9 +57,13 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  padding: 30px;
   width: 320px;
-  height: 220px;
+  padding: 30px;
+
+  @media (width < 1440px) {
+    width: 240px;
+    padding: 20px;
+  }
 }
 
 .cases__icons-item-title {
@@ -62,15 +80,39 @@
   line-height: 150%;
   color: var(--white);
   margin-bottom: 16px;
+
+  @media (width < 1024px) {
+    text-align: center;
+  }
 }
 
 .cases__info-text {
   margin-bottom: 60px;
+
+  @media (width < 1024px) {
+    text-align: center;
+  }
 }
 
 .cases__stat {
   display: flex;
+  align-items: stretch;
+  gap: 50px;
   margin-bottom: 60px;
+
+  @media (width < 1440px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media (width < 1024px) {
+    align-items: center;
+  }
+}
+
+.cases__stat-item {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .cases__stat-number {
@@ -78,11 +120,21 @@
   font-size: 58px;
   line-height: 150%;
   color: var(--green-60);
+
+  @media (width < 1024px) {
+    text-align: center;
+  }
 }
 
 .cases__stat-divider {
-  border: 1px dashed var(--grey-15);
-  width: 146px;
-  height: 0;
-  rotate: 90deg;
+  flex: 0 0 1px;
+  align-self: stretch;
+  border-left: 1px dashed var(--grey-15);
+}
+
+.cases__info-button {
+  @media (width < 1024px) {
+    display: block;
+    margin-inline: auto;
+  }
 }
