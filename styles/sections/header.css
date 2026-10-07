@@ -30,14 +30,29 @@
 .header__nav {
   grid-column: 2;
 
-  @media (width < 768px) {
-    display: none;
-    grid-column: 1 / -1;
-    margin-top: 20px;
-  }
+  --header-nav-transition-duration: 400ms;
 
-  &.is-open {
-    display: block;
+  @media (width < 768px) {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-rows: 0fr;
+    margin-top: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      grid-template-rows var(--header-nav-transition-duration) ease,
+      margin-top var(--header-nav-transition-duration) ease,
+      opacity calc(var(--header-nav-transition-duration) * 0.75) ease,
+      visibility var(--header-nav-transition-duration);
+
+    &.is-open {
+      grid-template-rows: 1fr;
+      margin-top: 20px;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
   }
 }
 
@@ -98,6 +113,8 @@
   @media (width < 768px) {
     flex-direction: column;
     gap: 4px;
+    min-height: 0;
+    overflow: hidden;
   }
 }
 
