@@ -4,7 +4,7 @@ import handlebars from 'vite-plugin-handlebars'
 import { caseItems } from './data/case-items.js'
 
 export default defineConfig({
-  publicDir: 'images',
+  publicDir: 'assets',
   plugins: [
     handlebars({
       partialDirectory: [
