@@ -5,6 +5,7 @@
 @import './ui/button.css';
 @import './ui/headings.css';
 @import './components/product-card.css';
+@import './components/case-item.css';
 @import './sections/header.css';
 @import './sections/products.css';
 @import './sections/cases.css';

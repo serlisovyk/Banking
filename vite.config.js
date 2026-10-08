@@ -1,6 +1,7 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import handlebars from 'vite-plugin-handlebars'
+import { caseItems } from './data/case-items.js'
 
 export default defineConfig({
   publicDir: 'images',
@@ -18,6 +19,7 @@ export default defineConfig({
           isAbout: page === 'about',
           isCareers: page === 'careers',
           isSecurity: page === 'security',
+          caseItems,
         }
       },
     }),
