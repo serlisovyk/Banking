@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import handlebars from 'vite-plugin-handlebars'
 import { caseItems } from './data/case-items.js'
 import { featureGroups } from './data/feature-groups.js'
+import { questionGroups } from './data/question-items.js'
 
 export default defineConfig({
   publicDir: 'assets',
@@ -22,6 +23,7 @@ export default defineConfig({
           isSecurity: page === 'security',
           caseItems,
           featureGroups,
+          questionGroups,
         }
       },
     }),
