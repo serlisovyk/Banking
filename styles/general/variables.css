@@ -27,6 +27,7 @@
   --font-family: 'Lexend';
 
   --border-radius: 40px;
+  --border-radius-small: 12px;
 
   --transition-duration: 0.2s;
 }

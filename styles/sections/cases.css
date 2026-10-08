@@ -2,6 +2,7 @@
   margin-bottom: 80px;
 
   @media (width < 1024px) {
+    text-align: center;
     margin-bottom: 60px;
   }
 }
