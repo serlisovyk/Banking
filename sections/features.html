@@ -10,97 +10,40 @@
         </div>
       </div>
       <div class="features__content">
-        <div class="features__buttons">
+        <div
+          class="features__buttons"
+          role="tablist"
+          aria-label="Feature categories"
+          aria-orientation="vertical"
+        >
+          {{#each featureGroups}}
           <button
+            id="features-tab-{{id}}"
             type="button"
-            class="button button--secondary features__button features__button--active"
+            role="tab"
+            class="button button--secondary features__button{{#if @first}} features__button--active{{/if}}"
+            data-features-tab="{{id}}"
+            aria-controls="features-panel-{{id}}"
+            aria-selected="{{#if @first}}true{{else}}false{{/if}}"
+            tabindex="{{#if @first}}0{{else}}-1{{/if}}"
           >
-            Online Banking
+            {{label}}
           </button>
-          <button type="button" class="button button--secondary features__button">
-            Financial Tools
-          </button>
-          <button type="button" class="button button--secondary features__button">
-            Customer Support
-          </button>
+          {{/each}}
         </div>
-        <div class="features__items">
-          <div class="features__item">
-            <div class="features__item-top">
-              <h3 class="features__item-title">24/7 Account Access</h3>
-              <div class="features__item-image">
-                <img
-                  src="/assets/images/icons/arrow.svg"
-                  alt=""
-                  aria-hidden="true"
-                  width="34"
-                  height="34"
-                />
-              </div>
-            </div>
-            <div class="features__item-content">
-              Enjoy the convenience of accessing your accounts anytime, anywhere
-              through our secure online banking platform. Check balances, transfer
-              funds, and pay bills with ease.
-            </div>
+        <div class="features__panels">
+          {{#each featureGroups}}
+          <div
+            id="features-panel-{{id}}"
+            class="features__items{{#if @first}} features__items--active{{/if}}"
+            role="tabpanel"
+            aria-labelledby="features-tab-{{id}}"
+            data-features-panel="{{id}}"
+            tabindex="0"
+          >
+            {{#each items}} {{> feature-item}} {{/each}}
           </div>
-          <div class="features__item">
-            <div class="features__item-top">
-              <h3 class="features__item-title">Mobile Banking App</h3>
-              <div class="features__item-image">
-                <img
-                  src="/assets/images/icons/arrow.svg"
-                  alt=""
-                  aria-hidden="true"
-                  width="34"
-                  height="34"
-                />
-              </div>
-            </div>
-            <div class="features__item-content">
-              Stay connected to your finances on the go with our user-friendly mobile
-              banking app. Easily manage your accounts, deposit checks, and make
-              payments from your smartphone or tablet.
-            </div>
-          </div>
-          <div class="features__item">
-            <div class="features__item-top">
-              <h3 class="features__item-title">Secure Transactions</h3>
-              <div class="features__item-image">
-                <img
-                  src="/assets/images/icons/arrow.svg"
-                  alt=""
-                  aria-hidden="true"
-                  width="34"
-                  height="34"
-                />
-              </div>
-            </div>
-            <div class="features__item-content">
-              Rest assured knowing that your transactions are protected by
-              industry-leading security measures. We employ encryption and
-              multi-factor authentication to safeguard your financial information.
-            </div>
-          </div>
-          <div class="features__item">
-            <div class="features__item-top">
-              <h3 class="features__item-title">Bill Pay and Transfers</h3>
-              <div class="features__item-image">
-                <img
-                  src="/assets/images/icons/arrow.svg"
-                  alt=""
-                  aria-hidden="true"
-                  width="34"
-                  height="34"
-                />
-              </div>
-            </div>
-            <div class="features__item-content">
-              Save time and avoid late fees with our convenient bill pay service. Set
-              up recurring payments or make one-time transfers between your accounts
-              with just a few clicks.
-            </div>
-          </div>
+          {{/each}}
         </div>
       </div>
     </div>

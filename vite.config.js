@@ -2,6 +2,7 @@ import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import handlebars from 'vite-plugin-handlebars'
 import { caseItems } from './data/case-items.js'
+import { featureGroups } from './data/feature-groups.js'
 
 export default defineConfig({
   publicDir: 'assets',
@@ -20,6 +21,7 @@ export default defineConfig({
           isCareers: page === 'careers',
           isSecurity: page === 'security',
           caseItems,
+          featureGroups,
         }
       },
     }),
