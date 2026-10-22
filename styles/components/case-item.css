@@ -23,13 +23,13 @@
 }
 
 .case-item--inverted .case-item__icons {
-  background-image: url('/images/decor/dot-wave-right.svg');
+  background-image: url('/assets/images/decor/dot-wave-right.svg');
   background-position: top right;
 }
 
 .case-item__icons {
   background: var(--grey-11);
-  background-image: url('/images/decor/dot-wave-left.svg');
+  background-image: url('/assets/images/decor/dot-wave-left.svg');
   background-repeat: no-repeat;
   background-position: top left;
   border-radius: var(--border-radius);

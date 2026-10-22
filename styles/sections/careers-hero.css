@@ -1,0 +1,72 @@
+.careers-hero__inner {
+  background: url('/assets/images/decor/dots-grid.svg'), var(--grey-11);
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: relative;
+  padding: 50px;
+  border-radius: 20px;
+
+  @media (width < 1440px) {
+    padding: 30px;
+  }
+
+  @media (width < 1024px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  @media (width < 768px) {
+    padding: 16px;
+    background-size: 330px;
+  }
+}
+
+.careers-hero__content {
+  position: absolute;
+  background: var(--grey-10);
+  max-width: 800px;
+  padding: 80px;
+  border-radius: 20px 0 80px 20px;
+
+  @media (width < 1440px) {
+    padding: 40px;
+  }
+
+  @media (width < 1024px) {
+    position: static;
+    border-radius: 20px;
+  }
+
+  @media (width < 768px) {
+    padding: 20px;
+  }
+}
+
+.careers-hero__title {
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 58px);
+  line-height: 130%;
+  margin-bottom: 24px;
+  color: var(--white);
+
+  span {
+    color: var(--green-60);
+  }
+}
+
+.careers-hero__text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--grey-70);
+}
+
+.careers-hero__image {
+  display: flex;
+  justify-content: flex-end;
+
+  img {
+    border-radius: 16px;
+  }
+}
