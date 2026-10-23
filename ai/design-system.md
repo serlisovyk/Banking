@@ -61,7 +61,7 @@ The palette is the template's; every swatch is a token already.
 | `--grey-30`                      | `#4c4c4d`                               | the big titles of Our Values                                                              |
 | `--grey-35`, `-40`, `-60`, `-75` | `#59595a` `#656567` `#98989a` `#bfbfbf` | palette only                                                                              |
 | `--grey-70`                      | `#b3b3b3`                               | body text (weight 300), badge text, footer legal links                                    |
-| `--green-10` (proposed)          | `#22251b`                               | dark olive: the two floating pills of the hero card and its Exchange button               |
+| `--green-10`                     | `#22251b`                               | dark olive: the two floating pills of the hero card and its Exchange button               |
 
 - Opacity is part of the look: the three transaction rows of the hero card are 100 % / 50 % /
   20 %; the green tints of the icon circles are baked into their SVGs.
@@ -325,7 +325,7 @@ text card overlaps its lower part, with a plain radius 20.
 
 - **Hero card border:** the design draws it in `--green-60`; the code has `--grey-15`.
   Follow the design.
-- **Hero olive:** `#22251b` is hard-coded in the CSS; it becomes `--green-10`.
+- **Hero olive:** `#22251b` is the token `--green-10`.
 - **Title sizes:** the home h1 is a section title (`--text-title`); the page-hero title is
   larger (58 / 48 / 28, line 1.3). Both are intended.
 - **Heading block gap** to the content is 80 / 60 / 60, or 100 / 80 / 60 with a toggle;
