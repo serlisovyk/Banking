@@ -58,6 +58,7 @@ each with the record that replaced it.
 ### Code
 
 - [Sources in `src/`: partials by page, every asset bundled and hashed](2026-10-23-sources-in-src.md)
+- [Production build: Vite's CSS defaults, minified HTML, optimized images](2026-10-23-build-pipeline.md)
 - [JavaScript in OOP style: a class per component and per section](2026-10-23-oop-javascript.md) — accepted (not implemented)
 - [Breakpoints: two structural queries, fluid tokens between 390, 1440 and 1920](2026-10-23-breakpoint-scheme.md) — accepted (not implemented)
 

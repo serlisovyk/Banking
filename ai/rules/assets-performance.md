@@ -22,6 +22,8 @@ decision `vanilla-js-vite-handlebars`.
   or a smaller export.
 - A photo is a compressed `jpg` or `webp` at the size it is shown (twice that for a sharp
   screen), never the original export.
+- The build recompresses every emitted image (SVGO keeping `viewBox`, jpg and webp at quality
+  80), but that does not replace the clean-up and the sizing above: it only trims what is left.
 - Every image and the font sits in `src/assets/` and is referenced by one scheme, the root path
   `/assets/images/…` or `/assets/fonts/…`, in HTML, partial parameters, `data/*.js` and CSS.
   The bundler emits each file once, with a hash in its name, and never inlines it
