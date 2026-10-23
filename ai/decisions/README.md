@@ -58,6 +58,7 @@ each with the record that replaced it.
 ### Code
 
 - [JavaScript in OOP style: a class per component and per section](2026-10-23-oop-javascript.md) — accepted (not implemented)
+- [Breakpoints: two structural queries, fluid tokens between 390, 1440 and 1920](2026-10-23-breakpoint-scheme.md) — accepted (not implemented)
 
 ### Superseded
 
