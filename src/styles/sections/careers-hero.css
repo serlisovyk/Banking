@@ -1,7 +1,8 @@
 .careers-hero__inner {
-  background: url('/assets/images/decor/dots-grid.svg'), var(--grey-11);
+  background: url('/assets/images/decor/dots-grid.avif'), var(--grey-11);
   background-repeat: no-repeat;
   background-position: top right;
+  background-size: 480px;
   position: relative;
   padding: 50px;
   border-radius: 20px;
