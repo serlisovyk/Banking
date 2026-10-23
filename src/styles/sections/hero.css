@@ -5,7 +5,6 @@
 .hero__inner {
   display: flex;
   gap: 3vw;
-
   background-image: url('/assets/images/decor/growth-arrows.svg');
   background-repeat: no-repeat;
   background-position: top right;
@@ -66,7 +65,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #22251b;
+  background: var(--green-10);
   border-radius: var(--border-radius-small);
   padding: 12px 18px;
 }
@@ -94,7 +93,7 @@
 }
 
 .hero__card {
-  background: linear-gradient(214.85deg, #1a1a1a00 0%, #1a1a1a 39.72%);
+  background: linear-gradient(214.85deg, transparent 0%, var(--grey-10) 39.72%);
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius-small);
   padding: 34px;
@@ -158,9 +157,6 @@
   color: var(--white);
 }
 
-.hero__change {
-}
-
 .hero__change-title {
   font-weight: 500;
   font-size: 17px;
@@ -170,7 +166,7 @@
 
 .hero__button {
   font-family: var(--font-family);
-  background: #22251b;
+  background: var(--green-10);
   border-radius: var(--border-radius);
   font-weight: 400;
   font-size: 16px;

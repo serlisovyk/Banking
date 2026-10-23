@@ -22,11 +22,6 @@
   }
 }
 
-.case-item--inverted .case-item__icons {
-  background-image: url('/assets/images/decor/dot-wave-right.svg');
-  background-position: top right;
-}
-
 .case-item__icons {
   background: var(--grey-11);
   background-image: url('/assets/images/decor/dot-wave-left.svg');
@@ -43,6 +38,11 @@
     grid-template-columns: 1fr;
     gap: 10px;
   }
+}
+
+.case-item--inverted .case-item__icons {
+  background-image: url('/assets/images/decor/dot-wave-right.svg');
+  background-position: top right;
 }
 
 .case-item__icon {
