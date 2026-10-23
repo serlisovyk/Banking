@@ -20,8 +20,12 @@ decision `vanilla-js-vite-handlebars`.
   committed (no editor metadata, no embedded raster, no needless paths); a file that stays
   heavy after that (over about 200 kB) is questioned first: a simpler shape, a CSS gradient,
   or a smaller export.
-- A photo is a compressed `jpg` or `webp` at the size it is shown (twice that for a sharp
-  screen), never the original export.
+- A photo is `webp` or `avif` (the smaller one without visible loss), set in `<img src>` directly,
+  with no `<picture>`, at the size it is shown (twice that for a sharp screen), never the original
+  export.
+- Dotted and other textured decor is a raster too, `avif` or `webp`, baked over the flat surface it
+  sits on and drawn at twice its CSS size, with a `background-size` in CSS px. It is never an SVG
+  with a path per dot (decision `light-decor-raster`).
 - The build recompresses every emitted image (SVGO keeping `viewBox`, jpg and webp at quality
   80), but that does not replace the clean-up and the sizing above: it only trims what is left.
 - Every image and the font sits in `src/assets/` and is referenced by one scheme, the root path

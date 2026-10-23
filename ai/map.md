@@ -72,7 +72,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 ## Assets (`src/assets/`)
 
-- `fonts/` — the self-hosted Lexend `woff2`. `images/` — `logo.svg`, the hero backgrounds, `icons/`, `decor/`, `flags/`.
+- `fonts/` — the self-hosted Lexend `woff2`. `images/` — `logo.svg`, the Careers hero photo, `icons/`, `decor/`, `flags/`.
 - Referenced by the root path (`/assets/images/…`) in HTML, `data/` and CSS; the build emits each once, hashed.
 
 ## Where is the recipe
