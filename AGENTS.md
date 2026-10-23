@@ -111,7 +111,7 @@ If a change materially reshapes a pattern, update the matching skill in the same
 Run before handing over any change:
 
 ```bash
-npx prettier --check .
+npm run format:check
 npm run build
 ```
 

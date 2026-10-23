@@ -11,7 +11,8 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `assets/` — Vite's `publicDir`, served from the root and copied as it is: `fonts/`, `images/` (`/images/…`, `/fonts/…`).
 - `vite.config.js` — Vite with `vite-plugin-handlebars`: the partial folders and `context(pagePath)`, which sets the
   `isHome`, `isAbout`, `isCareers`, `isSecurity` flags and passes the `data/` constants.
-- `package.json` — scripts `dev`, `build`, `preview`; `package-lock.json` — the lockfile. `.prettierrc`, `.prettierignore` — Prettier.
+- `package.json` — scripts `dev`, `build`, `preview`, `format`, `format:check`; `package-lock.json` — the lockfile
+  (npm, decision `npm-package-manager`). `.prettierrc`, `.prettierignore` — Prettier. License: MIT, declared in `package.json` only (decision `license-in-package-json`).
 - `AGENTS.md` — the entry point for agents; `CLAUDE.md` points to it.
 - `ai/` — agent docs: this map, `workflow.md`, `rules/`, `skills/`, `decisions/`, `prompts/`,
   `linear-task-template.md`, and the archive `superpowers/`.

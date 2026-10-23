@@ -69,7 +69,7 @@ Keep the relevant lines, delete the rest. Copy them into the issue as-is:
 
 Copy into the issue, one line per check under "Verification" in `AGENTS.md`, plus the manual lines:
 
-- [ ] `npx prettier --check .`
+- [ ] `npm run format:check`
 - [ ] `npm run build`
 - [ ] Прогнано руками в `npm run dev`: 1920 / 1440 / 390 px против дизайна
 - [ ] Клавиатура: Tab, фокус, стрелки, `Escape` по паттерну

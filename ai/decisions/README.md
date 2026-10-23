@@ -51,6 +51,8 @@ each with the record that replaced it.
 - [No automated tests](2026-10-23-no-automated-tests.md)
 - [Deployed on Vercel through its Git integration](2026-10-23-vercel-deploy.md)
 - [Merge locally into `main`, no pull requests](2026-10-23-local-merge-without-pr.md)
+- [npm is the package manager; one `package-lock.json`](2026-10-23-npm-package-manager.md)
+- [License declared in `package.json` only, no `LICENSE` file](2026-10-23-license-in-package-json.md)
 - [The design is a third-party template: a reference only, never published](2026-10-23-design-is-a-reference.md)
 
 ### Code
