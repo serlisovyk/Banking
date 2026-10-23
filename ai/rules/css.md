@@ -32,8 +32,9 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
 ## Tokens
 
 - Every value comes from a token in `styles/general/variables.css`: colours (also inside a
-  gradient or a shadow), the font family, radii, durations. `#`, `rgb(` and `hsl(` appear
-  nowhere else; `transparent` and `currentColor` stay keywords.
+  gradient or a shadow), the font family, radii, durations, and the type and spacing scale
+  listed in `ai/design-system.md`. `#`, `rgb(` and `hsl(` appear nowhere else; `transparent`
+  and `currentColor` stay keywords. Never hard-code a colour, a font size or a section spacing.
 - A value used in more than one place is a token first, named on the existing scale
   (`--green-60`, `--grey-15`). A one-off layout size (a section's padding, a column's width)
   need not be a token.
@@ -46,10 +47,14 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
 
 ## Breakpoints
 
-- The design is drawn at 1920, 1440 and 390 px. The code today uses `1440`, `1024` and `768`
-  (`width <`, widest first); the exact scheme is fixed by MY-177, and until then a
-  new media query takes only a value the code already uses and is checked at 1920, 1440 and
-  390 px. This section is rewritten when the scheme lands.
+- The design is drawn at 1920, 1440 and 390 px (`ai/design-system.md`). Only structure is a
+  media query, and only two: `width < 1024px` (side-by-side compositions stack) and
+  `width < 768px` (grids become one column, the header becomes the menu button). Type and
+  spacing are fluid tokens, so a rule has no per-width values and no query at 1440
+  (`ai/decisions/2026-10-23-breakpoint-scheme.md`).
+- Planned (MY-185): the stylesheets still carry `1440` queries and per-width values until they
+  move onto the tokens; a new rule takes its value from the `ai/design-system.md` tables and is
+  checked at 1920, 1440 and 390 px. This note goes when that task lands.
 - The base rule is the widest layout; a narrower screen overrides it.
 - No horizontal scroll from 390 to 1920 px, and none at 200% zoom.
 

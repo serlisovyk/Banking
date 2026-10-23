@@ -16,7 +16,7 @@ docs answer **where** (`ai/map.md`), **what must hold** (`ai/rules/`, `ai/skills
   names last.
 - **Limits.** `ai/map.md`: at most 150 lines and 12 KB, a list item at most about 150
   characters, a table cell at most 80. A rules file: about 150 lines. A skill: about 12 KB.
-  A decision record: about 30 lines. README: Features at most 10 one-line items. A plan or a
+  A decision record: about 30 lines. `ai/design-system.md`: about 350 lines. README: Features at most 10 one-line items. A plan or a
   spec cites decisions, it does not retell them.
 - **A task adds a line or two per doc, and cuts when a limit is crossed** — in the same
   change, from the doc that went over.

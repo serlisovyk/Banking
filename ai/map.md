@@ -66,6 +66,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 ## Where is the recipe
 
 - A page section or a repeated element: `ai/skills/section.md`. Reviewing a diff: `ai/skills/review.md`.
+- Colours, type, spacing, components and the sections of each page, as designed: `ai/design-system.md`.
 - What must hold: `ai/rules/`. Why it is so: `ai/decisions/` (index in its `README.md`).
 
 ## Deployment
