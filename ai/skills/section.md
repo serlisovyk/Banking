@@ -15,10 +15,11 @@ order of the work.
 
 1. **Data** — if the section has a list or repeated text: a named export in `data/<name>.js`, wired
    in `context` of `vite.config.js`. No markup, classes or styles in the data.
-2. **Partial** — `sections/<name>.html`: a root `<section class="<name> section">` with a
-   `.container` inside. A repeated part is `components/<item>.html` with one root and parameters
-   (a hash, or the context of `{{#each}}`). Partial name = BEM block name. Roles and ARIA go in
-   the markup; script hooks are `data-<name>-<role>` attributes.
+2. **Partial** — `partials/sections/<page>/<name>.html` (`shared/` when two pages use it): a root
+   `<section class="<name> section">` with a `.container` inside. A repeated part is
+   `partials/components/<item>.html` with one root and parameters (a hash, or the context of
+   `{{#each}}`). File name = BEM block name. Roles and ARIA go in the markup; script hooks are
+   `data-<name>-<role>` attributes.
 3. **Styles** — `styles/sections/<name>.css` (and `styles/components/<item>.css`): BEM, native
    nesting, only tokens from `variables.css`; import it in `styles/style.css` beside its kind.
    Compare 1920, 1440 and 390 px with the design.
@@ -26,7 +27,7 @@ order of the work.
    `constructor(root, options)` and `start()`. A repeated widget (tabs, expander, menu) is a
    component in `scripts/components/` that the controller assembles. When a ready component is
    enough, skip the controller.
-5. **Wiring** — `{{> <name> }}` on every page that needs the section; in `main.js` find the root,
+5. **Wiring** — `{{> sections/<page>/<name> }}` on every page that needs the section; in `main.js` find the root,
    create the instance, call `start()`, and skip it when the section is not on the page.
 6. **Docs** — `ai/map.md` (partial, stylesheet, script, data file); a decision record if a durable
    decision was made; a rule or this skill if a pattern changed (`ai/rules/docs.md`).

@@ -6,11 +6,10 @@ decision `vanilla-js-vite-handlebars`.
 
 ## Font
 
-- Lexend is self-hosted: a `woff2` in `assets/fonts/`, declared in `styles/general/fonts.css`
-  with `font-display: swap`. No font CDN.
+- Lexend is self-hosted: a `woff2` in `src/assets/fonts/`, declared in
+  `src/styles/general/fonts.css` with `font-display: swap`. No font CDN.
 - A new weight, style or face is a decision for the author, not a drive-by edit; a variable
   file already covers the weights in use.
-- A changed font file gets a new name: the URL is not hashed.
 
 ## Images
 
@@ -23,9 +22,14 @@ decision `vanilla-js-vite-handlebars`.
   or a smaller export.
 - A photo is a compressed `jpg` or `webp` at the size it is shown (twice that for a sharp
   screen), never the original export.
-- Files in `assets/` are served from the root (`/images/…`, `/fonts/…`) as they are and
-  copied to `dist/`; they are named in lowercase with hyphens, by what they show
-  (`growth-arrows.svg`), not by their place in the design.
+- Every image and the font sits in `src/assets/` and is referenced by one scheme, the root path
+  `/assets/images/…` or `/assets/fonts/…`, in HTML, partial parameters, `data/*.js` and CSS.
+  The bundler emits each file once, with a hash in its name, and never inlines it
+  (`build.assetsInlineLimit: 0`). Do not import images in JS and do not put them in `public/`.
+- `public/` is only for a file that needs a fixed URL (`favicon.ico`, `robots.txt`); it is
+  copied as it is.
+- Asset files are named in lowercase with hyphens, by what they show (`growth-arrows.svg`),
+  not by their place in the design.
 - An asset the code no longer uses is deleted in the same change.
 
 ## Page metadata

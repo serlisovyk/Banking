@@ -9,14 +9,14 @@ scripts.
 Content flows one way: data → partial → page, and each block's look and behavior sit beside
 it. Each folder has one job:
 
-| Layer         | Owns                                                            | Must not                             |
-| ------------- | --------------------------------------------------------------- | ------------------------------------ |
-| `data/`       | the texts and lists a partial renders, as plain exported values | hold markup, classes or styles       |
-| `components/` | a repeated element as a partial: one root, parameters           | know which page or section uses it   |
-| `sections/`   | one page section as a partial; composes components with data    | hold another section's markup        |
-| `pages/`      | the page shell: `<head>` and the list of sections               | contain section markup               |
-| `styles/`     | tokens, `ui/` shared elements, one stylesheet per partial       | style another block's elements       |
-| `scripts/`    | behavior: a class per widget and per section, `main.js` wires   | build markup that a partial can hold |
+| Layer         | Owns                                                             | Must not                             |
+| ------------- | ---------------------------------------------------------------- | ------------------------------------ |
+| `data/`       | the texts and lists a partial renders, as plain exported values  | hold markup, classes or styles       |
+| `components/` | a repeated element as a partial: one root, parameters            | know which page or section uses it   |
+| `sections/`   | one page section as a partial; composes components with data     | hold another section's markup        |
+| pages         | the page shell (`src/*.html`): `<head>` and the list of sections | contain section markup               |
+| `styles/`     | tokens, `ui/` shared elements, one stylesheet per partial        | style another block's elements       |
+| `scripts/`    | behavior: a class per widget and per section, `main.js` wires    | build markup that a partial can hold |
 
 ## Pages and partials
 
@@ -25,8 +25,8 @@ it. Each folder has one job:
 - `vite.config.js` is the one place that wires partial folders and `context`: a `data/`
   constant reaches the templates only through it, and a page flag (`isHome`, …) only from
   `context(pagePath)`.
-- A new page is an HTML file under `pages/`; it gets a flag in `context` and a link in the
-  `header` navigation. A page that is not in the navigation needs a reason.
+- A new page is an HTML file in `src/`, added to `build.rollupOptions.input`; it gets a flag in
+  `context` and a link in the `header` navigation. A page that is not in the navigation needs a reason.
 
 ## Behavior
 

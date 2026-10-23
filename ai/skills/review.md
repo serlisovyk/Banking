@@ -30,8 +30,8 @@ font or the metadata). Then check what the rules do not cover:
   missing from the page breaks nothing; no module-level state, no inline style except a custom
   property.
 - **Motion**: a new animation takes its duration from a token and survives `prefers-reduced-motion`.
-- **Build and assets**: every page builds; image and font URLs work from `dist/` and on nested
-  pages (`pages/…`); images have size and `alt`; no unused asset left behind.
+- **Build and assets**: every page builds; images and the font are referenced as
+  `/assets/…` and come out of the build once, hashed; images have size and `alt`; no unused asset left behind.
 - **Scope**: nothing from `ai/rules/scope.md` or the decisions behind it slipped in; no unrelated
   rewrites; removed behavior left no unused code, styles or data; no design link or key in any
   file.

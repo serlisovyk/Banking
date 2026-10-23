@@ -7,8 +7,12 @@ everything lives: `ai/map.md`; how the layers relate: `ai/rules/architecture.md`
 
 - A page is a shell: `<head>` and a list of `{{> section }}` calls. Section markup is never
   written on a page.
-- `sections/` — one page section: `<section class="<name> section">` with a `.container`
-  inside. `components/` — a repeated element (a card, a list item).
+- Pages are `src/*.html`; partials live in `src/partials/`. `partials/sections/<page>/` — one
+  page section: `<section class="<name> section">` with a `.container` inside; `shared/` holds
+  what two or more pages use. `partials/components/` — a repeated element (a card, a list item).
+- A partial is called by its path under `partials/`, without the extension:
+  `{{> sections/home/hero }}`, `{{> components/product-card }}`. The path is the name, so two
+  partials never collide; a folder is created with its first file.
 - A partial's file name is the name of its BEM block (`product-card.html` → `.product-card`);
   kebab-case.
 - A partial has one root element with the block's class. A component is used by sections

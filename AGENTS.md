@@ -91,9 +91,8 @@ If a change materially reshapes a pattern, update the matching skill in the same
   it by hand unless there is no safer option.
 - Stack: the browser plus Node.js build tooling; Vite 8 and `vite-plugin-handlebars`;
   HTML partials, plain CSS with native nesting and design tokens, JavaScript ESM.
-- Sources: `index.html`, `pages/`, `sections/`, `components/`, `data/`, `styles/`,
-  `scripts/`, `assets/`; output in `dist/`. The layout moves into `src/` in MY-179 — `ai/map.md`
-  always shows the current one.
+- Sources: everything under `src/` (pages, `partials/`, `data/`, `styles/`, `scripts/`,
+  `assets/`); output in `dist/`. `ai/map.md` shows where each lives.
 - Formatting: Prettier (`.prettierrc`). Linters, a pre-commit hook and CI are not in the
   repo yet and are not forbidden; once they land, their commands join "Verification"
   below.
