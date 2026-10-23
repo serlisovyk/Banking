@@ -1,6 +1,6 @@
 # Deployed on Vercel through its Git integration
 
-Date: 2026-10-23 · Status: accepted
+Date: 2026-10-23 · Status: superseded by 2026-10-23-clean-urls-vercel-json.md
 
 ## Context
 

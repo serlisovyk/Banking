@@ -49,7 +49,7 @@ each with the record that replaced it.
 - [Vanilla JavaScript, Vite and Handlebars; no framework, no TypeScript](2026-10-23-vanilla-js-vite-handlebars.md)
 - [Four pages, no Login or Sign Up](2026-10-23-four-pages-no-auth.md)
 - [No automated tests](2026-10-23-no-automated-tests.md)
-- [Deployed on Vercel through its Git integration](2026-10-23-vercel-deploy.md)
+- [Vercel: clean URLs, a real 404 and cached assets, set in `vercel.json`](2026-10-23-clean-urls-vercel-json.md)
 - [Merge locally into `main`, no pull requests](2026-10-23-local-merge-without-pr.md)
 - [npm is the package manager; one `package-lock.json`](2026-10-23-npm-package-manager.md)
 - [License declared in `package.json` only, no `LICENSE` file](2026-10-23-license-in-package-json.md)
@@ -64,4 +64,4 @@ each with the record that replaced it.
 
 ### Superseded
 
-None yet.
+- [Deployed on Vercel through its Git integration](2026-10-23-vercel-deploy.md) — superseded by `clean-urls-vercel-json`

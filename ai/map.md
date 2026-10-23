@@ -17,6 +17,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
   `data/` constants. The pages are listed in `build.rollupOptions.input`.
 - `package.json` — scripts `dev`, `build`, `preview`, `format`, `format:check`; `package-lock.json` — the lockfile
   (npm, decision `npm-package-manager`). `.prettierrc`, `.prettierignore` — Prettier. License: MIT, declared in `package.json` only (decision `license-in-package-json`).
+- `vercel.json` — Vercel: clean URLs, the redirect from the old `/pages/…` links, the cache header of `/assets/`.
 - `AGENTS.md` — the entry point for agents; `CLAUDE.md` points to it.
 - `ai/` — agent docs: this map, `workflow.md`, `rules/`, `skills/`, `decisions/`, `prompts/`,
   `linear-task-template.md`, and the archive `superpowers/`.
@@ -30,6 +31,8 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `index.html` — `shared/header`, `home/hero`, `home/products`, `home/cases`, `home/features`, `home/questions`.
 - `careers.html` — `shared/header`, `careers/careers-hero`, `careers/values`.
 - `about.html`, `security.html` — only `shared/header` so far.
+- No `404.html` source: the build copies `dist/index.html` to `dist/404.html` (a plugin in `vite.config.js`); Vercel serves it
+  with status 404 for an unknown path.
 - Every page links `/styles/style.css` and `/scripts/main.js` in `<head>`.
 
 ## Partials (`src/partials/`)
@@ -78,7 +81,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 ## Deployment
 
 Live at <https://banking-coral-three.vercel.app> on Vercel through its Git integration: `main` is production, other
-branches get previews (decision `vercel-deploy`).
+branches get previews; the config is `vercel.json` only (decision `clean-urls-vercel-json`).
 
 ## Not in this project
 

@@ -27,6 +27,8 @@ it. Each folder has one job:
   `context(pagePath)`.
 - A new page is an HTML file in `src/`, added to `build.rollupOptions.input`; it gets a flag in
   `context` and a link in the `header` navigation. A page that is not in the navigation needs a reason.
+- Links between pages are clean URLs without `.html` (`/careers`). `dist/404.html` is a build copy of the home
+  page, not a source page (`ai/decisions/2026-10-23-clean-urls-vercel-json.md`).
 
 ## Behavior
 
