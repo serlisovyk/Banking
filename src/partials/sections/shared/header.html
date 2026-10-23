@@ -2,22 +2,48 @@
   <div class="container">
     <div class="header__inner">
       <div class="header__logo">
-        <img src="/assets/images/logo.svg" alt="Bank logo" class="header__logo-image" width="156" height="40" />
+        <img
+          src="/assets/images/logo.svg"
+          alt="Bank logo"
+          class="header__logo-image"
+          width="156"
+          height="40"
+        />
       </div>
 
       <nav class="header__nav" id="header-navigation" aria-label="Main navigation">
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a href="/" class="header__nav-link"{{#if isHome}} aria-current="page"{{/if}}>Home</a>
+            <a
+              href="/"
+              class="header__nav-link"
+              aria-current="{{#if isHome}}page{{else}}false{{/if}}"
+              >Home</a
+            >
           </li>
           <li class="header__nav-item">
-            <a href="/careers" class="header__nav-link"{{#if isCareers}} aria-current="page"{{/if}}>Careers</a>
+            <a
+              href="/careers"
+              class="header__nav-link"
+              aria-current="{{#if isCareers}}page{{else}}false{{/if}}"
+              >Careers</a
+            >
           </li>
           <li class="header__nav-item">
-            <a href="/about" class="header__nav-link"{{#if isAbout}} aria-current="page"{{/if}}>About</a>
+            <a
+              href="/about"
+              class="header__nav-link"
+              aria-current="{{#if isAbout}}page{{else}}false{{/if}}"
+              >About</a
+            >
           </li>
           <li class="header__nav-item">
-            <a href="/security" class="header__nav-link"{{#if isSecurity}} aria-current="page"{{/if}}>Security</a>
+            <a
+              href="/security"
+              class="header__nav-link"
+              aria-current="{{#if isSecurity}}page{{else}}false{{/if}}"
+              >Security</a
+            >
           </li>
         </ul>
       </nav>
