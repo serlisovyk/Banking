@@ -10,7 +10,7 @@ interaction. The author's answer: no separate 404 design, the 404 is the home pa
   redirects `/careers.html` to `/careers` (308).
 - `headers`: `/assets/(.*)` gets `Cache-Control: public, max-age=31536000, immutable`. Every file
   Vite emits there carries a content hash (decision `sources-in-src`), so a changed file is a new URL.
-- `redirects`: permanent `/pages/:slug(about|careers|security).html` to `/:slug`. The `pages/`
+- `redirects`: permanent `/pages/:slug(about|careers|security)` (after `cleanUrls` strips `.html`) to `/:slug`. The `pages/`
   URLs were the live ones until the move into `src/`; the rule keeps old links and search results
   working, costs one entry, and lists the slugs so it never redirects a path that never existed.
   Alternative `(.*)` rejected: it would also bounce unknown paths to a second 404.

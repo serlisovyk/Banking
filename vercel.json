@@ -3,7 +3,7 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/pages/:slug(about|careers|security).html",
+      "source": "/pages/:slug(about|careers|security)",
       "destination": "/:slug",
       "permanent": true
     }

@@ -17,7 +17,9 @@ cached for good. Production already returns 404 for an unknown path: there is no
   `/security`; `/careers.html` redirects there. The header links use these URLs.
 - A permanent redirect `/pages/<about|careers|security>.html` to `/<page>`: those were the live
   URLs before the move into `src/`, so old links keep working. It lists the slugs, so a path that
-  never existed still gets the 404.
+  never existed still gets the 404. `cleanUrls` strips `.html` before any custom redirect runs,
+  so the source is `/pages/:slug(about|careers|security)` without the extension: the old URL
+  takes two hops (`/pages/about.html` → `/pages/about` → `/about`).
 - `Cache-Control: public, max-age=31536000, immutable` on `/assets/(.*)`: every file there is
   emitted with a content hash (`2026-10-23-sources-in-src.md`).
 - No rewrites, above all no "everything to `index.html`": an unknown path must end in
