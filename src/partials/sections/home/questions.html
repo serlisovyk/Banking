@@ -9,11 +9,12 @@
       </div>
       <div class="questions__content">
         <div class="questions__items">
-          {{#each questionGroups.initial}} {{> question-item}} {{/each}}
+          {{#each questionGroups.initial}} {{> components/question-item}} {{/each}}
         </div>
         <div class="questions__more" id="questions-more" inert>
           <div class="questions__items">
-            {{#each questionGroups.additional}} {{> question-item}} {{/each}}
+            {{#each questionGroups.additional}} {{> components/question-item}}
+            {{/each}}
           </div>
         </div>
         <button
@@ -25,7 +26,7 @@
         >
           <span data-questions-toggle-label>Load All FAQ’s</span>
           <img
-            src="/images/icons/small-arrow.svg"
+            src="/assets/images/icons/small-arrow.svg"
             width="22"
             height="22"
             alt=""

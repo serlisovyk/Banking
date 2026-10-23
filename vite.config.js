@@ -1,18 +1,31 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import handlebars from 'vite-plugin-handlebars'
-import { caseItems } from './data/case-items.js'
-import { featureGroups } from './data/feature-groups.js'
-import { questionGroups } from './data/question-items.js'
+import { caseItems } from './src/data/case-items.js'
+import { featureGroups } from './src/data/feature-groups.js'
+import { questionGroups } from './src/data/question-items.js'
+
+const root = resolve(import.meta.dirname, 'src')
 
 export default defineConfig({
-  publicDir: 'assets',
+  root,
+  publicDir: '../public',
+  build: {
+    outDir: '../dist',
+    emptyOutDir: true,
+    assetsInlineLimit: 0,
+    rollupOptions: {
+      input: {
+        index: resolve(root, 'index.html'),
+        about: resolve(root, 'about.html'),
+        careers: resolve(root, 'careers.html'),
+        security: resolve(root, 'security.html'),
+      },
+    },
+  },
   plugins: [
     handlebars({
-      partialDirectory: [
-        resolve(import.meta.dirname, 'sections'),
-        resolve(import.meta.dirname, 'components'),
-      ],
+      partialDirectory: resolve(root, 'partials'),
       context(pagePath) {
         const page = pagePath.split('/').at(-1).replace('.html', '') || 'index'
 
@@ -28,10 +41,4 @@ export default defineConfig({
       },
     }),
   ],
-  input: {
-    index: resolve(import.meta.dirname, 'index.html'),
-    about: resolve(import.meta.dirname, 'pages/about.html'),
-    careers: resolve(import.meta.dirname, 'pages/careers.html'),
-    security: resolve(import.meta.dirname, 'pages/security.html'),
-  },
 })
