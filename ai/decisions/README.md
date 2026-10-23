@@ -1,0 +1,62 @@
+# Decisions
+
+Durable project decisions: why a choice was made, with a date. One decision per file, named
+`YYYY-MM-DD-<slug>.md`. Format: a title, a `Date: … · Status: …` line, then `Context` →
+`Decision` → `Consequences`; short and specific (about 30 lines, `ai/rules/docs.md`),
+rejected alternatives with their reason, no check logs.
+
+How this differs from `ai/rules/`: **rules** state what to do now (current law, rewritten as it
+changes). **Decisions** state _why_, with a date. A record's text is not rewritten or deleted;
+only its `Status` line changes.
+
+The point: an agent (or a human) does not relitigate settled questions or "helpfully" restore
+something that was deliberately rejected.
+
+## Status
+
+- `accepted` — in force and built.
+- `accepted (not implemented)` — agreed now, built by a later task; that task sets it to
+  `accepted`.
+- `superseded by <file>` — replaced by a newer record; its line in the index moves to the
+  Superseded group.
+
+## Changing a decision
+
+A refinement or a reversal is a **new record** that restates what stays in force, so the reader
+needs only the newest one. The old record only changes its `Status` line to
+`superseded by <file>`.
+
+## When to add a record
+
+Propose one as soon as the decision surfaces, without being asked, and only for:
+
+- a standing constraint ("we will not do X", "always / never Y");
+- a feature the author deliberately rejected;
+- a tradeoff accepted over a named alternative, one a future agent would likely undo;
+- a goal agreed now and built later (`accepted (not implemented)`);
+- a convention chosen where an obvious alternative existed.
+
+Not decisions: one-off task details, plain current-state facts, a choice nobody would reverse,
+anything `ai/rules/` and `ai/map.md` already cover. Do not create noise records.
+
+## Records
+
+The first groups are the records in force, by topic; the last one lists the superseded records,
+each with the record that replaced it.
+
+### Project and process
+
+- [Vanilla JavaScript, Vite and Handlebars; no framework, no TypeScript](2026-10-23-vanilla-js-vite-handlebars.md)
+- [Four pages, no Login or Sign Up](2026-10-23-four-pages-no-auth.md)
+- [No automated tests](2026-10-23-no-automated-tests.md)
+- [Deployed on Vercel through its Git integration](2026-10-23-vercel-deploy.md)
+- [Merge locally into `main`, no pull requests](2026-10-23-local-merge-without-pr.md)
+- [The design is a third-party template: a reference only, never published](2026-10-23-design-is-a-reference.md)
+
+### Code
+
+- [JavaScript in OOP style: a class per component and per section](2026-10-23-oop-javascript.md) — accepted (not implemented)
+
+### Superseded
+
+None yet.
