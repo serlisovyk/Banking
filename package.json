@@ -1,11 +1,13 @@
 {
   "name": "banking",
   "version": "1.0.0",
-  "description": "HTML, CSS, and JavaScript multi-page banking website",
+  "description": "A multi-page bank website built with HTML, plain CSS, vanilla JavaScript and Vite",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "keywords": [
     "banking",
@@ -15,8 +17,11 @@
     "JavaScript"
   ],
   "author": "Serhii Lisovyk",
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "devDependencies": {
     "prettier": "^3.9.9",
     "vite": "^8.3.3",
