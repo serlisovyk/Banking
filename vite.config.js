@@ -1,11 +1,27 @@
 import { resolve } from 'node:path'
+import { minify } from 'html-minifier-terser'
 import { defineConfig } from 'vite'
 import handlebars from 'vite-plugin-handlebars'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { caseItems } from './src/data/case-items.js'
 import { featureGroups } from './src/data/feature-groups.js'
 import { questionGroups } from './src/data/question-items.js'
 
 const root = resolve(import.meta.dirname, 'src')
+
+const minifyHtml = () => ({
+  name: 'minify-html',
+  apply: 'build',
+  transformIndexHtml: {
+    order: 'post',
+    handler: (html) =>
+      minify(html, {
+        collapseWhitespace: true,
+        collapseBooleanAttributes: true,
+        removeComments: true,
+      }),
+  },
+})
 
 export default defineConfig({
   root,
@@ -40,5 +56,20 @@ export default defineConfig({
         }
       },
     }),
+    ViteImageOptimizer({
+      jpg: { quality: 80 },
+      webp: { quality: 80 },
+      avif: { quality: 75 },
+      svg: {
+        multipass: true,
+        plugins: [
+          {
+            name: 'preset-default',
+            params: { overrides: { removeViewBox: false } },
+          },
+        ],
+      },
+    }),
+    minifyHtml(),
   ],
 })
