@@ -53,6 +53,8 @@ each with the record that replaced it.
 - [Merge locally into `main`, no pull requests](2026-10-23-local-merge-without-pr.md)
 - [npm is the package manager; one `package-lock.json`](2026-10-23-npm-package-manager.md)
 - [License declared in `package.json` only, no `LICENSE` file](2026-10-23-license-in-package-json.md)
+- [Linters: ESLint, Stylelint, Husky and lint-staged](2026-10-23-linters.md)
+- [Line endings: Prettier `endOfLine: auto`, no `.gitattributes`](2026-10-23-line-endings-auto.md)
 - [The design is a third-party template: a reference only, never published](2026-10-23-design-is-a-reference.md)
 
 ### Code

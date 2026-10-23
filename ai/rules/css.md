@@ -8,7 +8,7 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
 
 - `block__element--modifier`. The block is the partial (`.header`, `.product-card`), an
   element is a part of it (`.product-card__title`), a modifier is a variation or a state
-  (`.button--secondary`, `.case-item--inverted`).
+  (`.button--secondary`, `.case-item--inverted`). Stylelint checks the pattern.
 - Elements do not nest in the name: `block__element`, never `block__element__sub`; a
   two-word element is hyphenated (`header__nav-link`).
 - One block, one stylesheet named like its partial, in `styles/sections/` or
@@ -35,6 +35,7 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
   gradient or a shadow), the font family, radii, durations, and the type and spacing scale
   listed in `ai/design-system.md`. `#`, `rgb(` and `hsl(` appear nowhere else; `transparent`
   and `currentColor` stay keywords. Never hard-code a colour, a font size or a section spacing.
+  Stylelint rejects a hex colour outside `variables.css`; `rgb(` and `hsl(` stay a review matter.
 - A value used in more than one place is a token first, named on the existing scale
   (`--green-60`, `--grey-15`). A one-off layout size (a section's padding, a column's width)
   need not be a token.

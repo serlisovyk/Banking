@@ -54,7 +54,7 @@ The parts that never bend:
   approval.
 - Merges happen locally into `main`, then `main` is pushed. No pull requests, and never
   a force-push of `main`.
-- Never bypass a pre-commit hook (`--no-verify`), once there is one.
+- Never bypass the pre-commit hook (`--no-verify`).
 - No automated tests — do not add them unless explicitly asked.
 
 Prompts to start agent sessions live in `ai/prompts/` (index in `ai/prompts/README.md`):
@@ -93,8 +93,9 @@ If a change materially reshapes a pattern, update the matching skill in the same
   HTML partials, plain CSS with native nesting and design tokens, JavaScript ESM.
 - Sources: everything under `src/` (pages, `partials/`, `data/`, `styles/`, `scripts/`,
   `assets/`); output in `dist/`. `ai/map.md` shows where each lives.
-- Formatting: Prettier (`.prettierrc`). Linters, a pre-commit hook and CI are not in the
-  repo yet and are not forbidden; once they land, their commands join "Verification"
+- Formatting and linting: Prettier (`.prettierrc`), ESLint (`eslint.config.js`) and Stylelint
+  (`.stylelintrc.json`). A pre-commit hook (Husky, lint-staged) fixes and formats what is staged.
+  CI is not in the repo yet and is not forbidden; when it lands, its commands join "Verification"
   below.
 - The design is a third-party template: a visual reference only. Its link, file key and
   node ids never go into the repo (`ai/decisions/`).
@@ -110,6 +111,8 @@ If a change materially reshapes a pattern, update the matching skill in the same
 Run before handing over any change:
 
 ```bash
+npm run lint
+npm run lint:css
 npm run format:check
 npm run build
 ```

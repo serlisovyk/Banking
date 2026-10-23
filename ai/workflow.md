@@ -61,7 +61,7 @@ you change.
 
 - Follow the plan; commit in logical units, not one giant snapshot. Inspect `git status`
   and `git diff` before each commit.
-- If the repo has a pre-commit hook, every commit goes through it; never bypass it with
+- Every commit goes through the pre-commit hook; never bypass it with
   `--no-verify`, fix what it reports.
 - Conventional Commit messages in English (`feat:`, `fix:`, `refactor:`, `docs:`, `style:`,
   `build:`, `chore:`) — specific, never `update` or `changes`.

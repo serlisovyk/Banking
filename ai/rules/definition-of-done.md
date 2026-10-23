@@ -43,7 +43,9 @@ over for approval.
 
 ## Verification
 
-- Every check listed under "Verification" in `AGENTS.md` passes.
+- Every check listed under "Verification" in `AGENTS.md` passes: `npm run lint`,
+  `npm run lint:css`, `npm run format:check`, `npm run build`. The commit went through the
+  pre-commit hook, never `--no-verify`.
 - A change to a page was used in the browser (`npm run dev`) — keyboard and mouse, the three
   widths — not just built.
 - Reported: what changed, which commands were run, whether they passed, and anything that
