@@ -208,8 +208,10 @@ the links open below.
 | Hero card                     | see Hero of Home                                                                                                            | transactions, money exchange                                                                   |
 
 - Job card: title, then a badge row, **About This Job** + paragraph, **Requirements &
-  Qualifications** + a list (a 24 px bag icon, 10 px gap, 20 / 14 / 14 px between rows), then the
-  compact primary button.
+  Qualifications** + a list (a 24 px bag icon in `--grey-70`, centred on the row, 10 px gap, 20 / 14 / 14 px
+  between rows), then the compact button at the card's bottom edge. Card: no decor, radius
+  `--border-radius-medium` (about 15 measured), 783 wide at 1920. Gaps at 1920: badges to About 50, text to
+  Requirements 40, list to button 50.
 - Press card: image (723 × 333 at 1920, radius 16), title, badge row (Location, Date),
   paragraph.
 
