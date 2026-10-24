@@ -3,18 +3,16 @@
 The JavaScript is object-oriented: a class per component and per section. These rules apply
 to every file in `scripts/`. Why: `ai/decisions/2026-10-23-oop-javascript.md`.
 
-**Where the code is now.** The modules in `scripts/` are still procedural (one per section,
-no classes). MY-186 migrates them to classes; new and reworked code follows these
-rules from the start, old code is not touched without a reason. That task deletes this note.
-
 ## Files and modules
 
 - One class per file, the file named after the class in PascalCase: `Tabs.js` exports `Tabs`.
 - The only non-class module is `main.js`, the composition root, in camelCase.
 - Named exports only, no default exports; imports carry the `.js` extension.
-- Folders by role: `scripts/components/` — reusable widgets (`Tabs`, `Disclosure`,
-  `MobileMenu`); `scripts/controllers/` — one controller per section (`ProductsController`,
-  `FeaturesController`, `QuestionsController`).
+- Folders by role: `scripts/components/` — reusable widgets (`Tabs`, `Toggle`,
+  `Disclosure`); `scripts/controllers/` — one controller per section (`HeaderMenuController`,
+  `ProductsController`, `FeaturesController`, `FaqController`).
+- `scripts/constants.js` — what scripts share: the media queries (equal to the CSS
+  breakpoints), key names, button texts and state classes.
 
 ## Encapsulation
 
@@ -35,7 +33,10 @@ Each class has one reason to change:
 | Composition root (`main.js`) | finding section roots, creating and starting     | hold logic                    |
 
 - A component works inside its `root`: it finds its children by `data-*` hooks within it,
-  never by BEM classes and never from `document`.
+  never by BEM classes and never from `document`. Component hooks are generic
+  (`data-tab`, `data-toggle-button`, `data-disclosure-trigger`) and section roots are
+  `data-<section>`; what is section-specific (classes, texts, a query) comes in `options`.
+- A controller works with several instances on a page: `main.js` creates one per root.
 - A section that a ready component covers needs no controller: `main.js` creates the
   component directly.
 
@@ -56,8 +57,8 @@ Each class has one reason to change:
 
 - `render*` puts state into the DOM (`renderTab`, `renderExpanded`).
 - `show*` / `hide*` is a transient decoration.
-- `open*` / `close*` is something expandable: a menu, an expander (`MobileMenu.open`,
-  `Disclosure.close`).
+- `open*` / `close*` is something expandable: a menu, an expander
+  (`HeaderMenuController.open`, `Disclosure.close`).
 - `select*` picks one of a set (`Tabs.select`).
 - `on<Action>(handler)` reports a user action outward when a controller needs the answer.
 - A DOM event handler is a private method attached through an inline arrow
@@ -73,7 +74,7 @@ Each class has one reason to change:
 
 ## Naming
 
-- Classes: PascalCase nouns (`Tabs`, `QuestionsController`).
+- Classes: PascalCase nouns (`Tabs`, `FaqController`).
 - Methods: camelCase verbs (`start`, `select`, `renderExpanded`).
 - Booleans: `is` / `has` / `can` / `should` prefix (`isOpen`, `hasPanel`, `canWrap`).
 - Constants: `UPPER_SNAKE_CASE`.

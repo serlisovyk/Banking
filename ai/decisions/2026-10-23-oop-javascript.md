@@ -1,6 +1,6 @@
 # JavaScript in OOP style: a class per component and per section
 
-Date: 2026-10-23 · Status: accepted (not implemented)
+Date: 2026-10-23 · Status: accepted
 
 ## Context
 

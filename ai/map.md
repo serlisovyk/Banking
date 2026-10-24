@@ -64,13 +64,13 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 ## Scripts (`src/scripts/`)
 
-- `main.js` — imports the section modules below (the only entry; the pages load it).
-- `header-menu.js` — the mobile menu: `aria-expanded`, `inert`, `Escape`, close on a link.
-- `products.js` — the audience switch: `aria-pressed`, `hidden` on the panels.
-- `features.js` — the ARIA tabs: arrows, `Home`/`End`, orientation by width.
-- `questions.js` — the FAQ expander: `aria-expanded`, `inert`, the height as a custom property.
-- These are still procedural modules; the target layout is classes in `scripts/controllers/` and `scripts/components/`
-  (`ai/rules/oop.md`), which MY-186 migrates to.
+- `main.js` — the only entry (the pages load it): finds each section's root, creates its controller, calls `start()`.
+- `constants.js` — the media queries (equal to the CSS breakpoints), key names, button texts, state classes.
+- `components/` — reusable widgets: `Tabs` (ARIA tabs: arrows, `Home`/`End`, orientation by width), `Toggle` (`aria-pressed`
+  buttons and `hidden` panels), `Disclosure` (`aria-expanded`, `inert`, the height as a custom property).
+- `controllers/` — one class per section: `HeaderMenuController` (the mobile menu: `inert`, `Escape`, close on a link),
+  `ProductsController` (`Toggle`), `FeaturesController` (`Tabs`), `FaqController` (`Disclosure`).
+- Hooks are `data-*`: section roots `data-header`, `data-products`, `data-features`, `data-questions` (`ai/rules/oop.md`).
 
 ## Assets (`src/assets/`)
 

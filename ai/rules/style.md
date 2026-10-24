@@ -33,8 +33,8 @@ structure and data: `ai/rules/html.md`; CSS: `ai/rules/css.md`; classes: `ai/rul
 
 ## Hooks for scripts
 
-- A script finds its elements by `data-*` attributes (`data-features-tab`,
-  `data-products-panel`, `data-questions-toggle`), never by BEM classes. A class says how
+- A script finds its elements by `data-*` attributes (`data-tab-panel`,
+  `data-toggle-button`, `data-header-nav`), never by BEM classes. A class says how
   something looks, an attribute says what the code does with it, so renaming a class never
   breaks a script.
 - A state is shown to CSS by a native attribute (`aria-expanded`, `hidden`, `inert`) or a
