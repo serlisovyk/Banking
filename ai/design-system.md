@@ -196,15 +196,16 @@ the links open below.
 
 ### Cards
 
-| Card                                   | Surface and edge                                                           | Content                                                                                        |
-| -------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| Feature, FAQ item, job, press, benefit | `--grey-11` (FAQ item: no fill), 1 px `--grey-15`, `--border-radius-small` | title, text; feature title has an arrow icon at the right (34 px)                              |
-| Use-case plate                         | `--grey-11`, `--border-radius`, dotted decor at a corner                   | 2 × 2 small cards                                                                              |
-| Small card in a plate                  | `--grey-10`, 1 px `--grey-15`, 16 px                                       | icon circle, centred label; 314 × 222 (192) at 1920, 260 × 174 (150) at 1440, 154 × 160 at 390 |
-| Product card                           | no surface                                                                 | icon circle, title, text, all centred                                                          |
-| Testimonial                            | no surface                                                                 | quote mark (60 / 44 / 44), text (`--text-body`, white), name; all centred                      |
-| Value item                             | no surface, 1 px `--green-60` rule at the left                             | big grey title, text; padding-left 30 / 24 / 20                                                |
-| Hero card                              | see Hero of Home                                                           | transactions, money exchange                                                                   |
+| Card                          | Surface and edge                                                                                                            | Content                                                                                        |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Feature, FAQ item, job, press | `--grey-11` (FAQ item: no fill), 1 px `--grey-15`, `--border-radius-small`                                                  | title, text; feature title has an arrow icon at the right (34 px)                              |
+| Benefit (`icon-card`)         | `--grey-11`, 1 px `--grey-15`, `--border-radius` (20 at 390), dotted decor top left; Security: `--grey-10`, 16 px, no decor | icon circle left of the title, text under; 748 × 336 at 1920                                   |
+| Use-case plate                | `--grey-11`, `--border-radius`, dotted decor at a corner                                                                    | 2 × 2 small cards                                                                              |
+| Small card in a plate         | `--grey-10`, 1 px `--grey-15`, 16 px                                                                                        | icon circle, centred label; 314 × 222 (192) at 1920, 260 × 174 (150) at 1440, 154 × 160 at 390 |
+| Product card                  | no surface                                                                                                                  | icon circle, title, text, all centred                                                          |
+| Testimonial                   | no surface                                                                                                                  | quote mark (60 / 44 / 44), text (`--text-body`, white), name; all centred                      |
+| Value item                    | no surface, 1 px `--green-60` rule at the left                                                                              | big grey title, text; padding-left 30 / 24 / 20                                                |
+| Hero card                     | see Hero of Home                                                                                                            | transactions, money exchange                                                                   |
 
 - Job card: title, then a badge row, **About This Job** + paragraph, **Requirements &
   Qualifications** + a list (a 24 px bag icon, 10 px gap, 20 / 14 / 14 px between rows), then the
@@ -225,8 +226,8 @@ Two concentric circles with the icon glyph (`--green-60`) centred: the outer one
 green tint (about 5 %), the inner one stronger (about 10 %) with a 1 px ring (about 20 %).
 The circles are drawn inside the icon SVG, so the `<img>` is the whole thing. Outer / inner /
 glyph: product 98 / 74 / 34 at 1920, 72 / 56 / 28 at 1440 and 390; use-case card
-78 / 58 / 30, then 64 / 48 / 24. On Security and Careers Benefits the circle sits left of the
-title, on one row. A solid variant (`--green-60` disc, dark glyph, 40 px at 1920) is used
+78 / 58 / 30, then 64 / 48 / 24. On Security and Careers Benefits the circle is the product
+size (`--icon-card`) and sits left of the title, on one row. A solid variant (`--green-60` disc, dark glyph, 40 px at 1920) is used
 inside the hero card.
 
 ### Dotted decor
@@ -235,13 +236,13 @@ Decorative backgrounds in `assets/images/decor/`, never content. The dotted ones
 rasters at twice the CSS size, baked over the surface they sit on (`--grey-10` or `--grey-11`); a
 new photo or decor is `webp` or `avif`, never a vector with a path per dot:
 
-| Decor                      | Where                                                                    |
-| -------------------------- | ------------------------------------------------------------------------ |
-| `dots.avif`                | the top-left of every page, behind the navbar, 600 wide                  |
-| `growth-arrows.svg`        | top right of the Home hero, 418 × 383 at 1920, 300 × 275 at 1440         |
-| `dots-grid.avif`           | top right of the page-hero panel                                         |
-| `dots-fine.avif`           | top left of the CTA panel, a fine grid fading out, 320 wide (240 at 390) |
-| `dot-wave-left/right.avif` | a corner of the use-case plate, mirrored on the second row, 200 × 211    |
+| Decor                      | Where                                                                                         |
+| -------------------------- | --------------------------------------------------------------------------------------------- |
+| `dots.avif`                | the top-left of every page, behind the navbar, 600 wide                                       |
+| `growth-arrows.svg`        | top right of the Home hero, 418 × 383 at 1920, 300 × 275 at 1440                              |
+| `dots-grid.avif`           | top right of the page-hero panel                                                              |
+| `dots-fine.avif`           | top left of the CTA panel and the benefit card, a fine grid fading out, 320 wide (240 at 390) |
+| `dot-wave-left/right.avif` | a corner of the use-case plate, mirrored on the second row, 200 × 211                         |
 
 ## Pages
 
@@ -290,8 +291,7 @@ line (`--grey-60`, weight 300). At 390 these stack into centred rows. The drawn 
 1. **Hero** (page hero): see below.
 2. **Our Values.** Heading block; a 2 × 2 grid of value items (758 / 610 wide at 1920 / 1440);
    one column at 390.
-3. **Our Benefits.** Heading block; 2 × 2 cards (748 / 610 wide), each with an icon circle
-   and the title on one row, the text under it; one column at 390.
+3. **Our Benefits.** Heading block; a 2 × 2 grid of benefit cards (748 / 610 wide); one column at 390.
 4. **Job Openings.** Heading block; three job cards, two in the first row and one in the second
    (783 / 630 wide); one column at 390.
 5. **FAQ**, **CTA** ("Start your Career with YourBank today!", a paragraph, the hero action),
