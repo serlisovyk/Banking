@@ -66,8 +66,9 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
 - Reduced motion is handled once, in `general/reset.css`; a component never adds its own
   `prefers-reduced-motion` block. A duration comes from a token (`--transition-duration`).
 - A `transition` names its properties, never `all`.
-- One `:focus-visible` rule in `general/` draws the ring for every control; never
-  `outline: none` without a replacement.
+- One `:focus-visible` rule in `general/main.css` draws the ring for every control, from the
+  token `--focus-ring`; a hover look never sits on `:focus`, and never `outline: none` without a
+  replacement.
 - Use `hidden` or `inert` to take an element out of the page; text for assistive technology
   only is a utility class in `ui/`, not `display: none`, which hides it from them too.
 - Every `@keyframes` lives in one stylesheet in `general/`.

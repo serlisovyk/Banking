@@ -5,8 +5,8 @@ everything lives: `ai/map.md`; how the layers relate: `ai/rules/architecture.md`
 
 ## Pages and partials
 
-- A page is a shell: `<head>` and a list of `{{> section }}` calls. Section markup is never
-  written on a page.
+- A page is a shell: `<html lang="en">`, `<head>`, the header, and a `<main>` holding the list of
+  `{{> section }}` calls (the footer goes after it). Section markup is never written on a page.
 - Pages are `src/*.html`; partials live in `src/partials/`. `partials/sections/<page>/` — one
   page section: `<section class="<name> section">` with a `.container` inside; `shared/` holds
   what two or more pages use. `partials/components/` — a repeated element (a card, a list item).
@@ -51,6 +51,8 @@ everything lives: `ai/map.md`; how the layers relate: `ai/rules/architecture.md`
   `footer`); one `h1` per page, headings in order without skipping a level.
 - A button for an action (`<button type="button">`), a link only for going to another
   address; a link that opens a new tab has `target="_blank"` and `rel="noopener"` and says so.
+  Every button outside a form has `type="button"`.
+- The logo is a link to `/`; its image is named by `alt="YourBank"`.
 - A control with no visible text, or whose text is not enough, has an accessible name
   (`aria-label`); an icon next to text is decorative (`alt=""`, `aria-hidden="true"`).
 - Widgets (tabs, disclosure, menu) carry their roles, `aria-controls` and

@@ -42,7 +42,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 ## Partials (`src/partials/`)
 
-- `sections/shared/header` — logo, navigation (`navigation` as a loop, `aria-current` from `page`), the mobile menu button.
+- `sections/shared/header` — the logo link, navigation (`navigation` as a loop, `aria-current` from `page`), the mobile menu button.
 - `sections/home/hero`, `sections/careers/careers-hero` — the first screens of home and Careers.
 - `sections/home/products` — the audience switch (For Individuals / For Businesses) and two panels of `product-card`.
 - `sections/home/cases` — Use Cases: `caseItems` as `case-item`.
@@ -61,7 +61,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 ## Styles (`src/styles/`)
 
 - `style.css` — imports the files below in order: `general`, `ui`, `components`, `sections`.
-- `general/` — `reset.css`, `fonts.css` (`@font-face`), `variables.css` (every token), `main.css` (`body`, `.container`, `.section`).
+- `general/` — `reset.css`, `fonts.css` (`@font-face`), `variables.css` (every token), `main.css` (`body`, focus ring, `.container`, `.section`).
 - `ui/` — the shared elements: `button.css`, `toggle.css` (the Individuals / Businesses pill).
 - `components/`, `sections/` — one stylesheet per partial of the same name.
 
