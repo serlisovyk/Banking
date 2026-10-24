@@ -32,3 +32,14 @@
 .section-heading--with-actions .section-heading__text {
   max-width: 580px;
 }
+
+.section-heading__link {
+  color: var(--green-60);
+  text-decoration: none;
+
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

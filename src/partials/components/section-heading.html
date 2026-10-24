@@ -6,7 +6,10 @@
       {{#if titleStart}}{{titleStart}} {{/if}}<span>{{titleAccent}}</span>{{#if
       titleEnd}} {{titleEnd}}{{/if}}
     </h2>
-    <p class="section-heading__text">{{text}}</p>
+    <p class="section-heading__text">
+      {{text}}{{#if linkHref}}
+      <a class="section-heading__link" href="{{linkHref}}">{{linkText}}</a>{{/if}}
+    </p>
   </div>
   {{#if @partial-block}}
   <div class="section-heading__actions">{{> @partial-block}}</div>
