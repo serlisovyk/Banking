@@ -77,9 +77,10 @@
     background: var(--green-60);
     border-radius: var(--border-radius-pill);
 
-    &:hover,
-    &:focus {
-      background: var(--green-70);
+    @media (hover: hover) {
+      &:hover {
+        background: var(--green-70);
+      }
     }
   }
 
@@ -123,9 +124,13 @@
   padding: var(--navbar-link-padding-y) var(--navbar-link-padding-x);
   transition: background var(--transition-duration);
 
-  &:hover,
-  &:focus,
   &[aria-current='page'] {
     background: var(--grey-15);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background: var(--grey-15);
+    }
   }
 }

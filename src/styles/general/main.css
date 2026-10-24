@@ -16,9 +16,9 @@ body {
   background-size: 600px;
 }
 
-.wrapper {
-  min-height: 100%;
-  overflow-y: hidden;
+:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
 }
 
 .container {

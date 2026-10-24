@@ -34,6 +34,7 @@
   --border-radius-small: 12px;
 
   --transition-duration: 0.2s;
+  --focus-ring: 2px solid var(--green-60);
 
   --content-width: 1596px;
 
