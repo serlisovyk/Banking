@@ -8,40 +8,12 @@
       and shape the way we work together to achieve our goals." }}
       <div class="values__content">
         <div class="values__items">
+          {{#each values}}
           <div class="values__item">
-            <h3 class="values__item-title">Integrity</h3>
-            <div class="values__item-text">
-              We conduct ourselves with utmost honesty, transparency, and ethical
-              behavior. We believe in doing what is right for our customers,
-              colleagues, and stakeholders, even when faced with difficult choices.
-            </div>
+            <h3 class="values__item-title">{{title}}</h3>
+            <div class="values__item-text">{{text}}</div>
           </div>
-          <div class="values__item">
-            <h3 class="values__item-title">Customer Centricity</h3>
-            <div class="values__item-text">
-              Our customers are at the heart of everything we do. We are dedicated to
-              understanding their needs, providing personalized solutions, and
-              delivering exceptional service that exceeds expectations.
-            </div>
-          </div>
-          <div class="values__item">
-            <h3 class="values__item-title">Collaboration</h3>
-            <div class="values__item-text">
-              We foster a collaborative and inclusive work environment, where
-              teamwork and diversity are celebrated. By leveraging the unique
-              strengths and perspectives of our employees, we drive innovation and
-              achieve greater success together.
-            </div>
-          </div>
-          <div class="values__item">
-            <h3 class="values__item-title">Innovation</h3>
-            <div class="values__item-text">
-              We embrace change and constantly seek innovative solutions to meet the
-              evolving needs of our customers. We encourage our employees to think
-              creatively, challenge conventions, and explore new ideas to drive the
-              future of banking.
-            </div>
-          </div>
+          {{/each}}
         </div>
       </div>
     </div>

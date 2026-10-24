@@ -6,7 +6,10 @@ import handlebars from 'vite-plugin-handlebars'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { caseItems } from './src/data/case-items.js'
 import { featureGroups } from './src/data/feature-groups.js'
+import { heroTransactions } from './src/data/hero-transactions.js'
+import { products } from './src/data/products.js'
 import { questionGroups } from './src/data/question-items.js'
+import { values } from './src/data/values.js'
 
 const root = resolve(import.meta.dirname, 'src')
 
@@ -69,6 +72,9 @@ export default defineConfig({
           caseItems,
           featureGroups,
           questionGroups,
+          products,
+          values,
+          heroTransactions,
         }
       },
     }),

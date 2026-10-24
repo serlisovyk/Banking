@@ -42,6 +42,7 @@
         <div class="hero__card">
           <div class="hero__transactions">
             <h3 class="hero__transactions-title">Your Transactions</h3>
+            {{#each heroTransactions}}
             <div class="hero__transactions-card">
               <div class="hero__transactions-card-left">
                 <div class="hero__transactions-card-image">
@@ -54,48 +55,13 @@
                   />
                 </div>
                 <div class="hero__transactions-card-content">
-                  <div class="hero__transactions-card-title">Transaction</div>
-                  <div class="hero__transactions-card-name">Joel Kenley</div>
+                  <div class="hero__transactions-card-title">{{title}}</div>
+                  <div class="hero__transactions-card-name">{{name}}</div>
                 </div>
               </div>
-              <div class="hero__transactions-card-amount">- $68.00</div>
+              <div class="hero__transactions-card-amount">{{amount}}</div>
             </div>
-            <div class="hero__transactions-card">
-              <div class="hero__transactions-card-left">
-                <div class="hero__transactions-card-image">
-                  <img
-                    src="/assets/images/icons/transaction.svg"
-                    width="21"
-                    height="21"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </div>
-                <div class="hero__transactions-card-content">
-                  <div class="hero__transactions-card-title">Transaction</div>
-                  <div class="hero__transactions-card-name">Mark Smith</div>
-                </div>
-              </div>
-              <div class="hero__transactions-card-amount">- $68.00</div>
-            </div>
-            <div class="hero__transactions-card">
-              <div class="hero__transactions-card-left">
-                <div class="hero__transactions-card-image">
-                  <img
-                    src="/assets/images/icons/transaction.svg"
-                    width="21"
-                    height="21"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </div>
-                <div class="hero__transactions-card-content">
-                  <div class="hero__transactions-card-title">Transaction</div>
-                  <div class="hero__transactions-card-name">Lenen Roy</div>
-                </div>
-              </div>
-              <div class="hero__transactions-card-amount">- $68.00</div>
-            </div>
+            {{/each}}
           </div>
           <div class="hero__change">
             <h3 class="hero__change-title">Money Exchange</h3>
