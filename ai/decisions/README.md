@@ -65,6 +65,8 @@ each with the record that replaced it.
 - [Dotted decor and photos are WebP or AVIF rasters, never a vector per dot](2026-10-23-light-decor-raster.md)
 - [JavaScript in OOP style: a class per component and per section](2026-10-23-oop-javascript.md)
 - [Breakpoints: two structural queries, fluid tokens between 390, 1440 and 1920](2026-10-23-breakpoint-scheme.md)
+- [The footer's year is written in the browser](2026-10-24-footer-year-in-browser.md)
+- [Privacy Policy and Terms of Service are text, not links](2026-10-24-footer-legal-text.md)
 
 ### Superseded
 

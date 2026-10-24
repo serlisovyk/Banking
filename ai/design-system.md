@@ -248,8 +248,9 @@ Every page: the navbar, its sections one after another with the section gap, the
 The footer is the same on all four: the logo centred, the four links in a row, a divider, a
 row of three contacts (envelope, phone, pin icons in `--green-60`), a divider, then a pill bar
 with three social circles at the left, the copyright centred (`--grey-70`) and
-`Privacy Policy | Terms of Service` at the right. At 390 these stack into centred rows. The
-footer is 578 / 440 / 503 px tall. Total page height: Home 7128 / 5674 / 9290, Careers
+`Privacy Policy | Terms of Service` at the right (plain text) and, under the bar, the muted author
+line (`--grey-60`, weight 300). At 390 these stack into centred rows. The drawn footer is
+578 / 440 / 503 px tall. Total page height: Home 7128 / 5674 / 9290, Careers
 7478 / 6089 / 8819, About 5223 / 4197 / 5870, Security 4025 / 3258 / 4397.
 
 ### Home
@@ -341,5 +342,7 @@ text card overlaps its lower part, with a plain radius 20.
 - **Guessed in the code**, where the layout data has no number: the navbar paddings, link gap
   and the logo width at 1440 (156); the hero column gap (120 / 80 / 80), the hero card padding
   and the type inside it (`--text-body`); the Careers photo height at 1440 and 390; the space
-  from the navbar to the Careers panel (50).
+  from the navbar to the Careers panel (50); in the footer the author line, the 12 × 8 padding of
+  links (44 px targets, so the footer runs about 45 px taller than drawn), the bar padding
+  (`--toggle-padding`) and the green current link.
 - **Hover and focus looks** come from the built code; the layout data carries none.

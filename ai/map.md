@@ -33,9 +33,9 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 ## Pages
 
-- `index.html` — `shared/header`, `home/hero`, `home/products`, `home/cases`, `home/features`, `home/questions`.
-- `careers.html` — `shared/header`, `shared/page-hero`, `careers/values`.
-- `about.html`, `security.html` — only `shared/header` so far.
+- `index.html` — `shared/header`, `home/hero`, `home/products`, `home/cases`, `home/features`, `home/questions`, `shared/footer`.
+- `careers.html` — `shared/header`, `shared/page-hero`, `careers/values`, `shared/footer`.
+- `about.html`, `security.html` — only `shared/header` and `shared/footer` so far.
 - No `404.html` source: the build copies `dist/index.html` to `dist/404.html` (a plugin in `vite.config.js`); Vercel serves it
   with status 404 for an unknown path.
 - Every page links `/styles/style.css` and `/scripts/main.js` in `<head>`.
@@ -43,6 +43,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 ## Partials (`src/partials/`)
 
 - `sections/shared/header` — the logo link, navigation (`navigation` as a loop, `aria-current` from `page`), the mobile menu button.
+- `sections/shared/footer` — the logo link, navigation like the header, `contacts`, the bar with `socials` and legal text, the author line.
 - `sections/home/hero` — the first screen of home. `sections/shared/page-hero` — the hero of Careers, About and Security: one context, `page.hero`.
 - `sections/home/products` — the audience switch (For Individuals / For Businesses) and two panels of `product-card`.
 - `sections/home/cases` — Use Cases: `caseItems` as `case-item`.
@@ -56,6 +57,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 - `case-items.js` → `caseItems`, `feature-groups.js` → `featureGroups`, `question-items.js` → `questionGroups`,
   `products.js` → `products`, `values.js` → `values`, `hero-transactions.js` → `heroTransactions`.
+- `contacts.js` → `contacts`, `socials.js` → `socials`, `footer.js` → `footer` (copyright, legal documents, author name).
 - `navigation.js` → `navigation` (the menu links); `pages.js` → `pages`: `title`, `description`, `navKey` and the `hero` of the page-hero pages, per page file name.
 
 ## Styles (`src/styles/`)
@@ -71,9 +73,9 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `constants.js` — the media queries (equal to the CSS breakpoints), key names, button texts, state classes.
 - `components/` — reusable widgets: `Tabs` (ARIA tabs: arrows, `Home`/`End`, orientation by width), `Toggle` (`aria-pressed`
   buttons and `hidden` panels), `Disclosure` (`aria-expanded`, `inert`, the height as a custom property).
-- `controllers/` — one class per section: `HeaderMenuController` (the mobile menu: `inert`, `Escape`, close on a link),
+- `controllers/` — one class per section: `HeaderMenuController` (the mobile menu: `inert`, `Escape`, close on a link), `FooterController` (the current year),
   `ProductsController` (`Toggle`), `FeaturesController` (`Tabs`), `FaqController` (`Disclosure`).
-- Hooks are `data-*`: section roots `data-header`, `data-products`, `data-features`, `data-questions` (`ai/rules/oop.md`).
+- Hooks are `data-*`: section roots `data-header`, `data-footer`, `data-products`, `data-features`, `data-questions` (`ai/rules/oop.md`).
 
 ## Assets (`src/assets/`)
 
