@@ -42,6 +42,14 @@ Goal: a working Money Exchange in the hero card. Behavior is in
 - `scripts/components/CurrencyConverter.js`, its constants in `scripts/constants.js`
   (`CURRENCY_CONVERTER`: locale, maximum, texts), one row in `main.js`.
 
+## Changed while building
+
+- The select and the amount have a 44 px touch height (the select by a negative margin, so the row
+  keeps the icon's height); a coin icon's padding is a share of `--icon-currency`.
+- The Supported Currency pill sits flush with the card's right edge below 768 px: its 20 px overhang
+  scrolled the page sideways at 320 px.
+- An invalid amount is also underlined with a wavy line, so the state is not only the dash.
+
 ## Docs
 
 - A decision record `fixed rates, no API; native select` and its line in the index.
