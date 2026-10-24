@@ -13,8 +13,8 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `src/assets/` — `fonts/`, `images/`: referenced as `/assets/…`, bundled and hashed (below).
 - `public/` — files that need a fixed URL, served as they are; not created until one exists.
 - `vite.config.js` — Vite (`root: 'src'`, output `dist/` at the repo root) with `vite-plugin-handlebars`: the `partials`
-  folder and `context(pagePath)`, which sets the `isHome`, `isAbout`, `isCareers`, `isSecurity` flags and passes the
-  `data/` constants. The pages are listed in `build.rollupOptions.input`.
+  folder and `context(pagePath)`, which passes the current `page` and the
+  `data/` constants, and the `eq` helper. The pages are listed in `build.rollupOptions.input`.
 - `package.json` — scripts `dev`, `build`, `preview`, `format`, `format:check`, `lint`, `lint:fix`, `lint:css`, `lint:css:fix`, `size`;
   `package-lock.json` — the lockfile (npm, decision `npm-package-manager`). License: MIT, declared in `package.json` only
   (decision `license-in-package-json`).
@@ -42,7 +42,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 ## Partials (`src/partials/`)
 
-- `sections/shared/header` — logo, navigation (`aria-current` from the page flags), the mobile menu button.
+- `sections/shared/header` — logo, navigation (`navigation` as a loop, `aria-current` from `page`), the mobile menu button.
 - `sections/home/hero`, `sections/careers/careers-hero` — the first screens of home and Careers.
 - `sections/home/products` — the audience switch (For Individuals / For Businesses) and two panels of `product-card`.
 - `sections/home/cases` — Use Cases: `caseItems` as `case-item`.
@@ -54,7 +54,9 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 ## Data (`src/data/`)
 
-- `case-items.js` → `caseItems`, `feature-groups.js` → `featureGroups`, `question-items.js` → `questionGroups`.
+- `case-items.js` → `caseItems`, `feature-groups.js` → `featureGroups`, `question-items.js` → `questionGroups`,
+  `products.js` → `products`, `values.js` → `values`, `hero-transactions.js` → `heroTransactions`.
+- `navigation.js` → `navigation` (the menu links); `pages.js` → `pages`: `title`, `description`, `navKey` per page file name.
 
 ## Styles (`src/styles/`)
 

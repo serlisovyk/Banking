@@ -29,11 +29,13 @@ everything lives: `ai/map.md`; how the layers relate: `ai/rules/architecture.md`
   or the context of `{{#each items}} {{> item }} {{/each}}`.
 - A variation is a parameter flag and a BEM modifier
   (`{{#if inverted}} case-item--inverted{{/if}}`).
-- The current page reaches a partial as a flag from `context` (`isHome`, `isCareers`, …); every
-  navigation link has `aria-current`, `page` on the current one and `false` on the rest.
-  The condition sits inside the value (`aria-current="{{#if isHome}}page{{else}}false{{/if}}"`),
-  never around the attribute: Prettier cannot parse a tag with a conditional attribute.
-- Template logic stays at `if` / `unless` / `each`: anything more is computed in `data/`.
+- The current page reaches a partial as `page` from `context` (an entry of `data/pages.js`); the `<title>`
+  is `{{page.title}}`. The navigation is `{{#each navigation}}`; every link has `aria-current`, `page` on
+  the current one and `false` on the rest. The condition sits inside the value
+  (`aria-current="{{#if (eq key ../page.navKey)}}page{{else}}false{{/if}}"`), never around the
+  attribute: Prettier cannot parse a tag with a conditional attribute.
+- Template logic stays at `if` / `unless` / `each` and the `eq` helper (registered in `vite.config.js`):
+  anything more is computed in `data/`.
 
 ## Data
 
