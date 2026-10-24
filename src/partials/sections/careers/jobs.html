@@ -1,0 +1,11 @@
+<section class="jobs section">
+  <div class="container">
+    {{> components/section-heading titleAccent="Job Openings" text="Explore exciting
+    job openings at YourBank, where we value talent, innovation, and a passion for
+    customer service. Join our team and be a part of shaping a brighter future in the
+    banking industry." }}
+    <div class="jobs__items">
+      {{#each jobs}} {{> components/job-card }} {{/each}}
+    </div>
+  </div>
+</section>

@@ -110,6 +110,17 @@
   --space-benefits-gap: clamp(60px, calc(8.3333vw - 60px), 100px);
   --icon-card: var(--icon-product);
 
+  --space-job-card: clamp(40px, calc(2.0833vw + 10px), 50px);
+  --space-job-block: clamp(32px, calc(1.6667vw + 8px), 40px);
+  --space-job-list: clamp(14px, calc(1.25vw - 4px), 20px);
+  --text-job-title: clamp(24px, calc(1.25vw + 6px), 30px);
+  --text-job-subtitle: clamp(20px, calc(0.8333vw + 8px), 24px);
+  --badge-padding-y: clamp(5px, calc(0.4167vw - 1px), 7px);
+  --badge-padding-x: clamp(13px, calc(0.4167vw + 7px), 15px);
+  --badge-gap: clamp(8px, calc(0.4167vw + 2px), 10px);
+  --button-padding-y-compact: clamp(12px, 0.8333vw, 16px);
+  --button-padding-x-compact: clamp(20px, calc(2.0833vw - 10px), 30px);
+
   --space-testimonial-gap: clamp(60px, 4.1667vw, 80px);
   --space-testimonial-arrow: clamp(40px, calc(2.0833vw + 10px), 50px);
   --testimonial-arrow-size: clamp(52px, calc(2.0833vw + 22px), 62px);
@@ -198,6 +209,17 @@
     --space-values-gap: clamp(50px, calc(0.9524vw + 46.29px), 60px);
     --space-value-inset: clamp(20px, calc(0.381vw + 18.51px), 24px);
     --space-benefits-gap: clamp(48px, calc(1.1429vw + 43.54px), 60px);
+
+    --space-job-card: clamp(24px, calc(1.5238vw + 18.06px), 40px);
+    --space-job-block: clamp(24px, calc(0.7619vw + 21.03px), 32px);
+    --space-job-list: 14px;
+    --text-job-title: clamp(20px, calc(0.381vw + 18.51px), 24px);
+    --text-job-subtitle: clamp(18px, calc(0.1905vw + 17.26px), 20px);
+    --badge-padding-y: 5px;
+    --badge-padding-x: clamp(9px, calc(0.381vw + 7.51px), 13px);
+    --badge-gap: clamp(6px, calc(0.1905vw + 5.26px), 8px);
+    --button-padding-y-compact: 12px;
+    --button-padding-x-compact: 20px;
 
     --space-testimonial-gap: 60px;
     --space-testimonial-arrow: 40px;

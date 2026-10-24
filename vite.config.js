@@ -19,6 +19,7 @@ import { socials } from './src/data/socials.js'
 import { testimonials } from './src/data/testimonials.js'
 import { values } from './src/data/values.js'
 import { benefits } from './src/data/benefits.js'
+import { jobs } from './src/data/jobs.js'
 
 const root = resolve(import.meta.dirname, 'src')
 
@@ -88,6 +89,7 @@ export default defineConfig({
           products,
           values,
           benefits,
+          jobs,
           testimonials,
           heroTransactions,
           currencies,

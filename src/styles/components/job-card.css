@@ -1,0 +1,62 @@
+.job-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--grey-11);
+  border: 1px solid var(--grey-15);
+  border-radius: var(--border-radius-medium);
+  padding: var(--space-job-card);
+}
+
+.job-card__title {
+  font-weight: 500;
+  font-size: var(--text-job-title);
+  line-height: 150%;
+  color: var(--white);
+  margin-bottom: var(--space-heading-gap);
+}
+
+.job-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--badge-gap);
+  margin-bottom: var(--space-card);
+}
+
+.job-card__subtitle {
+  font-weight: 500;
+  font-size: var(--text-job-subtitle);
+  line-height: 150%;
+  color: var(--white);
+  margin-bottom: var(--space-card-gap-sm);
+}
+
+.job-card__text {
+  margin-bottom: var(--space-job-block);
+}
+
+.job-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-job-list);
+  list-style: none;
+  margin-bottom: var(--space-card);
+}
+
+.job-card__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: url('/assets/images/icons/briefcase.svg') center / contain no-repeat;
+  }
+}
+
+.job-card__button {
+  align-self: flex-start;
+  margin-top: auto;
+}

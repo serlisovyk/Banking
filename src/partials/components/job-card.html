@@ -1,0 +1,18 @@
+<article class="job-card">
+  <h3 class="job-card__title">{{title}}</h3>
+  <div class="job-card__badges">
+    {{> components/badge label="Location" value=location}} {{> components/badge
+    label="Department" value=department}}
+  </div>
+  <h4 class="job-card__subtitle">About This Job</h4>
+  <p class="job-card__text">{{about}}</p>
+  <h4 class="job-card__subtitle">Requirements &amp; Qualifications</h4>
+  <ul class="job-card__list">
+    {{#each requirements}}
+    <li class="job-card__item">{{this}}</li>
+    {{/each}}
+  </ul>
+  <a class="button button--compact job-card__button" href="{{applyHref}}"
+    >Apply Now<span class="visually-hidden"> for {{title}}</span></a
+  >
+</article>

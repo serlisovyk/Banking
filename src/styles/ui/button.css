@@ -28,6 +28,10 @@
   padding-inline: var(--button-padding-x-lg);
 }
 
+.button--compact {
+  padding: var(--button-padding-y-compact) var(--button-padding-x-compact);
+}
+
 .button--empty {
   background: transparent;
   color: var(--white);
