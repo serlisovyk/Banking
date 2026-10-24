@@ -52,6 +52,9 @@ everything lives: `ai/map.md`; how the layers relate: `ai/rules/architecture.md`
 - A button for an action (`<button type="button">`), a link only for going to another
   address; a link that opens a new tab has `target="_blank"` and `rel="noopener"` and says so.
   Every button outside a form has `type="button"`.
+- Whatever goes to a place, on the page or off it, is `<a href>` even with the button look
+  (`<a class="button">`); whatever acts on the page (open, toggle, submit) is `<button>`. No control
+  without an action: a destination is a section, never `href="#"`.
 - The logo is a link to `/`; its image is named by `alt="YourBank"`.
 - A control with no visible text, or whose text is not enough, has an accessible name
   (`aria-label`); an icon next to text is decorative (`alt=""`, `aria-hidden="true"`).

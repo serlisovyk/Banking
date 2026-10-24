@@ -82,7 +82,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
   buttons and `hidden` panels), `Disclosure` (`aria-expanded`, `inert`, the height as a custom property), `CurrencyConverter` (reads the rates from the
   options' `data-*`; `main.js` creates it directly, no controller), `Carousel` (scroll-snap track: arrows scroll by one card, disabled at the ends).
 - `controllers/` — one class per section: `HeaderMenuController` (the mobile menu: `inert`, `Escape`, close on a link), `FooterController` (the current year),
-  `ProductsController` (`Toggle`), `FeaturesController` (`Tabs`), `FaqController` (`Disclosure`), `TestimonialsController` (`Toggle` and a `Carousel` per panel).
+  `ProductsController` (`Toggle`; also selects the tab named by a `#products-<key>` address and scrolls to the section), `FeaturesController` (`Tabs`), `FaqController` (`Disclosure`), `TestimonialsController` (`Toggle` and a `Carousel` per panel).
 - Hooks are `data-*`: section roots `data-header`, `data-footer`, `data-products`, `data-features`, `data-faq`, `data-testimonials`, the converter `data-currency-converter` (`ai/rules/oop.md`).
 
 ## Assets (`src/assets/`)
