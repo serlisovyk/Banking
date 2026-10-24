@@ -70,6 +70,7 @@ each with the record that replaced it.
 - [Currency converter: fixed rates in `data/`, no API, a native select](2026-10-24-fixed-rates-native-select.md)
 - [Carousel: CSS scroll-snap, no library](2026-10-24-carousel-scroll-snap.md)
 - [Open Account leads to Our Products, the tab in the address](2026-10-24-open-account-to-products.md)
+- [Search files are hand-written in `public/`; the JSON-LD comes from `data/`](2026-10-24-seo-files-in-public.md)
 
 ### Superseded
 
