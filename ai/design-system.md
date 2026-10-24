@@ -167,8 +167,8 @@ Pressed: moves down 2 px. Sizes (height, vertical × horizontal padding):
 
 | Size                                                                     | 1920 / 1440 / 390        | Padding                     |
 | ------------------------------------------------------------------------ | ------------------------ | --------------------------- |
-| Hero action (`Open Account` in the hero)                                 | 63 / 49 / 49             | 18 × 30 / 14 × 24 / 14 × 24 |
-| Default (Learn More, Load All FAQ's, CTA, feature tab)                   | 63 / 49 / 49             | 18 × 24 / 14 × 20 / 14 × 20 |
+| Hero action (`Open Account` in the hero and the CTA)                     | 63 / 49 / 49             | 18 × 30 / 14 × 24 / 14 × 24 |
+| Default (Learn More, Load All FAQ's, feature tab)                        | 63 / 49 / 49             | 18 × 24 / 14 × 20 / 14 × 20 |
 | Compact (Apply Now)                                                      | 59 / 45 / 45             | 16 × 30 / 12 × 20 / 12 × 20 |
 | Nav link (active one has a `--grey-15` pill)                             | 51 / 41 / n/a            | 12 × 24 / 10 × 18           |
 | Social circle, footer (primary, glyph `--grey-11`)                       | 52 / 44 / 44             | square                      |
@@ -235,12 +235,13 @@ Decorative backgrounds in `assets/images/decor/`, never content. The dotted ones
 rasters at twice the CSS size, baked over the surface they sit on (`--grey-10` or `--grey-11`); a
 new photo or decor is `webp` or `avif`, never a vector with a path per dot:
 
-| Decor                      | Where                                                                     |
-| -------------------------- | ------------------------------------------------------------------------- |
-| `dots.avif`                | the top-left of every page, behind the navbar, 600 wide                   |
-| `growth-arrows.svg`        | top right of the Home hero, 418 × 383 at 1920, 300 × 275 at 1440          |
-| `dots-grid.avif`           | top right of the page-hero panel (the CTA has a similar grid at its left) |
-| `dot-wave-left/right.avif` | a corner of the use-case plate, mirrored on the second row, 200 × 211     |
+| Decor                      | Where                                                                    |
+| -------------------------- | ------------------------------------------------------------------------ |
+| `dots.avif`                | the top-left of every page, behind the navbar, 600 wide                  |
+| `growth-arrows.svg`        | top right of the Home hero, 418 × 383 at 1920, 300 × 275 at 1440         |
+| `dots-grid.avif`           | top right of the page-hero panel                                         |
+| `dots-fine.avif`           | top left of the CTA panel, a fine grid fading out, 320 wide (240 at 390) |
+| `dot-wave-left/right.avif` | a corner of the use-case plate, mirrored on the second row, 200 × 211    |
 
 ## Pages
 
@@ -279,9 +280,10 @@ line (`--grey-60`, weight 300). At 390 these stack into centred rows. The drawn 
 6. **Our Testimonials.** Heading block with the toggle; three cards in a row (404 / 325
    wide), a round arrow at each side, the outer cards fading into the background; at 390 one
    card, the arrows below it.
-7. **CTA.** A bordered panel (`--grey-15`, `--border-radius-small`, dotted decor at its left):
-   a title (`--text-title-lg`, accent words green), a paragraph and the hero action at the
-   right; at 390 stacked and centred.
+7. **CTA.** A bordered panel (`--grey-11`, 1 px `--grey-15`, `--border-radius-small`, dotted decor
+   at its left, padding `--space-cta` 80 / 60 / 30): a title (`--text-title-lg`, accent words green),
+   a paragraph (at most 1060 wide) and the hero action at the right; below 1024 stacked and centred.
+   The panel is as tall as its content (285 / 228 / 342 built, 288 / 223 / 360 drawn).
 
 ### Careers
 

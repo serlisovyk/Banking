@@ -33,7 +33,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 ## Pages
 
-- `index.html` — `shared/header`, `home/hero`, `home/products`, `home/cases`, `home/features`, `shared/faq`, `home/testimonials`, `shared/footer`.
+- `index.html` — `shared/header`, `home/hero`, `home/products`, `home/cases`, `home/features`, `shared/faq`, `home/testimonials`, `shared/cta`, `shared/footer`.
 - `careers.html` — `shared/header`, `shared/page-hero`, `careers/values`, `shared/footer`.
 - `about.html`, `security.html` — only `shared/header` and `shared/footer` so far.
 - No `404.html` source: the build copies `dist/index.html` to `dist/404.html` (a plugin in `vite.config.js`); Vercel serves it
@@ -50,6 +50,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `sections/home/features` — category tabs: `featureGroups` as tabs, panels of `feature-item`.
 - `sections/shared/faq` — the FAQ: `groups` (the default set is `questionGroups`) as `question-item`, the rest under an expander; `name` makes its ids unique.
 - `sections/home/testimonials` — the audience switch and two panels, each a `testimonial-carousel`.
+- `sections/shared/cta` — the call-to-action card of Home and Careers: one context, an entry of `cta` (title parts, text, `button`).
 - `sections/careers/values` — Our Values on Careers.
 - `components/section-heading` — a section's title (one accent word), text (an optional link at its end) and an optional right slot (the toggle).
 - `components/` — `product-card`, `case-item`, `feature-item`, `question-item`: data comes as hash parameters or from `each`.
@@ -62,6 +63,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
   `products.js` → `products`, `values.js` → `values`, `hero-transactions.js` → `heroTransactions`,
   `testimonials.js` → `testimonials` (text, name and the "N of M" `position` per audience),
   `currency-rates.js` → `currencies` (code, name, icons, rate per 1 USD, decimals; the fixed rates, decision `fixed-rates-native-select`).
+- `cta.js` → `cta` (the `home` and `careers` entries of the CTA).
 - `contacts.js` → `contacts`, `socials.js` → `socials`, `footer.js` → `footer` (copyright, legal documents, author name).
 - `navigation.js` → `navigation` (the menu links); `pages.js` → `pages`: `title`, `description`, `navKey` and the `hero` of the page-hero pages, per page file name.
 
