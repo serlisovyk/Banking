@@ -1,0 +1,60 @@
+<div
+  class="testimonial-carousel"
+  role="region"
+  aria-roledescription="carousel"
+  aria-label="{{label}}"
+  data-carousel
+>
+  <button
+    type="button"
+    class="button button--empty testimonial-carousel__arrow testimonial-carousel__arrow--previous"
+    data-carousel-previous
+    aria-label="Previous testimonial"
+  >
+    <img
+      src="/assets/images/icons/arrow-right.svg"
+      width="34"
+      height="34"
+      alt=""
+      aria-hidden="true"
+    />
+  </button>
+
+  <div class="testimonial-carousel__track" data-carousel-track>
+    {{#each items}}
+    <figure
+      class="testimonial-carousel__slide"
+      role="group"
+      aria-roledescription="slide"
+      aria-label="{{position}}"
+      data-carousel-slide
+    >
+      <img
+        class="testimonial-carousel__quote"
+        src="/assets/images/icons/quote.svg"
+        width="60"
+        height="60"
+        alt=""
+        aria-hidden="true"
+      />
+      <blockquote class="testimonial-carousel__text">{{text}}</blockquote>
+      <figcaption class="testimonial-carousel__name">{{name}}</figcaption>
+    </figure>
+    {{/each}}
+  </div>
+
+  <button
+    type="button"
+    class="button button--empty testimonial-carousel__arrow testimonial-carousel__arrow--next"
+    data-carousel-next
+    aria-label="Next testimonial"
+  >
+    <img
+      src="/assets/images/icons/arrow-right.svg"
+      width="34"
+      height="34"
+      alt=""
+      aria-hidden="true"
+    />
+  </button>
+</div>

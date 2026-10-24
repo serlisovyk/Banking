@@ -1,0 +1,110 @@
+.testimonial-carousel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas: 'previous track next';
+  align-items: center;
+  column-gap: var(--space-testimonial-arrow);
+
+  @media (width < 1024px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'track track'
+      'previous next';
+    gap: 30px 20px;
+  }
+}
+
+.testimonial-carousel__track {
+  grid-area: track;
+  display: flex;
+  gap: var(--space-testimonial-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    var(--black) 30%,
+    var(--black) 70%,
+    transparent
+  );
+
+  @media (width < 1024px) {
+    mask-image: none;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.testimonial-carousel__slide {
+  flex: 0 0 calc((100% - 2 * var(--space-testimonial-gap)) / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  scroll-snap-align: start;
+
+  @media (width < 1024px) {
+    flex-basis: 100%;
+  }
+}
+
+.testimonial-carousel__quote {
+  width: var(--icon-quote);
+  height: var(--icon-quote);
+  margin-bottom: var(--space-card-gap);
+}
+
+.testimonial-carousel__text {
+  max-width: 600px;
+  margin-bottom: var(--space-card-gap-sm);
+  color: var(--white);
+}
+
+.testimonial-carousel__name {
+  font-weight: 500;
+  font-size: var(--text-testimonial-name);
+  color: var(--green-60);
+}
+
+.testimonial-carousel__arrow {
+  display: grid;
+  place-items: center;
+  width: var(--testimonial-arrow-size);
+  height: var(--testimonial-arrow-size);
+  padding: 0;
+  border: 1px solid var(--grey-15);
+
+  img {
+    width: var(--icon-testimonial-arrow);
+    height: var(--icon-testimonial-arrow);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.testimonial-carousel__arrow--previous {
+  grid-area: previous;
+
+  img {
+    transform: scaleX(-1);
+  }
+
+  @media (width < 1024px) {
+    justify-self: end;
+  }
+}
+
+.testimonial-carousel__arrow--next {
+  grid-area: next;
+
+  @media (width < 1024px) {
+    justify-self: start;
+  }
+}

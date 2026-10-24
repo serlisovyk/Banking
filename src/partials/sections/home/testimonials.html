@@ -1,0 +1,41 @@
+<section class="testimonials section" data-testimonials>
+  <div class="container">
+    {{#> components/section-heading titleStart="Our" titleAccent="Testimonials"
+    text="Discover how YourBank has transformed lives with innovative digital
+    solutions and personalized customer service. See why our clients trust us for a
+    secure and prosperous financial journey" }}
+    <div class="toggle" role="group" aria-label="Testimonial audience">
+      <button
+        id="testimonials-individuals-button"
+        type="button"
+        class="button toggle__button"
+        data-toggle-button="individuals"
+        aria-controls="testimonials-individuals"
+        aria-pressed="true"
+      >
+        For Individuals
+      </button>
+      <button
+        id="testimonials-businesses-button"
+        type="button"
+        class="button button--empty toggle__button"
+        data-toggle-button="businesses"
+        aria-controls="testimonials-businesses"
+        aria-pressed="false"
+      >
+        For Businesses
+      </button>
+    </div>
+    {{/components/section-heading}}
+
+    <div id="testimonials-individuals" data-toggle-panel="individuals">
+      {{> components/testimonial-carousel label="Testimonials from individuals"
+      items=testimonials.individuals }}
+    </div>
+
+    <div id="testimonials-businesses" data-toggle-panel="businesses" hidden>
+      {{> components/testimonial-carousel label="Testimonials from businesses"
+      items=testimonials.businesses }}
+    </div>
+  </div>
+</section>

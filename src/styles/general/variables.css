@@ -108,6 +108,13 @@
   --space-values-gap: clamp(60px, 4.1667vw, 80px);
   --space-value-inset: clamp(24px, calc(1.25vw + 6px), 30px);
 
+  --space-testimonial-gap: clamp(60px, 4.1667vw, 80px);
+  --space-testimonial-arrow: clamp(40px, calc(2.0833vw + 10px), 50px);
+  --testimonial-arrow-size: clamp(52px, calc(2.0833vw + 22px), 62px);
+  --icon-testimonial-arrow: clamp(28px, calc(1.25vw + 10px), 34px);
+  --icon-quote: clamp(44px, calc(3.3333vw - 4px), 60px);
+  --text-testimonial-name: clamp(16px, calc(0.4167vw + 10px), 18px);
+
   --space-page-hero: clamp(40px, calc(2.0833vw + 10px), 50px);
   --space-page-hero-card: clamp(60px, 4.1667vw, 80px);
   --page-hero-card-width: clamp(658px, calc(27.7083vw + 259px), 791px);
@@ -186,6 +193,13 @@
     --space-faq-line: clamp(20px, calc(0.381vw + 18.51px), 24px);
     --space-values-gap: clamp(50px, calc(0.9524vw + 46.29px), 60px);
     --space-value-inset: clamp(20px, calc(0.381vw + 18.51px), 24px);
+
+    --space-testimonial-gap: 60px;
+    --space-testimonial-arrow: 40px;
+    --testimonial-arrow-size: 52px;
+    --icon-testimonial-arrow: 28px;
+    --icon-quote: 44px;
+    --text-testimonial-name: 16px;
 
     --space-page-hero: clamp(14px, calc(2.4762vw + 4.34px), 40px);
     --space-page-hero-card: clamp(24px, calc(3.4286vw + 10.63px), 60px);
