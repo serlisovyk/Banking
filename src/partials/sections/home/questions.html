@@ -1,4 +1,4 @@
-<section class="questions section">
+<section class="questions section" data-questions>
   <div class="container">
     <div class="questions__inner">
       <div class="questions__heading">
@@ -11,7 +11,12 @@
         <div class="questions__items">
           {{#each questionGroups.initial}} {{> components/question-item}} {{/each}}
         </div>
-        <div class="questions__more" id="questions-more" inert>
+        <div
+          class="questions__more"
+          id="questions-more"
+          data-disclosure-region
+          inert
+        >
           <div class="questions__items">
             {{#each questionGroups.additional}} {{> components/question-item}}
             {{/each}}
@@ -20,11 +25,11 @@
         <button
           type="button"
           class="questions__button button button--secondary"
-          data-questions-toggle
+          data-disclosure-trigger
           aria-controls="questions-more"
           aria-expanded="false"
         >
-          <span data-questions-toggle-label>Load All FAQ’s</span>
+          <span data-disclosure-label>Load All FAQ’s</span>
           <img
             src="/assets/images/icons/small-arrow.svg"
             width="22"

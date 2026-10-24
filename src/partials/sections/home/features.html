@@ -1,4 +1,4 @@
-<section class="features section">
+<section class="features section" data-features>
   <div class="container">
     <div class="features__inner">
       <div class="features__heading">
@@ -22,7 +22,7 @@
             type="button"
             role="tab"
             class="button button--secondary features__button{{#if @first}} features__button--active{{/if}}"
-            data-features-tab="{{id}}"
+            data-tab="{{id}}"
             aria-controls="features-panel-{{id}}"
             aria-selected="{{#if @first}}true{{else}}false{{/if}}"
             tabindex="{{#if @first}}0{{else}}-1{{/if}}"
@@ -38,7 +38,7 @@
             class="features__items{{#if @first}} features__items--active{{/if}}"
             role="tabpanel"
             aria-labelledby="features-tab-{{id}}"
-            data-features-panel="{{id}}"
+            data-tab-panel="{{id}}"
             tabindex="0"
           >
             {{#each items}} {{> components/feature-item}} {{/each}}
