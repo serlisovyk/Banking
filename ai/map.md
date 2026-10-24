@@ -15,10 +15,12 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `vite.config.js` — Vite (`root: 'src'`, output `dist/` at the repo root) with `vite-plugin-handlebars`: the `partials`
   folder and `context(pagePath)`, which sets the `isHome`, `isAbout`, `isCareers`, `isSecurity` flags and passes the
   `data/` constants. The pages are listed in `build.rollupOptions.input`.
-- `package.json` — scripts `dev`, `build`, `preview`, `format`, `format:check`, `lint`, `lint:fix`, `lint:css`, `lint:css:fix`;
+- `package.json` — scripts `dev`, `build`, `preview`, `format`, `format:check`, `lint`, `lint:fix`, `lint:css`, `lint:css:fix`, `size`;
   `package-lock.json` — the lockfile (npm, decision `npm-package-manager`). License: MIT, declared in `package.json` only
   (decision `license-in-package-json`).
 - `.prettierrc`, `.prettierignore` — Prettier. `eslint.config.js` — ESLint, `.stylelintrc.json` — Stylelint (decision `linters`).
+- `.size-limit.json` — limits on the built JS, CSS, font and images, checked by `npm run size` after a build.
+- `.github/workflows/ci.yml` — GitHub Actions: the checks of `AGENTS.md` "Verification" on every push (decision `ci-size-limit`).
 - `.husky/pre-commit` runs lint-staged (`.lintstagedrc.json`): ESLint and Stylelint `--fix`, then Prettier, on staged files.
 - `vercel.json` — Vercel: clean URLs, the redirect from the old `/pages/…` links, the cache header of `/assets/`.
 - `AGENTS.md` — the entry point for agents; `CLAUDE.md` points to it.
@@ -91,4 +93,3 @@ branches get previews; the config is `vercel.json` only (decision `clean-urls-ve
 - No UI framework, TypeScript, CSS preprocessor or backend: decision `vanilla-js-vite-handlebars`.
 - No automated tests: decision `no-automated-tests`. No pull requests: decision `local-merge-without-pr`.
 - No Login or Sign Up pages: decision `four-pages-no-auth`. No external currency API: `ai/rules/scope.md`.
-- No CI yet: it is in scope, not built.

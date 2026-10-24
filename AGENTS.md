@@ -94,9 +94,8 @@ If a change materially reshapes a pattern, update the matching skill in the same
 - Sources: everything under `src/` (pages, `partials/`, `data/`, `styles/`, `scripts/`,
   `assets/`); output in `dist/`. `ai/map.md` shows where each lives.
 - Formatting and linting: Prettier (`.prettierrc`), ESLint (`eslint.config.js`) and Stylelint
-  (`.stylelintrc.json`). A pre-commit hook (Husky, lint-staged) fixes and formats what is staged.
-  CI is not in the repo yet and is not forbidden; when it lands, its commands join "Verification"
-  below.
+  (`.stylelintrc.json`). A pre-commit hook (Husky, lint-staged) fixes and formats what is staged;
+  GitHub Actions runs the checks under "Verification" on every push.
 - The design is a third-party template: a visual reference only. Its link, file key and
   node ids never go into the repo (`ai/decisions/`).
 
@@ -115,6 +114,7 @@ npm run lint
 npm run lint:css
 npm run format:check
 npm run build
+npm run size
 ```
 
 Then exercise the change in the browser (`npm run dev`): 1920, 1440 and 390 px wide

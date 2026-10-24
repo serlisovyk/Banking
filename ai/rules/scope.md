@@ -15,9 +15,8 @@ application template.
 - A client-side router, analytics, third-party runtime scripts
 - A service worker or PWA, i18n
 
-Not forbidden, planned as a separate task (MY-183): CI. More linter rules beyond the ones in
-`eslint.config.js` and `.stylelintrc.json` are a new decision (`ai/decisions/`). A new page beyond
-the four needs the author's explicit request.
+More linter rules beyond the ones in `eslint.config.js` and `.stylelintrc.json` are a new decision
+(`ai/decisions/`). A new page beyond the four needs the author's explicit request.
 
 Third-party scripts, a font CDN, a sitemap and a web app manifest:
 `ai/rules/assets-performance.md`. The decisions behind these limits are in `ai/decisions/`.
