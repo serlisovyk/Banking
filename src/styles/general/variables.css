@@ -28,7 +28,152 @@
   --font-family: 'Lexend';
 
   --border-radius: 40px;
+  --border-radius-pill: 100px;
+  --border-radius-large: 20px;
+  --border-radius-medium: 16px;
   --border-radius-small: 12px;
 
   --transition-duration: 0.2s;
+
+  --content-width: 1596px;
+
+  --gutter: clamp(80px, calc(17.0833vw - 166px), 162px);
+  --space-section: clamp(120px, calc(6.25vw + 30px), 150px);
+  --space-navbar-top: clamp(30px, calc(4.1667vw - 30px), 50px);
+  --navbar-padding-y: clamp(15px, calc(1.25vw - 3px), 21px);
+  --navbar-padding-x: clamp(28px, calc(1.25vw + 10px), 34px);
+  --logo-width: 156px;
+  --space-nav-gap: clamp(20px, calc(1.25vw + 2px), 26px);
+  --navbar-link-padding-y: clamp(10px, calc(0.4167vw + 4px), 12px);
+  --navbar-link-padding-x: clamp(18px, 1.25vw, 24px);
+
+  --text-title: clamp(38px, calc(2.0833vw + 8px), 48px);
+  --text-title-hero: clamp(48px, calc(2.0833vw + 18px), 58px);
+  --text-title-lg: clamp(32px, calc(1.25vw + 14px), 38px);
+  --text-title-md: clamp(26px, calc(0.8333vw + 14px), 30px);
+  --text-stat: clamp(40px, calc(3.75vw - 14px), 58px);
+  --text-value: clamp(40px, calc(3.75vw - 14px), 58px);
+  --text-card-title: clamp(20px, calc(0.8333vw + 8px), 24px);
+  --text-card-title-sm: clamp(18px, calc(0.8333vw + 6px), 22px);
+  --text-question: clamp(18px, calc(0.4167vw + 12px), 20px);
+  --text-plate: clamp(16px, calc(0.8333vw + 4px), 20px);
+  --text-body: clamp(16px, calc(0.4167vw + 10px), 18px);
+  --text-button: clamp(14px, calc(0.8333vw + 2px), 18px);
+
+  --button-padding-y: clamp(14px, calc(0.8333vw + 2px), 18px);
+  --button-padding-x: clamp(20px, calc(0.8333vw + 8px), 24px);
+  --button-padding-x-lg: clamp(24px, calc(1.25vw + 6px), 30px);
+  --toggle-padding: clamp(12px, calc(0.4167vw + 6px), 14px);
+  --toggle-button-padding-y: clamp(10px, calc(0.8333vw - 2px), 14px);
+  --toggle-button-padding-x: clamp(18px, 1.25vw, 24px);
+
+  --space-heading-gap: clamp(10px, calc(0.8333vw - 2px), 14px);
+  --space-heading-block: clamp(60px, 4.1667vw, 80px);
+  --space-heading-block-toggle: clamp(80px, calc(4.1667vw + 20px), 100px);
+  --space-card: clamp(40px, calc(2.0833vw + 10px), 50px);
+  --space-card-gap: clamp(24px, calc(1.25vw + 6px), 30px);
+  --space-card-gap-sm: clamp(16px, calc(0.8333vw + 4px), 20px);
+  --space-grid-gap: clamp(20px, calc(2.0833vw - 10px), 30px);
+  --space-columns: clamp(80px, calc(4.1667vw + 20px), 100px);
+  --icon-product: clamp(72px, calc(5.4167vw - 6px), 98px);
+
+  --space-hero-top: clamp(90px, calc(13.125vw - 99px), 153px);
+  --space-hero-bottom: clamp(61px, calc(3.125vw + 16px), 76px);
+  --space-hero-gap: clamp(80px, calc(8.3333vw - 40px), 120px);
+  --hero-card-width: clamp(410px, calc(21.875vw + 95px), 515px);
+  --hero-card-height: clamp(501px, calc(25.625vw + 132px), 624px);
+  --hero-card-padding: clamp(28px, calc(1.25vw + 10px), 34px);
+
+  --icon-case: clamp(64px, calc(2.9167vw + 22px), 78px);
+  --space-case-rows: clamp(40px, calc(4.1667vw - 20px), 60px);
+  --space-case-gap: clamp(60px, calc(8.3333vw - 60px), 100px);
+  --space-plate: clamp(40px, calc(2.0833vw + 10px), 50px);
+  --space-plate-gap: clamp(10px, calc(2.0833vw - 20px), 20px);
+  --space-plate-card: clamp(20px, calc(2.0833vw - 10px), 30px);
+  --space-case-text: clamp(50px, calc(2.0833vw + 20px), 60px);
+  --space-stats-gap: 100px;
+
+  --space-tabs-panel: clamp(40px, calc(2.0833vw + 10px), 50px);
+  --space-tabs-gap: clamp(20px, calc(0.8333vw + 8px), 24px);
+  --space-faq-line: clamp(24px, calc(1.25vw + 6px), 30px);
+  --space-values-gap: clamp(60px, 4.1667vw, 80px);
+  --space-value-inset: clamp(24px, calc(1.25vw + 6px), 30px);
+
+  --space-page-hero: clamp(40px, calc(2.0833vw + 10px), 50px);
+  --space-page-hero-card: clamp(60px, 4.1667vw, 80px);
+  --page-hero-card-width: clamp(658px, calc(27.7083vw + 259px), 791px);
+  --page-hero-photo-width: clamp(715px, calc(52.7083vw - 44px), 968px);
+  --page-hero-photo-height: clamp(568px, calc(30.8333vw + 124px), 716px);
+}
+
+@media (width < 1440px) {
+  :root {
+    --gutter: clamp(16px, calc(6.0952vw - 7.77px), 80px);
+    --space-section: clamp(80px, calc(3.8095vw + 65.14px), 120px);
+    --space-navbar-top: clamp(30px, calc(-0.9524vw + 43.71px), 40px);
+    --navbar-padding-y: clamp(13px, calc(0.1905vw + 12.26px), 15px);
+    --navbar-padding-x: clamp(24px, calc(0.381vw + 22.51px), 28px);
+    --logo-width: clamp(101px, calc(5.2381vw + 80.57px), 156px);
+    --space-nav-gap: clamp(16px, calc(0.381vw + 14.51px), 20px);
+    --navbar-link-padding-y: 10px;
+    --navbar-link-padding-x: 18px;
+
+    --text-title: clamp(28px, calc(0.9524vw + 24.29px), 38px);
+    --text-title-hero: clamp(28px, calc(1.9048vw + 20.57px), 48px);
+    --text-title-lg: clamp(26px, calc(0.5714vw + 23.77px), 32px);
+    --text-title-md: clamp(20px, calc(0.5714vw + 17.77px), 26px);
+    --text-stat: 40px;
+    --text-value: clamp(30px, calc(0.9524vw + 26.29px), 40px);
+    --text-card-title: 20px;
+    --text-card-title-sm: 18px;
+    --text-question: 18px;
+    --text-plate: clamp(14px, calc(0.1905vw + 13.26px), 16px);
+    --text-body: clamp(14px, calc(0.1905vw + 13.26px), 16px);
+    --text-button: 14px;
+
+    --button-padding-y: 14px;
+    --button-padding-x: 20px;
+    --button-padding-x-lg: 24px;
+    --toggle-padding: 12px;
+    --toggle-button-padding-y: 10px;
+    --toggle-button-padding-x: 18px;
+
+    --space-heading-gap: 10px;
+    --space-heading-block: 60px;
+    --space-heading-block-toggle: clamp(60px, calc(1.9048vw + 52.57px), 80px);
+    --space-card: clamp(30px, calc(0.9524vw + 26.29px), 40px);
+    --space-card-gap: clamp(20px, calc(0.381vw + 18.51px), 24px);
+    --space-card-gap-sm: clamp(12px, calc(0.381vw + 10.51px), 16px);
+    --space-grid-gap: 20px;
+    --space-columns: clamp(60px, calc(1.9048vw + 52.57px), 80px);
+    --icon-product: 72px;
+
+    --space-hero-top: clamp(50px, calc(3.8095vw + 35.14px), 90px);
+    --space-hero-bottom: clamp(61px, calc(-1.9048vw + 88.43px), 81px);
+    --space-hero-gap: 80px;
+    --hero-card-width: clamp(305px, calc(10vw + 266px), 410px);
+    --hero-card-height: clamp(368px, calc(12.6667vw + 318.6px), 501px);
+    --hero-card-padding: clamp(20px, calc(0.7619vw + 17.03px), 28px);
+
+    --icon-case: 64px;
+    --space-case-rows: 40px;
+    --space-case-gap: clamp(30px, calc(2.8571vw + 18.86px), 60px);
+    --space-plate: clamp(20px, calc(1.9048vw + 12.57px), 40px);
+    --space-plate-gap: 10px;
+    --space-plate-card: 20px;
+    --space-case-text: 50px;
+    --space-stats-gap: clamp(60px, calc(3.8095vw + 45.14px), 100px);
+
+    --space-tabs-panel: clamp(20px, calc(1.9048vw + 12.57px), 40px);
+    --space-tabs-gap: 20px;
+    --space-faq-line: clamp(20px, calc(0.381vw + 18.51px), 24px);
+    --space-values-gap: clamp(50px, calc(0.9524vw + 46.29px), 60px);
+    --space-value-inset: clamp(20px, calc(0.381vw + 18.51px), 24px);
+
+    --space-page-hero: clamp(14px, calc(2.4762vw + 4.34px), 40px);
+    --space-page-hero-card: clamp(24px, calc(3.4286vw + 10.63px), 60px);
+    --page-hero-card-width: 658px;
+    --page-hero-photo-width: clamp(329px, calc(36.7619vw + 185.63px), 715px);
+    --page-hero-photo-height: clamp(253px, calc(30vw + 136px), 568px);
+  }
 }
