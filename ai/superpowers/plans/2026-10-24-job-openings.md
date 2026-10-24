@@ -35,8 +35,8 @@ and a generic `badge` that Press Releases on About reuses. No spec: the only new
   of a row end alike.
 - Fluid tokens in `variables.css` (`:root` for 1440 to 1920, the `< 1440` block for 390 to 1440):
   `--space-job-card` 50 / 40 / 24, `--space-job-block` 40 / 32 / 24, `--space-job-list` 20 / 14 / 14,
-  `--text-job-title` 30 / 24 / 20, `--text-job-subtitle` 24 / 20 / 18, `--badge-padding-y` 8 / 6 / 6,
-  `--badge-padding-x` 16 / 14 / 10, `--badge-gap` 10 / 8 / 6, `--button-padding-y-compact` 16 / 12 / 12,
+  `--text-job-title` 30 / 24 / 20, `--text-job-subtitle` 24 / 20 / 18, `--badge-padding-y` 7 / 5 / 5 (the 1 px border brings the pill to 43 / 36 / 33),
+  `--badge-padding-x` 15 / 13 / 9, `--badge-gap` 10 / 8 / 6, `--button-padding-y-compact` 16 / 12 / 12,
   `--button-padding-x-compact` 30 / 20 / 20. Values at 1920 are measured from the crop; 1440 and 390 are
   the design-system figures where it has them and scaled otherwise (`--space-job-block`).
 - `careers.html`: the section after Benefits.
