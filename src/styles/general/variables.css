@@ -59,6 +59,7 @@
   --text-question: clamp(18px, calc(0.4167vw + 12px), 20px);
   --text-plate: clamp(16px, calc(0.8333vw + 4px), 20px);
   --text-body: clamp(16px, calc(0.4167vw + 10px), 18px);
+  --text-page-hero-label: clamp(18px, calc(0.4167vw + 12px), 20px);
   --text-button: clamp(14px, calc(0.8333vw + 2px), 18px);
 
   --button-padding-y: clamp(14px, calc(0.8333vw + 2px), 18px);
@@ -130,6 +131,7 @@
     --text-question: 18px;
     --text-plate: clamp(14px, calc(0.1905vw + 13.26px), 16px);
     --text-body: clamp(14px, calc(0.1905vw + 13.26px), 16px);
+    --text-page-hero-label: clamp(14px, calc(0.381vw + 12.51px), 18px);
     --text-button: 14px;
 
     --button-padding-y: 14px;

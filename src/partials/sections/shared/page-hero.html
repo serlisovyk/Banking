@@ -1,0 +1,26 @@
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__inner">
+      <div class="page-hero__content">
+        {{#if eyebrow}}
+        <p class="page-hero__eyebrow">{{eyebrow}}</p>
+        {{/if}}
+        <h1 class="page-hero__title">
+          {{#if titleStart}}{{titleStart}} {{/if}}<span>{{titleAccent}}</span>{{#if
+          titleEnd}} {{titleEnd}}{{/if}}
+        </h1>
+        <p class="page-hero__text">{{text}}</p>
+      </div>
+      <div class="page-hero__image">
+        <img
+          src="{{image.src}}"
+          width="{{image.width}}"
+          height="{{image.height}}"
+          alt="{{image.alt}}"
+          aria-hidden="{{#if image.alt}}false{{else}}true{{/if}}"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </div>
+</section>
