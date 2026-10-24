@@ -1,29 +1,23 @@
-<section class="questions section" data-questions>
+<section class="faq section" data-faq>
   <div class="container">
-    <div class="questions__inner">
+    <div class="faq__inner">
       {{> components/section-heading titleAccent="Frequently" titleEnd="Asked
       Questions" text="Still you have any questions? Contact our Team via
       support@yourbank.com" }}
-      <div class="questions__content">
-        <div class="questions__items">
-          {{#each questionGroups.initial}} {{> components/question-item}} {{/each}}
+      <div class="faq__content">
+        <div class="faq__items">
+          {{#each groups.initial}} {{> components/question-item}} {{/each}}
         </div>
-        <div
-          class="questions__more"
-          id="questions-more"
-          data-disclosure-region
-          inert
-        >
-          <div class="questions__items">
-            {{#each questionGroups.additional}} {{> components/question-item}}
-            {{/each}}
+        <div class="faq__more" id="faq-{{name}}-more" data-disclosure-region inert>
+          <div class="faq__items">
+            {{#each groups.additional}} {{> components/question-item}} {{/each}}
           </div>
         </div>
         <button
           type="button"
-          class="questions__button button button--secondary"
+          class="faq__button button button--secondary"
           data-disclosure-trigger
-          aria-controls="questions-more"
+          aria-controls="faq-{{name}}-more"
           aria-expanded="false"
         >
           <span data-disclosure-label>Load All FAQ’s</span>

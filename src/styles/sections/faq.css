@@ -1,4 +1,4 @@
-.questions__items {
+.faq__items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-grid-gap);
@@ -8,16 +8,16 @@
   }
 }
 
-.questions__more {
-  --questions-more-animation-duration: 650ms;
-  --questions-more-animation-easing: ease-in-out;
+.faq__more {
+  --faq-more-animation-duration: 650ms;
+  --faq-more-animation-easing: ease-in-out;
 
   position: relative;
   max-height: 220px;
   overflow: hidden;
   margin-top: var(--space-grid-gap);
-  transition: max-height var(--questions-more-animation-duration)
-    var(--questions-more-animation-easing);
+  transition: max-height var(--faq-more-animation-duration)
+    var(--faq-more-animation-easing);
 
   &::after {
     content: '';
@@ -26,20 +26,20 @@
     height: 220px;
     background: linear-gradient(to bottom, transparent 35%, var(--grey-10));
     pointer-events: none;
-    transition: opacity var(--questions-more-animation-duration)
-      var(--questions-more-animation-easing);
+    transition: opacity var(--faq-more-animation-duration)
+      var(--faq-more-animation-easing);
   }
 }
 
-.questions__more--expanded {
-  max-height: var(--questions-expanded-height, 220px);
+.faq__more--expanded {
+  max-height: var(--faq-expanded-height, 220px);
 
   &::after {
     opacity: 0;
   }
 }
 
-.questions__button {
+.faq__button {
   position: relative;
   z-index: 1;
   display: flex;
@@ -55,7 +55,7 @@
   }
 }
 
-.questions__button[aria-expanded='true'] {
+.faq__button[aria-expanded='true'] {
   margin-top: 30px;
 
   img {

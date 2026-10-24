@@ -9,7 +9,7 @@ const SECTIONS = [
   { selector: '[data-header]', Controller: HeaderMenuController },
   { selector: '[data-products]', Controller: ProductsController },
   { selector: '[data-features]', Controller: FeaturesController },
-  { selector: '[data-questions]', Controller: FaqController },
+  { selector: '[data-faq]', Controller: FaqController },
   { selector: '[data-currency-converter]', Controller: CurrencyConverter },
   { selector: '[data-footer]', Controller: FooterController },
 ]
