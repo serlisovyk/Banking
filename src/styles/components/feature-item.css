@@ -2,12 +2,8 @@
   background: var(--grey-11);
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius-small);
-  padding: 50px;
+  padding: var(--space-card);
   max-width: 620px;
-
-  @media (width < 768px) {
-    padding: 30px;
-  }
 }
 
 .feature-item__top {
@@ -15,16 +11,12 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  margin-bottom: 30px;
+  margin-bottom: var(--space-card-gap);
 }
 
 .feature-item__title {
   font-weight: 400;
-  font-size: 22px;
+  font-size: var(--text-card-title-sm);
   line-height: 150%;
   color: var(--white);
-
-  @media (width < 768px) {
-    font-size: 18px;
-  }
 }

@@ -1,28 +1,19 @@
 .question-item {
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius-small);
-  padding: 50px;
+  padding: var(--space-card);
 
   @media (width < 1024px) {
     text-align: center;
-  }
-
-  @media (width < 768px) {
-    padding: 30px;
   }
 }
 
 .question-item__title {
   border-bottom: 1px solid var(--grey-15);
   font-weight: 500;
-  font-size: 20px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
+  font-size: var(--text-question);
+  line-height: normal;
+  padding-bottom: var(--space-faq-line);
+  margin-bottom: var(--space-faq-line);
   color: var(--white);
-
-  @media (width < 1024px) {
-    font-size: 18px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-  }
 }

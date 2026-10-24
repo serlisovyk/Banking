@@ -1,16 +1,10 @@
 .case-item {
   display: flex;
   align-items: center;
-  gap: 7vw;
-
-  @media (width < 1440px) {
-    align-items: start;
-  }
+  gap: var(--space-case-gap);
 
   @media (width < 1024px) {
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
   }
 }
 
@@ -22,6 +16,18 @@
   }
 }
 
+.case-item__icons,
+.case-item__info {
+  flex: 1 1 0;
+  min-width: 0;
+
+  @media (width < 1024px) {
+    flex: none;
+    width: 100%;
+    max-width: 748px;
+  }
+}
+
 .case-item__icons {
   background: var(--grey-11);
   background-image: url('/assets/images/decor/dot-wave-left.avif');
@@ -29,16 +35,10 @@
   background-position: top left;
   background-size: 200px;
   border-radius: var(--border-radius);
-  padding: 50px;
+  padding: var(--space-plate);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-
-  @media (width < 768px) {
-    padding: 30px;
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
+  gap: var(--space-plate-gap);
 }
 
 .case-item--inverted .case-item__icons {
@@ -49,23 +49,21 @@
 .case-item__icon {
   background: var(--grey-10);
   border: 1px solid var(--grey-15);
-  border-radius: 16px;
+  border-radius: var(--border-radius-medium);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  width: 320px;
-  padding: 30px;
+  padding: var(--space-plate-card);
+}
 
-  @media (width < 1440px) {
-    width: 240px;
-    padding: 20px;
-  }
+.case-item__icon-image img {
+  width: var(--icon-case);
 }
 
 .case-item__icon-title {
   font-weight: 400;
-  font-size: 20px;
+  font-size: var(--text-plate);
   line-height: 150%;
   text-align: center;
   color: var(--white);
@@ -73,10 +71,10 @@
 
 .case-item__info-title {
   font-weight: 500;
-  font-size: 30px;
+  font-size: var(--text-title-md);
   line-height: 150%;
   color: var(--white);
-  margin-bottom: 16px;
+  margin-bottom: var(--space-heading-gap);
 
   @media (width < 1024px) {
     text-align: center;
@@ -84,7 +82,7 @@
 }
 
 .case-item__info-text {
-  margin-bottom: 60px;
+  margin-bottom: var(--space-case-text);
 
   @media (width < 1024px) {
     text-align: center;
@@ -94,12 +92,11 @@
 .case-item__stats {
   display: flex;
   align-items: stretch;
-  gap: 50px;
-  margin-bottom: 60px;
+  gap: calc(var(--space-stats-gap) / 2);
+  margin-bottom: var(--space-case-text);
 
-  @media (width < 1440px) {
+  @media (width < 768px) {
     flex-direction: column;
-    gap: 10px;
   }
 
   @media (width < 1024px) {
@@ -114,7 +111,7 @@
 
 .case-item__stat-number {
   font-weight: 500;
-  font-size: 58px;
+  font-size: var(--text-stat);
   line-height: 150%;
   color: var(--green-60);
 

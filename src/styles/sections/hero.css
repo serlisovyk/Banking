@@ -1,10 +1,11 @@
 .hero {
-  padding-block: 110px;
+  padding-top: var(--space-hero-top);
+  padding-bottom: var(--space-hero-bottom);
 }
 
 .hero__inner {
   display: flex;
-  gap: 3vw;
+  gap: var(--space-hero-gap);
 
   background-image: url('/assets/images/decor/growth-arrows.svg');
   background-repeat: no-repeat;
@@ -18,7 +19,7 @@
 }
 
 .hero__info {
-  max-width: 830px;
+  max-width: 826px;
 
   @media (width < 1024px) {
     text-align: center;
@@ -30,10 +31,9 @@
   align-items: center;
   gap: 6px;
   background: var(--grey-15);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-pill);
   padding: 10px 20px;
   font-weight: 300;
-  font-size: 18px;
   line-height: 133%;
   color: var(--white);
   margin-bottom: 20px;
@@ -41,10 +41,10 @@
 
 .hero__info-title {
   font-weight: 500;
-  font-size: 48px;
+  font-size: var(--text-title);
   line-height: 150%;
   color: var(--white);
-  margin-bottom: 16px;
+  margin-bottom: var(--space-heading-gap);
 
   span {
     color: var(--green-60);
@@ -52,16 +52,18 @@
 }
 
 .hero__info-text {
+  color: var(--white-90);
   margin-bottom: 50px;
 }
 
 .hero__content {
   position: relative;
+  flex-shrink: 0;
 }
 
 .hero__money {
   position: absolute;
-  top: -40px;
+  top: -48px;
   left: -60px;
   display: inline-flex;
   align-items: center;
@@ -69,6 +71,10 @@
   background: var(--green-10);
   border-radius: var(--border-radius-small);
   padding: 12px 18px;
+
+  @media (width < 1024px) {
+    left: -20px;
+  }
 }
 
 .hero__money-image img {
@@ -81,25 +87,20 @@
 
 .hero__money-amount {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
   color: var(--white);
 }
 
 .hero__money-text {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 150%;
   color: var(--white-90);
 }
 
 .hero__card {
-  background: linear-gradient(214.85deg, transparent 0%, var(--grey-10) 39.72%);
-  border: 1px solid var(--grey-15);
+  background: linear-gradient(215deg, transparent 0%, var(--grey-10) 40%);
+  border: 1px solid var(--green-60);
   border-radius: var(--border-radius-small);
-  padding: 34px;
-  width: 520px;
-  height: 624px;
+  padding: var(--hero-card-padding);
+  width: var(--hero-card-width);
+  min-height: var(--hero-card-height);
 }
 
 .hero__transactions {
@@ -107,9 +108,8 @@
 }
 
 .hero__transactions-title {
+  font-size: var(--text-body);
   font-weight: 500;
-  font-size: 17px;
-  line-height: 150%;
   color: var(--white);
   margin-bottom: 18px;
 }
@@ -121,6 +121,14 @@
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius-small);
   padding: 13px 20px;
+
+  &:nth-of-type(2) {
+    opacity: 0.5;
+  }
+
+  &:nth-of-type(3) {
+    opacity: 0.2;
+  }
 }
 
 .hero__transactions-card-left {
@@ -138,41 +146,34 @@
 }
 
 .hero__transactions-card-title {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 150%;
   color: var(--white);
 }
 
 .hero__transactions-card-name {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
   color: var(--white);
 }
 
 .hero__transactions-card-amount {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 150%;
+  font-size: var(--text-question);
   color: var(--white);
 }
 
 .hero__change-title {
+  font-size: var(--text-body);
   font-weight: 500;
-  font-size: 17px;
-  line-height: 150%;
   color: var(--white);
 }
 
 .hero__button {
   font-family: var(--font-family);
   background: var(--green-10);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-pill);
   font-weight: 400;
-  font-size: 16px;
+  font-size: var(--text-button);
   line-height: 150%;
-  padding: 13px 26px;
+  padding: var(--button-padding-y) var(--button-padding-x);
   color: var(--green-65);
   width: 100%;
 }

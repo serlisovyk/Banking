@@ -9,10 +9,14 @@
   }
 }
 
+.product-card__image {
+  width: var(--icon-product);
+}
+
 .product-card__title {
-  margin: 20px 0 30px;
+  margin: var(--space-card-gap) 0 var(--space-card-gap-sm);
   font-weight: 400;
-  font-size: 24px;
+  font-size: var(--text-card-title);
   line-height: 150%;
   color: var(--white);
   text-align: center;
