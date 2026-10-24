@@ -1,6 +1,7 @@
 export const caseItems = [
   {
     title: 'For Individuals',
+    href: '#products-individuals',
     description:
       'For individuals, our mortgage services pave the way to homeownership, and our flexible personal loans provide vital support during various life milestones. We also prioritize retirement planning, ensuring a financially secure future for our customers',
     icons: [
@@ -20,6 +21,7 @@ export const caseItems = [
   },
   {
     title: 'For Business',
+    href: '#products-businesses',
     description:
       'For businesses, we empower growth with working capital solutions that optimize cash flow, and our tailored financing options fuel business expansion. Whatever your financial aspirations, YourBank is committed to providing the right tools and support to achieve them',
     inverted: true,

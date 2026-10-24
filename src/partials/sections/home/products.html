@@ -10,7 +10,7 @@
           type="button"
           class="button toggle__button"
           data-toggle-button="individuals"
-          aria-controls="products-individuals"
+          aria-controls="products-individuals-panel"
           aria-pressed="true"
         >
           For Individuals
@@ -20,7 +20,7 @@
           type="button"
           class="button button--empty toggle__button"
           data-toggle-button="businesses"
-          aria-controls="products-businesses"
+          aria-controls="products-businesses-panel"
           aria-pressed="false"
         >
           For Businesses
@@ -29,7 +29,7 @@
       {{/components/section-heading}}
 
       <div
-        id="products-individuals"
+        id="products-individuals-panel"
         class="products__content"
         data-toggle-panel="individuals"
         aria-labelledby="products-individuals-button"
@@ -41,7 +41,7 @@
       </div>
 
       <div
-        id="products-businesses"
+        id="products-businesses-panel"
         class="products__content"
         data-toggle-panel="businesses"
         aria-labelledby="products-businesses-button"

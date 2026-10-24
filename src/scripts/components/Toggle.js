@@ -25,6 +25,16 @@ export class Toggle {
     this.#renderPanels(selectedButton.dataset.toggleButton)
   }
 
+  selectByKey(key, { shouldFocus = false } = {}) {
+    const button = this.#buttons.find((item) => item.dataset.toggleButton === key)
+    if (!button) return false
+
+    this.select(button)
+    if (shouldFocus) button.focus({ preventScroll: true })
+
+    return true
+  }
+
   #handleClick(event) {
     const selectedButton = event.target.closest('[data-toggle-button]')
     if (!selectedButton) return

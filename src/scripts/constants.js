@@ -22,6 +22,7 @@ export const FOOTER = Object.freeze({
 
 export const PRODUCTS = Object.freeze({
   inactiveButtonClass: 'button--empty',
+  hashPrefix: '#products-',
 })
 
 export const FEATURES = Object.freeze({
