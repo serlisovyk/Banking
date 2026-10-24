@@ -1,0 +1,39 @@
+.icon-card {
+  background: url('/assets/images/decor/dots-fine.avif'), var(--grey-11);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 320px;
+  border: 1px solid var(--grey-15);
+  border-radius: var(--border-radius);
+  padding: var(--space-card);
+
+  @media (width < 768px) {
+    background-size: 240px;
+    border-radius: var(--border-radius-large);
+  }
+}
+
+.icon-card--inset {
+  background: var(--grey-10);
+  border-radius: var(--border-radius-medium);
+}
+
+.icon-card__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-card-gap-sm);
+  margin-bottom: var(--space-card-gap);
+}
+
+.icon-card__image {
+  flex-shrink: 0;
+  width: var(--icon-card);
+  height: auto;
+}
+
+.icon-card__title {
+  font-weight: 400;
+  font-size: var(--text-card-title);
+  line-height: 150%;
+  color: var(--white);
+}

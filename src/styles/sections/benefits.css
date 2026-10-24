@@ -1,0 +1,9 @@
+.benefits__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-benefits-gap);
+
+  @media (width < 768px) {
+    grid-template-columns: 1fr;
+  }
+}

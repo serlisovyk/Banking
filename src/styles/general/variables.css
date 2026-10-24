@@ -107,6 +107,8 @@
   --space-faq-line: clamp(24px, calc(1.25vw + 6px), 30px);
   --space-values-gap: clamp(60px, 4.1667vw, 80px);
   --space-value-inset: clamp(24px, calc(1.25vw + 6px), 30px);
+  --space-benefits-gap: clamp(60px, calc(8.3333vw - 60px), 100px);
+  --icon-card: var(--icon-product);
 
   --space-testimonial-gap: clamp(60px, 4.1667vw, 80px);
   --space-testimonial-arrow: clamp(40px, calc(2.0833vw + 10px), 50px);
@@ -195,6 +197,7 @@
     --space-faq-line: clamp(20px, calc(0.381vw + 18.51px), 24px);
     --space-values-gap: clamp(50px, calc(0.9524vw + 46.29px), 60px);
     --space-value-inset: clamp(20px, calc(0.381vw + 18.51px), 24px);
+    --space-benefits-gap: clamp(48px, calc(1.1429vw + 43.54px), 60px);
 
     --space-testimonial-gap: 60px;
     --space-testimonial-arrow: 40px;

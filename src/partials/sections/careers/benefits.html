@@ -1,0 +1,11 @@
+<section class="benefits section">
+  <div class="container">
+    {{> components/section-heading titleStart="Our" titleAccent="Benefits" text="At
+    YourBank, we value our employees and are dedicated to their well-being and
+    success. We offer a comprehensive range of benefits designed to support their
+    personal and professional growth." }}
+    <div class="benefits__items">
+      {{#each benefits}} {{> components/icon-card }} {{/each}}
+    </div>
+  </div>
+</section>
