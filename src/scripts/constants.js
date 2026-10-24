@@ -16,6 +16,10 @@ export const MENU = Object.freeze({
   labels: Object.freeze({ whenOpen: 'Close menu', whenClosed: 'Open menu' }),
 })
 
+export const FOOTER = Object.freeze({
+  yearSeparator: ' · ',
+})
+
 export const PRODUCTS = Object.freeze({
   inactiveButtonClass: 'button--empty',
 })

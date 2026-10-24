@@ -1,5 +1,6 @@
 import { FaqController } from './controllers/FaqController.js'
 import { FeaturesController } from './controllers/FeaturesController.js'
+import { FooterController } from './controllers/FooterController.js'
 import { HeaderMenuController } from './controllers/HeaderMenuController.js'
 import { ProductsController } from './controllers/ProductsController.js'
 
@@ -8,6 +9,7 @@ const SECTIONS = [
   { selector: '[data-products]', Controller: ProductsController },
   { selector: '[data-features]', Controller: FeaturesController },
   { selector: '[data-questions]', Controller: FaqController },
+  { selector: '[data-footer]', Controller: FooterController },
 ]
 
 for (const { selector, Controller } of SECTIONS) {
