@@ -12,7 +12,8 @@
     "lint:fix": "eslint . --fix",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint:css:fix": "stylelint \"src/**/*.css\" --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "size": "size-limit"
   },
   "keywords": [
     "banking",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@size-limit/file": "^14.3.0",
     "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.13.0",
@@ -37,6 +39,7 @@
     "lint-staged": "^17.6.0",
     "prettier": "^3.9.9",
     "sharp": "^0.35.5",
+    "size-limit": "^14.3.0",
     "stylelint": "^17.16.0",
     "stylelint-config-standard": "^40.0.0",
     "svgo": "^4.1.0",

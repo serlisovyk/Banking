@@ -1,0 +1,28 @@
+[
+  {
+    "name": "JavaScript",
+    "path": "dist/assets/*.js",
+    "gzip": true,
+    "limit": "3 kB"
+  },
+  {
+    "name": "CSS",
+    "path": "dist/assets/*.css",
+    "gzip": true,
+    "limit": "5 kB"
+  },
+  {
+    "name": "Font",
+    "path": "dist/assets/*.woff2",
+    "gzip": false,
+    "brotli": false,
+    "limit": "45 kB"
+  },
+  {
+    "name": "Images (decor, photo)",
+    "path": "dist/assets/*.{avif,webp}",
+    "gzip": false,
+    "brotli": false,
+    "limit": "120 kB"
+  }
+]
