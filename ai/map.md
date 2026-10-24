@@ -52,11 +52,13 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `sections/careers/values` — Our Values on Careers.
 - `components/section-heading` — a section's title (one accent word), text and an optional right slot (the toggle).
 - `components/` — `product-card`, `case-item`, `feature-item`, `question-item`: data comes as hash parameters or from `each`.
+- `components/currency-converter` — the hero card's Money Exchange: two native selects, an amount, the result, Exchange.
 
 ## Data (`src/data/`)
 
 - `case-items.js` → `caseItems`, `feature-groups.js` → `featureGroups`, `question-items.js` → `questionGroups`,
-  `products.js` → `products`, `values.js` → `values`, `hero-transactions.js` → `heroTransactions`.
+  `products.js` → `products`, `values.js` → `values`, `hero-transactions.js` → `heroTransactions`,
+  `currency-rates.js` → `currencies` (code, name, icons, rate per 1 USD, decimals; the fixed rates, decision `fixed-rates-native-select`).
 - `contacts.js` → `contacts`, `socials.js` → `socials`, `footer.js` → `footer` (copyright, legal documents, author name).
 - `navigation.js` → `navigation` (the menu links); `pages.js` → `pages`: `title`, `description`, `navKey` and the `hero` of the page-hero pages, per page file name.
 
@@ -64,7 +66,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 - `style.css` — imports the files below in order: `general`, `ui`, `components`, `sections`.
 - `general/` — `reset.css`, `fonts.css` (`@font-face`), `variables.css` (every token), `main.css` (`body`, focus ring, `.container`, `.section`).
-- `ui/` — the shared elements: `button.css`, `toggle.css` (the Individuals / Businesses pill).
+- `ui/` — the shared elements: `button.css`, `toggle.css` (the Individuals / Businesses pill), `visually-hidden.css` (text for assistive technology only).
 - `components/`, `sections/` — one stylesheet per partial of the same name.
 
 ## Scripts (`src/scripts/`)
@@ -72,10 +74,11 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `main.js` — the only entry (the pages load it): finds each section's root, creates its controller, calls `start()`.
 - `constants.js` — the media queries (equal to the CSS breakpoints), key names, button texts, state classes.
 - `components/` — reusable widgets: `Tabs` (ARIA tabs: arrows, `Home`/`End`, orientation by width), `Toggle` (`aria-pressed`
-  buttons and `hidden` panels), `Disclosure` (`aria-expanded`, `inert`, the height as a custom property).
+  buttons and `hidden` panels), `Disclosure` (`aria-expanded`, `inert`, the height as a custom property), `CurrencyConverter` (reads the rates from the
+  options' `data-*`; `main.js` creates it directly, no controller).
 - `controllers/` — one class per section: `HeaderMenuController` (the mobile menu: `inert`, `Escape`, close on a link), `FooterController` (the current year),
   `ProductsController` (`Toggle`), `FeaturesController` (`Tabs`), `FaqController` (`Disclosure`).
-- Hooks are `data-*`: section roots `data-header`, `data-footer`, `data-products`, `data-features`, `data-questions` (`ai/rules/oop.md`).
+- Hooks are `data-*`: section roots `data-header`, `data-footer`, `data-products`, `data-features`, `data-questions`, the converter `data-currency-converter` (`ai/rules/oop.md`).
 
 ## Assets (`src/assets/`)
 
