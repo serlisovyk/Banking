@@ -1,0 +1,43 @@
+.cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-columns);
+  background: url('/assets/images/decor/dots-fine.avif'), var(--grey-11);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 320px;
+  padding: var(--space-cta);
+  border: 1px solid var(--grey-15);
+  border-radius: var(--border-radius-small);
+
+  @media (width < 1024px) {
+    flex-direction: column;
+    gap: var(--space-card-gap);
+    text-align: center;
+  }
+
+  @media (width < 768px) {
+    background-size: 240px;
+  }
+}
+
+.cta__content {
+  max-width: 1060px;
+}
+
+.cta__title {
+  font-weight: 500;
+  font-size: var(--text-title-lg);
+  line-height: 150%;
+  margin-bottom: var(--space-heading-gap);
+  color: var(--white);
+
+  span {
+    color: var(--green-60);
+  }
+}
+
+.cta__button {
+  flex-shrink: 0;
+}

@@ -5,6 +5,7 @@ import { defineConfig } from 'vite'
 import handlebars from 'vite-plugin-handlebars'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { caseItems } from './src/data/case-items.js'
+import { cta } from './src/data/cta.js'
 import { currencies } from './src/data/currency-rates.js'
 import { featureGroups } from './src/data/feature-groups.js'
 import { contacts } from './src/data/contacts.js'
@@ -88,6 +89,7 @@ export default defineConfig({
           testimonials,
           heroTransactions,
           currencies,
+          cta,
         }
       },
     }),

@@ -7,6 +7,7 @@
   font-size: var(--text-button);
   line-height: 150%;
   white-space: nowrap;
+  text-decoration: none;
   color: var(--grey-11);
   transition: background var(--transition-duration);
 
