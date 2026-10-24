@@ -16,6 +16,7 @@ import { pages } from './src/data/pages.js'
 import { products } from './src/data/products.js'
 import { questionGroups } from './src/data/question-items.js'
 import { socials } from './src/data/socials.js'
+import { organizationJsonLd } from './src/data/structured-data.js'
 import { testimonials } from './src/data/testimonials.js'
 import { values } from './src/data/values.js'
 import { benefits } from './src/data/benefits.js'
@@ -94,6 +95,7 @@ export default defineConfig({
           heroTransactions,
           currencies,
           cta,
+          organizationJsonLd,
         }
       },
     }),
