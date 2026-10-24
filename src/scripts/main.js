@@ -4,12 +4,14 @@ import { FeaturesController } from './controllers/FeaturesController.js'
 import { FooterController } from './controllers/FooterController.js'
 import { HeaderMenuController } from './controllers/HeaderMenuController.js'
 import { ProductsController } from './controllers/ProductsController.js'
+import { TestimonialsController } from './controllers/TestimonialsController.js'
 
 const SECTIONS = [
   { selector: '[data-header]', Controller: HeaderMenuController },
   { selector: '[data-products]', Controller: ProductsController },
   { selector: '[data-features]', Controller: FeaturesController },
   { selector: '[data-faq]', Controller: FaqController },
+  { selector: '[data-testimonials]', Controller: TestimonialsController },
   { selector: '[data-currency-converter]', Controller: CurrencyConverter },
   { selector: '[data-footer]', Controller: FooterController },
 ]

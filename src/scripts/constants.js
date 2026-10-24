@@ -35,6 +35,14 @@ export const FAQ = Object.freeze({
   labels: Object.freeze({ whenOpen: 'Show Less', whenClosed: 'Load All FAQ’s' }),
 })
 
+export const TESTIMONIALS = Object.freeze({
+  inactiveButtonClass: 'button--empty',
+})
+
+export const CAROUSEL = Object.freeze({
+  edgeTolerance: 1,
+})
+
 export const CURRENCY_CONVERTER = Object.freeze({
   locale: 'en-US',
   amountPattern: /^(\d+([.,]\d*)?|[.,]\d+)$/,
