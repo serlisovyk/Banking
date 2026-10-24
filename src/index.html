@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +8,10 @@
     <title>{{page.title}}</title>
   </head>
   <body>
-    {{> sections/shared/header }} {{> sections/home/hero }} {{>
-    sections/home/products }} {{> sections/home/cases }} {{> sections/home/features
-    }} {{> sections/home/questions }}
+    {{> sections/shared/header }}
+    <main>
+      {{> sections/home/hero }} {{> sections/home/products }} {{> sections/home/cases
+      }} {{> sections/home/features }} {{> sections/home/questions }}
+    </main>
   </body>
 </html>
