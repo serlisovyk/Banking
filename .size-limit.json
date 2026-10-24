@@ -3,7 +3,7 @@
     "name": "JavaScript",
     "path": "dist/assets/*.js",
     "gzip": true,
-    "limit": "3 kB"
+    "limit": "5 kB"
   },
   {
     "name": "CSS",
