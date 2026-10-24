@@ -89,7 +89,7 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
 | Button, nav link (`--text-button`)                              | 18 / 14 / 14                       | 400    | 1.5                 | see Buttons                               |
 | Footer text                                                     | 18 / 16 / 14                       | 400    | 1.5                 | white                                     |
 | Testimonial name                                                | 18 / 16 / 16                       | 500    | 1.5                 | `--green-60`                              |
-| About hero label ("Welcome to YourBank")                        | 20 / 18 / 14                       | 400    | 1.5                 | white                                     |
+| About hero label (`--text-page-hero-label`)                     | 20 / 18 / 14                       | 400    | 1.5                 | white                                     |
 
 - The `@font-face` in `fonts.css` covers weights 300 to 700.
 
@@ -319,7 +319,8 @@ footer is 578 / 440 / 503 px tall. Total page height: Home 7128 / 5674 / 9290, C
 A panel (`--grey-11`, radius 20, padding 50 / 40 / 14, dotted decor at its top right) with a
 photo (968 × 716 at 1920, 715 × 568 at 1440, 329 × 253 at 390, radius 16) at the right and
 a text card (`--grey-10`, radius `20 0 80 20`, padding 80 / 60 / 24, 791 / 658 wide) on top of the
-photo's left edge: the title, a paragraph, nothing else. At 390 the photo is first and the
+photo's left edge: the title, a paragraph, nothing else (About adds the label above the title). Card
+and photo share one grid cell, so the panel is as tall as the taller of the two. At 390 the photo is first and the
 text card overlaps its lower part, with a plain radius 20.
 
 ## Known inconsistencies
