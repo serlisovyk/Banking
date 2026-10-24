@@ -17,7 +17,7 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
 - A state a script sets is a native attribute (`[aria-expanded='true']`, `[hidden]`,
   `[inert]`) or a BEM modifier; a hook for a script is a `data-*` attribute, never a class
   (`ai/rules/style.md`).
-- A tag selector appears only inside its block (`.questions__button img`), never globally
+- A tag selector appears only inside its block (`.faq__button img`), never globally
   outside `general/`.
 
 ## Nesting

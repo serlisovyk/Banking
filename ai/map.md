@@ -33,7 +33,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 ## Pages
 
-- `index.html` — `shared/header`, `home/hero`, `home/products`, `home/cases`, `home/features`, `home/questions`, `shared/footer`.
+- `index.html` — `shared/header`, `home/hero`, `home/products`, `home/cases`, `home/features`, `shared/faq`, `shared/footer`.
 - `careers.html` — `shared/header`, `shared/page-hero`, `careers/values`, `shared/footer`.
 - `about.html`, `security.html` — only `shared/header` and `shared/footer` so far.
 - No `404.html` source: the build copies `dist/index.html` to `dist/404.html` (a plugin in `vite.config.js`); Vercel serves it
@@ -48,9 +48,9 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `sections/home/products` — the audience switch (For Individuals / For Businesses) and two panels of `product-card`.
 - `sections/home/cases` — Use Cases: `caseItems` as `case-item`.
 - `sections/home/features` — category tabs: `featureGroups` as tabs, panels of `feature-item`.
-- `sections/home/questions` — the FAQ: `questionGroups` as `question-item`, the rest under an expander.
+- `sections/shared/faq` — the FAQ: `groups` (the default set is `questionGroups`) as `question-item`, the rest under an expander; `name` makes its ids unique.
 - `sections/careers/values` — Our Values on Careers.
-- `components/section-heading` — a section's title (one accent word), text and an optional right slot (the toggle).
+- `components/section-heading` — a section's title (one accent word), text (an optional link at its end) and an optional right slot (the toggle).
 - `components/` — `product-card`, `case-item`, `feature-item`, `question-item`: data comes as hash parameters or from `each`.
 - `components/currency-converter` — the hero card's Money Exchange: two native selects, an amount, the result, Exchange.
 
@@ -78,7 +78,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
   options' `data-*`; `main.js` creates it directly, no controller).
 - `controllers/` — one class per section: `HeaderMenuController` (the mobile menu: `inert`, `Escape`, close on a link), `FooterController` (the current year),
   `ProductsController` (`Toggle`), `FeaturesController` (`Tabs`), `FaqController` (`Disclosure`).
-- Hooks are `data-*`: section roots `data-header`, `data-footer`, `data-products`, `data-features`, `data-questions`, the converter `data-currency-converter` (`ai/rules/oop.md`).
+- Hooks are `data-*`: section roots `data-header`, `data-footer`, `data-products`, `data-features`, `data-faq`, the converter `data-currency-converter` (`ai/rules/oop.md`).
 
 ## Assets (`src/assets/`)
 

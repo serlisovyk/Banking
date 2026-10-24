@@ -36,7 +36,7 @@ it. Each folder has one job:
   `inert`); a script only changes states and reads hooks. It never builds a section's markup.
 - A script that a page does not need does nothing there: a section missing from the page is
   skipped by `main.js`, never an error.
-- A value that JS hands to CSS is a custom property (`--questions-expanded-height`), not an
+- A value that JS hands to CSS is a custom property (`--faq-expanded-height`), not an
   inline style. A breakpoint a script reads (`matchMedia`) is one constant that equals the
   stylesheet's.
 
