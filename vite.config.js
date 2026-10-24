@@ -6,11 +6,14 @@ import handlebars from 'vite-plugin-handlebars'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { caseItems } from './src/data/case-items.js'
 import { featureGroups } from './src/data/feature-groups.js'
+import { contacts } from './src/data/contacts.js'
+import { footer } from './src/data/footer.js'
 import { heroTransactions } from './src/data/hero-transactions.js'
 import { navigation } from './src/data/navigation.js'
 import { pages } from './src/data/pages.js'
 import { products } from './src/data/products.js'
 import { questionGroups } from './src/data/question-items.js'
+import { socials } from './src/data/socials.js'
 import { values } from './src/data/values.js'
 
 const root = resolve(import.meta.dirname, 'src')
@@ -72,6 +75,9 @@ export default defineConfig({
         return {
           page: pages[pageName],
           navigation,
+          contacts,
+          socials,
+          footer,
           caseItems,
           featureGroups,
           questionGroups,

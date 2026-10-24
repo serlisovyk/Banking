@@ -69,6 +69,11 @@
   --toggle-button-padding-y: clamp(10px, calc(0.8333vw - 2px), 14px);
   --toggle-button-padding-x: clamp(18px, 1.25vw, 24px);
 
+  --space-footer-top: clamp(60px, calc(8.3333vw - 60px), 100px);
+  --space-footer-bottom: clamp(30px, calc(4.1667vw - 30px), 50px);
+  --space-footer-gap: clamp(40px, calc(2.0833vw + 10px), 50px);
+  --footer-social-size: clamp(44px, calc(1.6667vw + 20px), 52px);
+
   --space-heading-gap: clamp(10px, calc(0.8333vw - 2px), 14px);
   --space-heading-block: clamp(60px, 4.1667vw, 80px);
   --space-heading-block-toggle: clamp(80px, calc(4.1667vw + 20px), 100px);
@@ -140,6 +145,11 @@
     --toggle-padding: 12px;
     --toggle-button-padding-y: 10px;
     --toggle-button-padding-x: 18px;
+
+    --space-footer-top: clamp(50px, calc(0.9524vw + 46.29px), 60px);
+    --space-footer-bottom: 30px;
+    --space-footer-gap: clamp(30px, calc(0.9524vw + 26.29px), 40px);
+    --footer-social-size: 44px;
 
     --space-heading-gap: 10px;
     --space-heading-block: 60px;

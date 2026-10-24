@@ -1,0 +1,89 @@
+<footer class="footer" data-footer>
+  <div class="container">
+    <div class="footer__inner">
+      <a href="/" class="footer__logo">
+        <img
+          src="/assets/images/logo.svg"
+          alt="YourBank"
+          class="footer__logo-image"
+          width="156"
+          height="40"
+        />
+      </a>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <ul class="footer__nav-list">
+          {{#each navigation}}
+          <li>
+            <a
+              href="{{href}}"
+              class="footer__link"
+              aria-current="{{#if (eq key ../page.navKey)}}page{{else}}false{{/if}}"
+              >{{label}}</a
+            >
+          </li>
+          {{/each}}
+        </ul>
+      </nav>
+
+      <address class="footer__contacts">
+        <ul class="footer__contact-list">
+          {{#each contacts}}
+          <li class="footer__contact">
+            <img
+              src="{{icon}}"
+              alt=""
+              aria-hidden="true"
+              class="footer__contact-icon"
+              width="24"
+              height="24"
+            />
+            {{#if href}}
+            <a href="{{href}}" class="footer__link">{{text}}</a>
+            {{else}}
+            <span class="footer__contact-text">{{text}}</span>
+            {{/if}}
+          </li>
+          {{/each}}
+        </ul>
+      </address>
+
+      <div class="footer__bar">
+        <ul class="footer__socials">
+          {{#each socials}}
+          <li>
+            <a
+              href="{{href}}"
+              class="footer__social"
+              aria-label="{{name}} (opens in a new tab)"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="{{icon}}"
+                alt=""
+                aria-hidden="true"
+                class="footer__social-icon"
+                width="24"
+                height="24"
+              />
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+
+        <p class="footer__copyright">{{footer.copyright}}</p>
+
+        <ul class="footer__legal">
+          {{#each footer.legalDocuments}}
+          <li class="footer__legal-item">{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <p class="footer__author">
+        {{footer.authorName}}<span data-footer-year></span>
+      </p>
+    </div>
+  </div>
+</footer>
