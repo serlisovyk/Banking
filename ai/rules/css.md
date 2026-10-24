@@ -53,9 +53,11 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
   `width < 768px` (grids become one column, the header becomes the menu button). Type and
   spacing are fluid tokens, so a rule has no per-width values and no query at 1440
   (`ai/decisions/2026-10-23-breakpoint-scheme.md`).
-- Planned (MY-185): the stylesheets still carry `1440` queries and per-width values until they
-  move onto the tokens; a new rule takes its value from the `ai/design-system.md` tables and is
-  checked at 1920, 1440 and 390 px. This note goes when that task lands.
+- A value that changes with the width is a fluid token in `variables.css`: `:root` holds the
+  1440 to 1920 segment of its `clamp()`, the one `@media (width < 1440px)` the 390 to 1440
+  segment; a token that shrinks as the width grows takes its `clamp` bounds the other way round.
+  A new rule takes its value from the `ai/design-system.md` tables and is checked at 1920, 1440
+  and 390 px.
 - The base rule is the widest layout; a narrower screen overrides it.
 - No horizontal scroll from 390 to 1920 px, and none at 200% zoom.
 

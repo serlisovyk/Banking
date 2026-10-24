@@ -11,9 +11,7 @@ it is described here in words and numbers, never linked.
   geometry; weights, radii and hover looks that the layout does not carry were read from the
   built code and the rendered pages. If a value looks wrong against the design on screen, the
   design wins: fix this document in the same change.
-- **Tokens** below are either `exists` (in `styles/general/variables.css`) or `proposed`
-  (not in the code yet; the task that moves the CSS onto this document creates them, and the
-  name may change when it does).
+- **Tokens** below are in `styles/general/variables.css`; a value that has a token names it.
 
 ## How to use
 
@@ -74,7 +72,7 @@ Font **Lexend**, one family everywhere (the template's guide page set in another
 documentation, not the site). Weights: **300** body, **400** buttons, nav, card titles,
 **500** headings and numbers. Line height is `1.5` unless the table says otherwise.
 
-| Role (token, proposed)                                          | 1920 / 1440 / 390                  | Weight | Line                | Colour                                    |
+| Role (token)                                                    | 1920 / 1440 / 390                  | Weight | Line                | Colour                                    |
 | --------------------------------------------------------------- | ---------------------------------- | ------ | ------------------- | ----------------------------------------- |
 | Title: home hero h1, every section h2 (`--text-title`)          | 48 / 38 / 28                       | 500    | 1.5                 | white, accent words `--green-60`          |
 | Page-hero title: Careers, About, Security (`--text-title-hero`) | 58 / 48 / 28                       | 500    | 1.3                 | same                                      |
@@ -93,8 +91,7 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
 | Testimonial name                                                | 18 / 16 / 16                       | 500    | 1.5                 | `--green-60`                              |
 | About hero label ("Welcome to YourBank")                        | 20 / 18 / 14                       | 400    | 1.5                 | white                                     |
 
-- The `@font-face` in `fonts.css` declares weights 400-700, so the 300 of body text is not
-  covered; declare the range that includes 300 when the CSS moves onto this document.
+- The `@font-face` in `fonts.css` covers weights 300 to 700.
 
 ## Spacing and layout
 
@@ -127,14 +124,18 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
 - Grids are flexible (`fr`, `flex`), not the drawn pixel widths; the widths in the page
   sections below are for checking, not for copying.
 - The numbers above are the dominant value; the exceptions are in "Known inconsistencies".
+- Spacing tokens are `--space-<what>` after the row they implement (`--space-heading-block`,
+  `--space-card`, `--space-grid-gap`, `--space-plate`, …); sizes are `--icon-*`, `--hero-card-*`,
+  `--page-hero-*`, `--navbar-*`, `--button-*`, `--toggle-*`; the page gutter is `--gutter`.
 
 ## Radii, borders, gradients
 
 - **Radii:** pill (any radius at or above half the height; token `--border-radius-pill`
-  `100px`, proposed): navbar, every button, toggle, badges, nav pill, footer bottom bar.
-  `--border-radius-small` `12px` (exists): cards, FAQ items, panels, hero card.
-  `--border-radius` `40px` (exists): the large use-case plate. 16 px: small cards inside
-  a plate, press and job images. 20 px: the page-hero panel (its text card is `20 0 80 20`).
+  `100px`): navbar, every button, toggle, badges, nav pill, footer bottom bar.
+  `--border-radius-small` `12px`: cards, FAQ items, panels, hero card. `--border-radius` `40px`:
+  the large use-case plate. `--border-radius-medium` `16px`: small cards inside a plate, press
+  and job images. `--border-radius-large` `20px`: the page-hero panel (its text card is
+  `20 0 80 20`).
   Round: icon circles, social and arrow buttons.
 - **Borders:** always 1 px. `--grey-15` for cards, panels, FAQ items, dividers, footer lines
   and the bottom bar. `--green-60` for the left rule of a value item and for the hero card
@@ -323,9 +324,8 @@ text card overlaps its lower part, with a plain radius 20.
 
 ## Known inconsistencies
 
-- **Hero card border:** the design draws it in `--green-60`; the code has `--grey-15`.
-  Follow the design.
-- **Hero olive:** `#22251b` is the token `--green-10`.
+- **Hero card border:** the design draws it in `--green-60`, unlike every other card
+  (`--grey-15`).
 - **Title sizes:** the home h1 is a section title (`--text-title`); the page-hero title is
   larger (58 / 48 / 28, line 1.3). Both are intended.
 - **Heading block gap** to the content is 80 / 60 / 60, or 100 / 80 / 60 with a toggle;
@@ -337,4 +337,8 @@ text card overlaps its lower part, with a plain radius 20.
   them: the corner radii of the use-case plate, the job, press and security cards; the CTA title
   size (about 38 / 32 / 26) and its inner spacing; the weights of card and badge text; the
   icon-circle tints. Check them against the design when building that element.
+- **Guessed in the code**, where the layout data has no number: the navbar paddings, link gap
+  and the logo width at 1440 (156); the hero column gap (120 / 80 / 80), the hero card padding
+  and the type inside it (`--text-body`); the Careers photo height at 1440 and 390; the space
+  from the navbar to the Careers panel (50).
 - **Hover and focus looks** come from the built code; the layout data carries none.

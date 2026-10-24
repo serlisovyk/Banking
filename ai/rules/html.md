@@ -17,6 +17,11 @@ everything lives: `ai/map.md`; how the layers relate: `ai/rules/architecture.md`
   kebab-case.
 - A partial has one root element with the block's class. A component is used by sections
   only; a section does not include another section.
+- A section's title, text and optional right slot (a toggle) are `components/section-heading`,
+  never a per-section `*__title` and `*__text`. The slot is a partial block
+  (`{{#> components/section-heading … }}…{{/components/section-heading}}`) rendered by
+  `{{> @partial-block }}`. A parameter never carries HTML (Prettier would parse it): a title with
+  an accent is `titleStart`, `titleAccent`, `titleEnd`.
 
 ## Partial parameters
 

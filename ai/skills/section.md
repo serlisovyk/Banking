@@ -18,10 +18,11 @@ order of the work.
 2. **Partial** — `partials/sections/<page>/<name>.html` (`shared/` when two pages use it): a root
    `<section class="<name> section">` with a `.container` inside. A repeated part is
    `partials/components/<item>.html` with one root and parameters (a hash, or the context of
-   `{{#each}}`). File name = BEM block name. Roles and ARIA go in the markup; the root gets
-   `data-<name>`, the children the hooks of the component that drives them (`ai/rules/oop.md`).
+   `{{#each}}`). The section's title and text are `{{> components/section-heading }}`. File name =
+   BEM block name. Roles and ARIA go in the markup; the root gets `data-<name>`, the children the
+   hooks of the component that drives them (`ai/rules/oop.md`).
 3. **Styles** — `styles/sections/<name>.css` (and `styles/components/<item>.css`): BEM, native
-   nesting, only tokens from `variables.css`; import it in `styles/style.css` beside its kind.
+   nesting, only tokens from `variables.css` (a value that changes with the width is a fluid token); import it in `styles/style.css` beside its kind.
    Compare 1920, 1440 and 390 px with the design.
 4. **Controller** — only when the section has behavior: a class in `scripts/controllers/` with
    `constructor(root, options)` and `start()`. A repeated widget (tabs, expander, menu) is a

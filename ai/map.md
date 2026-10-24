@@ -49,6 +49,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `sections/home/features` — category tabs: `featureGroups` as tabs, panels of `feature-item`.
 - `sections/home/questions` — the FAQ: `questionGroups` as `question-item`, the rest under an expander.
 - `sections/careers/values` — Our Values on Careers.
+- `components/section-heading` — a section's title (one accent word), text and an optional right slot (the toggle).
 - `components/` — `product-card`, `case-item`, `feature-item`, `question-item`: data comes as hash parameters or from `each`.
 
 ## Data (`src/data/`)
@@ -59,7 +60,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 - `style.css` — imports the files below in order: `general`, `ui`, `components`, `sections`.
 - `general/` — `reset.css`, `fonts.css` (`@font-face`), `variables.css` (every token), `main.css` (`body`, `.container`, `.section`).
-- `ui/` — the shared elements: `button.css`, `headings.css`.
+- `ui/` — the shared elements: `button.css`, `toggle.css` (the Individuals / Businesses pill).
 - `components/`, `sections/` — one stylesheet per partial of the same name.
 
 ## Scripts (`src/scripts/`)

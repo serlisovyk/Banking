@@ -1,6 +1,6 @@
 # Breakpoints: two structural queries, fluid tokens between the three drawn widths
 
-Date: 2026-10-23 · Status: accepted (not implemented)
+Date: 2026-10-23 · Status: accepted
 
 ## Context
 
