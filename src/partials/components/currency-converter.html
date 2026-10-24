@@ -1,0 +1,125 @@
+<div
+  class="currency-converter"
+  role="group"
+  aria-labelledby="currency-converter-title"
+  data-currency-converter
+  data-converter-from="INR"
+  data-converter-to="USD"
+>
+  <h3 class="currency-converter__title" id="currency-converter-title">
+    Money Exchange
+  </h3>
+  <div class="currency-converter__box">
+    <div class="currency-converter__side" data-converter-side>
+      <div class="currency-converter__head">
+        <div class="currency-converter__picker">
+          {{#each currencies}}
+          <img
+            class="currency-converter__icon{{#if isCrypto}} currency-converter__icon--coin{{/if}}"
+            src="{{icon}}"
+            width="28"
+            height="28"
+            alt=""
+            aria-hidden="true"
+            data-converter-currency="{{code}}"
+            hidden
+          />
+          {{/each}}
+          <label class="visually-hidden" for="currency-converter-from"
+            >From currency</label
+          >
+          <select
+            class="currency-converter__select"
+            id="currency-converter-from"
+            aria-describedby="currency-converter-from-name"
+            data-converter-select
+          >
+            {{#each currencies}}
+            <option
+              value="{{code}}"
+              data-converter-rate="{{rate}}"
+              data-converter-digits="{{fractionDigits}}"
+            >
+              {{code}}
+            </option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="currency-converter__name" id="currency-converter-from-name">
+          {{#each currencies}}
+          <span data-converter-currency="{{code}}" hidden>{{name}}</span>
+          {{/each}}
+        </div>
+      </div>
+      <label class="visually-hidden" for="currency-converter-amount">Amount</label>
+      <input
+        class="currency-converter__amount"
+        id="currency-converter-amount"
+        type="text"
+        inputmode="decimal"
+        autocomplete="off"
+        value="5000"
+        data-converter-amount
+      />
+    </div>
+    <div class="currency-converter__side" data-converter-side>
+      <div class="currency-converter__head">
+        <div class="currency-converter__picker">
+          {{#each currencies}}
+          <img
+            class="currency-converter__icon{{#if isCrypto}} currency-converter__icon--coin{{/if}}"
+            src="{{icon}}"
+            width="28"
+            height="28"
+            alt=""
+            aria-hidden="true"
+            data-converter-currency="{{code}}"
+            hidden
+          />
+          {{/each}}
+          <label class="visually-hidden" for="currency-converter-to"
+            >To currency</label
+          >
+          <select
+            class="currency-converter__select"
+            id="currency-converter-to"
+            aria-describedby="currency-converter-to-name"
+            data-converter-select
+          >
+            {{#each currencies}}
+            <option value="{{code}}">{{code}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="currency-converter__name" id="currency-converter-to-name">
+          {{#each currencies}}
+          <span data-converter-currency="{{code}}" hidden>{{name}}</span>
+          {{/each}}
+        </div>
+      </div>
+      <label class="visually-hidden" for="currency-converter-result"
+        >Converted amount</label
+      >
+      <output
+        class="currency-converter__amount"
+        id="currency-converter-result"
+        aria-live="polite"
+        data-converter-result
+      >
+        <span data-converter-result-value></span>
+        <span class="visually-hidden" data-converter-result-note></span>
+      </output>
+    </div>
+  </div>
+  <button
+    type="button"
+    class="currency-converter__button"
+    aria-describedby="currency-converter-swap-hint"
+    data-converter-swap
+  >
+    Exchange
+  </button>
+  <span class="visually-hidden" id="currency-converter-swap-hint"
+    >Swaps the two currencies</span
+  >
+</div>

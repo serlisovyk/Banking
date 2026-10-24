@@ -160,20 +160,52 @@
   color: var(--white);
 }
 
-.hero__change-title {
-  font-size: var(--text-body);
-  font-weight: 500;
-  color: var(--white);
-}
-
-.hero__button {
-  font-family: var(--font-family);
+.hero__currencies {
+  position: absolute;
+  right: -60px;
+  bottom: -64px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   background: var(--green-10);
   border-radius: var(--border-radius-pill);
-  font-weight: 400;
-  font-size: var(--text-button);
-  line-height: 150%;
-  padding: var(--button-padding-y) var(--button-padding-x);
-  color: var(--green-65);
-  width: 100%;
+  padding: 10px 12px 10px 20px;
+
+  @media (width < 1024px) {
+    right: -20px;
+  }
+
+  @media (width < 768px) {
+    right: 0;
+  }
+}
+
+.hero__currencies-text {
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.hero__currencies-list {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  background: var(--grey-10);
+  border-radius: var(--border-radius-pill);
+  padding: 6px;
+}
+
+.hero__currencies-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-currency);
+  height: var(--icon-currency);
+  background: var(--grey-15);
+  border-radius: 50%;
+
+  img {
+    width: 40%;
+    height: 55%;
+    object-fit: contain;
+  }
 }

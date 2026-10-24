@@ -1,0 +1,103 @@
+.currency-converter__title {
+  font-size: var(--text-body);
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 18px;
+}
+
+.currency-converter__box {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto auto;
+  border: 1px solid var(--grey-15);
+  border-radius: var(--border-radius-small);
+  margin-bottom: 20px;
+}
+
+.currency-converter__side {
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  min-width: 0;
+
+  &:nth-child(2) {
+    border-left: 1px solid var(--grey-15);
+  }
+}
+
+.currency-converter__head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--space-converter-cell);
+}
+
+.currency-converter__picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.currency-converter__icon {
+  flex-shrink: 0;
+  width: var(--icon-currency);
+  height: var(--icon-currency);
+  border-radius: 50%;
+}
+
+.currency-converter__icon--coin {
+  background: var(--grey-15);
+  padding: calc(var(--icon-currency) * 0.28);
+  object-fit: contain;
+}
+
+.currency-converter__select {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  margin-block: calc((var(--icon-currency) - 44px) / 2);
+  font: inherit;
+  color: var(--white);
+  background: transparent;
+  border: none;
+  color-scheme: dark;
+  cursor: pointer;
+}
+
+.currency-converter__name {
+  color: var(--white-90);
+}
+
+.currency-converter__amount {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  font: inherit;
+  color: var(--white);
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--grey-15);
+  padding: var(--space-converter-cell);
+  overflow-wrap: anywhere;
+
+  &[aria-invalid='true'] {
+    text-decoration: underline wavy;
+  }
+
+  &:focus-visible {
+    outline-offset: -2px;
+  }
+}
+
+.currency-converter__button {
+  font-family: var(--font-family);
+  background: var(--green-10);
+  border-radius: var(--border-radius-pill);
+  font-weight: 400;
+  font-size: var(--text-button);
+  line-height: 150%;
+  padding: var(--button-padding-y) var(--button-padding-x);
+  color: var(--green-65);
+  width: 100%;
+}

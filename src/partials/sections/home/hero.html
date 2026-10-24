@@ -63,10 +63,19 @@
             </div>
             {{/each}}
           </div>
-          <div class="hero__change">
-            <h3 class="hero__change-title">Money Exchange</h3>
+          {{> components/currency-converter currencies=currencies }}
+        </div>
+        <div class="hero__currencies">
+          <div class="hero__currencies-text" id="hero-currencies-text">
+            Supported Currency
           </div>
-          <button type="button" class="hero__button">Exchange</button>
+          <ul class="hero__currencies-list" aria-labelledby="hero-currencies-text">
+            {{#each currencies}} {{#if glyph}}
+            <li class="hero__currencies-item">
+              <img src="{{glyph}}" width="14" height="18" alt="{{name}}" />
+            </li>
+            {{/if}} {{/each}}
+          </ul>
         </div>
       </div>
     </div>

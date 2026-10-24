@@ -4,11 +4,13 @@
 @import url('./general/main.css');
 @import url('./ui/button.css');
 @import url('./ui/toggle.css');
+@import url('./ui/visually-hidden.css');
 @import url('./components/section-heading.css');
 @import url('./components/product-card.css');
 @import url('./components/case-item.css');
 @import url('./components/feature-item.css');
 @import url('./components/question-item.css');
+@import url('./components/currency-converter.css');
 @import url('./sections/header.css');
 @import url('./sections/footer.css');
 @import url('./sections/products.css');
