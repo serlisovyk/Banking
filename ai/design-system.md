@@ -248,7 +248,7 @@ new photo or decor is `webp` or `avif`, never a vector with a path per dot:
 
 ## Pages
 
-Every page: the navbar, its sections one after another with the section gap, the footer.
+Every page: the navbar, its sections one after another with the section gap, the footer (also a section gap after the last section).
 The footer is the same on all four: the logo centred, the four links in a row, a divider, a
 row of three contacts (envelope, phone, pin icons in `--green-60`), a divider, then a pill bar
 with three social circles at the left, the copyright centred (`--grey-70`) and

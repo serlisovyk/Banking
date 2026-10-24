@@ -34,7 +34,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 ## Pages
 
 - `index.html` — `shared/header`, `home/hero`, `home/products`, `home/cases`, `home/features`, `shared/faq`, `home/testimonials`, `shared/cta`, `shared/footer`.
-- `careers.html` — `shared/header`, `shared/page-hero`, `careers/values`, `careers/benefits`, `careers/jobs`, `shared/footer`.
+- `careers.html` — `shared/header`, `shared/page-hero`, `careers/values`, `careers/benefits`, `careers/jobs`, `shared/faq`, `shared/cta`, `shared/footer`.
 - `about.html`, `security.html` — only `shared/header` and `shared/footer` so far.
 - No `404.html` source: the build copies `dist/index.html` to `dist/404.html` (a plugin in `vite.config.js`); Vercel serves it
   with status 404 for an unknown path.
