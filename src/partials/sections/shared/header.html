@@ -18,38 +18,16 @@
         data-header-nav
       >
         <ul class="header__nav-list">
+          {{#each navigation}}
           <li class="header__nav-item">
             <a
-              href="/"
+              href="{{href}}"
               class="header__nav-link"
-              aria-current="{{#if isHome}}page{{else}}false{{/if}}"
-              >Home</a
+              aria-current="{{#if (eq key ../page.navKey)}}page{{else}}false{{/if}}"
+              >{{label}}</a
             >
           </li>
-          <li class="header__nav-item">
-            <a
-              href="/careers"
-              class="header__nav-link"
-              aria-current="{{#if isCareers}}page{{else}}false{{/if}}"
-              >Careers</a
-            >
-          </li>
-          <li class="header__nav-item">
-            <a
-              href="/about"
-              class="header__nav-link"
-              aria-current="{{#if isAbout}}page{{else}}false{{/if}}"
-              >About</a
-            >
-          </li>
-          <li class="header__nav-item">
-            <a
-              href="/security"
-              class="header__nav-link"
-              aria-current="{{#if isSecurity}}page{{else}}false{{/if}}"
-              >Security</a
-            >
-          </li>
+          {{/each}}
         </ul>
       </nav>
 

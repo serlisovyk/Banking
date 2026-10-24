@@ -7,6 +7,8 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { caseItems } from './src/data/case-items.js'
 import { featureGroups } from './src/data/feature-groups.js'
 import { heroTransactions } from './src/data/hero-transactions.js'
+import { navigation } from './src/data/navigation.js'
+import { pages } from './src/data/pages.js'
 import { products } from './src/data/products.js'
 import { questionGroups } from './src/data/question-items.js'
 import { values } from './src/data/values.js'
@@ -61,14 +63,15 @@ export default defineConfig({
   plugins: [
     handlebars({
       partialDirectory: resolve(root, 'partials'),
+      helpers: {
+        eq: (first, second) => first === second,
+      },
       context(pagePath) {
-        const page = pagePath.split('/').at(-1).replace('.html', '') || 'index'
+        const pageName = pagePath.split('/').at(-1).replace('.html', '') || 'index'
 
         return {
-          isHome: page === 'index',
-          isAbout: page === 'about',
-          isCareers: page === 'careers',
-          isSecurity: page === 'security',
+          page: pages[pageName],
+          navigation,
           caseItems,
           featureGroups,
           questionGroups,
