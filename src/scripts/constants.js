@@ -34,3 +34,12 @@ export const FAQ = Object.freeze({
   heightProperty: '--questions-expanded-height',
   labels: Object.freeze({ whenOpen: 'Show Less', whenClosed: 'Load All FAQ’s' }),
 })
+
+export const CURRENCY_CONVERTER = Object.freeze({
+  locale: 'en-US',
+  amountPattern: /^(\d+([.,]\d*)?|[.,]\d+)$/,
+  maxAmount: 1_000_000_000,
+  minFractionDigits: 2,
+  emptyResult: '—',
+  invalidMessage: 'Enter an amount from 0 to',
+})
