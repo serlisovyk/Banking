@@ -95,31 +95,31 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
 
 ## Spacing and layout
 
-| What                                                      | 1920 / 1440 / 390                                                        |
-| --------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Content width (`.container`; gutter = 162 / 80 / 16)      | 1596 / 1280 / 358                                                        |
-| Navbar: top margin, height                                | 50, 95 / 30, 73 / 40, 68                                                 |
-| Navbar to the hero content                                | 153 / 90 / 50                                                            |
-| Gap between sections (`--space-section`)                  | 150 / 120 / 80                                                           |
-| Hero to Products on Home (the hero card overhangs)        | 151 / 121 / 121                                                          |
-| Title to text in a heading block                          | 14 / 10 / 10                                                             |
-| Heading block to content                                  | 80 / 60 / 60; with a toggle 100 / 80 / 60                                |
-| Card padding: feature, FAQ item, benefit                  | 50 / 40 / 30                                                             |
-| Job card padding                                          | 50 / 40 / 24                                                             |
-| Press card padding                                        | 30 / 24 / 20                                                             |
-| Gap of a two-column card grid (FAQ, features, job, press) | 30 / 20 / 20                                                             |
-| Gap of the Values grid, of the Benefits grid              | 80 / 60 / 50, 100 / 60 / 48                                              |
-| Product columns (gap, vertical divider between)           | 100 / 80 / 60 (stacked)                                                  |
-| Product icon to title, title to text                      | 30 / 24 / 20, 20 / 16 / 12                                               |
-| Use-case rows (gap), plate to text                        | 60 / 40 / 40, 100 / 60 / 30                                              |
-| Use-case plate padding, gap between its cards             | 50 / 40 / 20, 20 / 10 / 10                                               |
-| Use-case text: heading block to stats, stats to button    | about 60 / 50 / 50                                                       |
-| Stats: gap between columns (dashed divider)               | 100 / 100 / 60 (stacked)                                                 |
-| FAQ item: padding each side of the 1 px line              | 30 / 24 / 20                                                             |
-| Feature tabs panel: padding, gap between tabs             | 50 / 40 / 20, 24 / 20 / 20                                               |
-| Testimonials: card gap, arrow to the cards                | 80 / 60 / one card, 50 / 40 / arrows below the card (gap 30, 20 between) |
-| Footer: top padding, bottom padding, gap of rows          | 100, 50, 50 / 60, 30, 40 / 50, 30, 30                                    |
-| CTA panel height                                          | 288 / 223 / 360                                                          |
+| What                                                      | 1920 / 1440 / 390                                                                                 |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Content width (`.container`; gutter = 162 / 80 / 16)      | 1596 / 1280 / 358                                                                                 |
+| Navbar: top margin, height                                | 50, 95 / 30, 73 / 40, 68                                                                          |
+| Navbar to the hero content                                | 153 / 90 / 50                                                                                     |
+| Gap between sections (`--space-section`)                  | 150 / 120 / 80                                                                                    |
+| Hero to Products on Home (the hero card overhangs)        | 151 / 121 / 121                                                                                   |
+| Title to text in a heading block                          | 14 / 10 / 10                                                                                      |
+| Heading block to content                                  | 80 / 60 / 60; with a toggle 100 / 80 / 60                                                         |
+| Card padding: feature, FAQ item, benefit                  | 50 / 40 / 30                                                                                      |
+| Job card padding                                          | 50 / 40 / 24                                                                                      |
+| Press card padding                                        | 30 / 24 / 20                                                                                      |
+| Gap of a two-column card grid (FAQ, features, job, press) | 30 / 20 / 20                                                                                      |
+| Gap of the Values grid, of the Benefits grid              | 80 / 60 / 50, 100 / 60 / 48                                                                       |
+| Product columns (gap, vertical divider between)           | 100 / 80 / 60 (stacked)                                                                           |
+| Product icon to title, title to text                      | 30 / 24 / 20, 20 / 16 / 12                                                                        |
+| Use-case rows (gap), plate to text                        | 60 / 40 / 40, 100 / 60 / 30                                                                       |
+| Use-case plate padding, gap between its cards             | 50 / 40 / 20, 20 / 10 / 10                                                                        |
+| Use-case text: heading block to stats, stats to button    | about 60 / 50 / 50                                                                                |
+| Stats: gap between columns (dashed divider)               | 100 / 100 / 60 (stacked)                                                                          |
+| FAQ item: padding each side of the 1 px line              | 30 / 24 / 20                                                                                      |
+| Feature tabs panel: padding, gap between tabs             | 50 / 40 / 20, 24 / 20 / 20                                                                        |
+| Testimonials: card gap, arrow to the cards                | 80 / 60 / one card, 50 / 40 / arrows below the card (30 under it, 20 between; stacked below 1024) |
+| Footer: top padding, bottom padding, gap of rows          | 100, 50, 50 / 60, 30, 40 / 50, 30, 30                                                             |
+| CTA panel height                                          | 288 / 223 / 360                                                                                   |
 
 - Grids are flexible (`fr`, `flex`), not the drawn pixel widths; the widths in the page
   sections below are for checking, not for copying.
@@ -146,7 +146,7 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
     texture drawn at 50 % with a screen blend.
   - FAQ fade: a 275 px overlay on the lower row, `to bottom`, transparent from 35 % to
     `--grey-10`; it disappears when the list is expanded.
-  - Testimonial edge fades: `--grey-10` to transparent, over the left and the right card.
+  - Testimonial edge fades: an alpha mask on the track (transparent, opaque from 30 % to 70 %, transparent), off below 1024.
   - Security panel: a dark, grainy backdrop with a faint green tint that overhangs the
     panel's top edge.
 
@@ -202,7 +202,7 @@ the links open below.
 | Use-case plate                         | `--grey-11`, `--border-radius`, dotted decor at a corner                   | 2 × 2 small cards                                                                              |
 | Small card in a plate                  | `--grey-10`, 1 px `--grey-15`, 16 px                                       | icon circle, centred label; 314 × 222 (192) at 1920, 260 × 174 (150) at 1440, 154 × 160 at 390 |
 | Product card                           | no surface                                                                 | icon circle, title, text, all centred                                                          |
-| Testimonial                            | no surface                                                                 | quote mark (60 / 44 / 44), text, name; all centred                                             |
+| Testimonial                            | no surface                                                                 | quote mark (60 / 44 / 44), text (`--text-body`, white), name; all centred                      |
 | Value item                             | no surface, 1 px `--green-60` rule at the left                             | big grey title, text; padding-left 30 / 24 / 20                                                |
 | Hero card                              | see Hero of Home                                                           | transactions, money exchange                                                                   |
 
@@ -344,5 +344,6 @@ text card overlaps its lower part, with a plain radius 20.
   and the type inside it (`--text-body`); the Careers photo height at 1440 and 390; the space
   from the navbar to the Careers panel (50); in the footer the author line, the 12 × 8 padding of
   links (44 px targets, so the footer runs about 45 px taller than drawn), the bar padding
-  (`--toggle-padding`) and the green current link.
+  (`--toggle-padding`) and the green current link; the testimonial text, its gaps
+  (`--space-card-gap`, `--space-card-gap-sm`) and its width (600 at most), and five cards per audience.
 - **Hover and focus looks** come from the built code; the layout data carries none.

@@ -33,7 +33,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 ## Pages
 
-- `index.html` — `shared/header`, `home/hero`, `home/products`, `home/cases`, `home/features`, `shared/faq`, `shared/footer`.
+- `index.html` — `shared/header`, `home/hero`, `home/products`, `home/cases`, `home/features`, `shared/faq`, `home/testimonials`, `shared/footer`.
 - `careers.html` — `shared/header`, `shared/page-hero`, `careers/values`, `shared/footer`.
 - `about.html`, `security.html` — only `shared/header` and `shared/footer` so far.
 - No `404.html` source: the build copies `dist/index.html` to `dist/404.html` (a plugin in `vite.config.js`); Vercel serves it
@@ -49,15 +49,18 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `sections/home/cases` — Use Cases: `caseItems` as `case-item`.
 - `sections/home/features` — category tabs: `featureGroups` as tabs, panels of `feature-item`.
 - `sections/shared/faq` — the FAQ: `groups` (the default set is `questionGroups`) as `question-item`, the rest under an expander; `name` makes its ids unique.
+- `sections/home/testimonials` — the audience switch and two panels, each a `testimonial-carousel`.
 - `sections/careers/values` — Our Values on Careers.
 - `components/section-heading` — a section's title (one accent word), text (an optional link at its end) and an optional right slot (the toggle).
 - `components/` — `product-card`, `case-item`, `feature-item`, `question-item`: data comes as hash parameters or from `each`.
 - `components/currency-converter` — the hero card's Money Exchange: two native selects, an amount, the result, Exchange.
+- `components/testimonial-carousel` — arrows and a scroll-snap track of quote cards (`items`, `label` as parameters).
 
 ## Data (`src/data/`)
 
 - `case-items.js` → `caseItems`, `feature-groups.js` → `featureGroups`, `question-items.js` → `questionGroups`,
   `products.js` → `products`, `values.js` → `values`, `hero-transactions.js` → `heroTransactions`,
+  `testimonials.js` → `testimonials` (text, name and the "N of M" `position` per audience),
   `currency-rates.js` → `currencies` (code, name, icons, rate per 1 USD, decimals; the fixed rates, decision `fixed-rates-native-select`).
 - `contacts.js` → `contacts`, `socials.js` → `socials`, `footer.js` → `footer` (copyright, legal documents, author name).
 - `navigation.js` → `navigation` (the menu links); `pages.js` → `pages`: `title`, `description`, `navKey` and the `hero` of the page-hero pages, per page file name.
@@ -75,10 +78,10 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `constants.js` — the media queries (equal to the CSS breakpoints), key names, button texts, state classes.
 - `components/` — reusable widgets: `Tabs` (ARIA tabs: arrows, `Home`/`End`, orientation by width), `Toggle` (`aria-pressed`
   buttons and `hidden` panels), `Disclosure` (`aria-expanded`, `inert`, the height as a custom property), `CurrencyConverter` (reads the rates from the
-  options' `data-*`; `main.js` creates it directly, no controller).
+  options' `data-*`; `main.js` creates it directly, no controller), `Carousel` (scroll-snap track: arrows scroll by one card, disabled at the ends).
 - `controllers/` — one class per section: `HeaderMenuController` (the mobile menu: `inert`, `Escape`, close on a link), `FooterController` (the current year),
-  `ProductsController` (`Toggle`), `FeaturesController` (`Tabs`), `FaqController` (`Disclosure`).
-- Hooks are `data-*`: section roots `data-header`, `data-footer`, `data-products`, `data-features`, `data-faq`, the converter `data-currency-converter` (`ai/rules/oop.md`).
+  `ProductsController` (`Toggle`), `FeaturesController` (`Tabs`), `FaqController` (`Disclosure`), `TestimonialsController` (`Toggle` and a `Carousel` per panel).
+- Hooks are `data-*`: section roots `data-header`, `data-footer`, `data-products`, `data-features`, `data-faq`, `data-testimonials`, the converter `data-currency-converter` (`ai/rules/oop.md`).
 
 ## Assets (`src/assets/`)
 

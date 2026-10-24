@@ -68,6 +68,7 @@ each with the record that replaced it.
 - [The footer's year is written in the browser](2026-10-24-footer-year-in-browser.md)
 - [Privacy Policy and Terms of Service are text, not links](2026-10-24-footer-legal-text.md)
 - [Currency converter: fixed rates in `data/`, no API, a native select](2026-10-24-fixed-rates-native-select.md)
+- [Carousel: CSS scroll-snap, no library](2026-10-24-carousel-scroll-snap.md)
 
 ### Superseded
 
