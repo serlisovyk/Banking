@@ -1,0 +1,14 @@
+<div
+  class="section-heading{{#if @partial-block}} section-heading--with-actions{{/if}}"
+>
+  <div class="section-heading__content">
+    <h2 class="section-heading__title">
+      {{#if titleStart}}{{titleStart}} {{/if}}<span>{{titleAccent}}</span>{{#if
+      titleEnd}} {{titleEnd}}{{/if}}
+    </h2>
+    <p class="section-heading__text">{{text}}</p>
+  </div>
+  {{#if @partial-block}}
+  <div class="section-heading__actions">{{> @partial-block}}</div>
+  {{/if}}
+</div>

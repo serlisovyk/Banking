@@ -1,0 +1,10 @@
+.toggle {
+  background: var(--grey-11);
+  border: 1px solid var(--grey-15);
+  border-radius: var(--border-radius-pill);
+  padding: var(--toggle-padding);
+}
+
+.toggle__button {
+  padding: var(--toggle-button-padding-y) var(--toggle-button-padding-x);
+}

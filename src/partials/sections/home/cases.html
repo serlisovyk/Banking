@@ -1,13 +1,9 @@
 <section class="cases section">
   <div class="container">
     <div class="cases__inner">
-      <div class="cases__heading">
-        <h2 class="cases__title"><span>Use Cases</span></h2>
-        <div class="cases__text">
-          At YourBank, we cater to the diverse needs of individuals and businesses
-          alike, offering a wide range of financial solutions
-        </div>
-      </div>
+      {{> components/section-heading titleAccent="Use Cases" text="At YourBank, we
+      cater to the diverse needs of individuals and businesses alike, offering a wide
+      range of financial solutions" }}
       <div class="cases__items">
         {{#each caseItems}} {{> components/case-item }} {{/each}}
       </div>

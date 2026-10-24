@@ -3,7 +3,8 @@
 @import url('./general/variables.css');
 @import url('./general/main.css');
 @import url('./ui/button.css');
-@import url('./ui/headings.css');
+@import url('./ui/toggle.css');
+@import url('./components/section-heading.css');
 @import url('./components/product-card.css');
 @import url('./components/case-item.css');
 @import url('./components/feature-item.css');
