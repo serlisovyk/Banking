@@ -101,12 +101,7 @@ export default defineConfig({
       avif: { quality: 75 },
       svg: {
         multipass: true,
-        plugins: [
-          {
-            name: 'preset-default',
-            params: { overrides: { removeViewBox: false } },
-          },
-        ],
+        plugins: ['preset-default'],
       },
     }),
     minifyHtml(),
