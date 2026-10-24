@@ -5,6 +5,7 @@
 .hero__inner {
   display: flex;
   gap: 3vw;
+
   background-image: url('/assets/images/decor/growth-arrows.svg');
   background-repeat: no-repeat;
   background-position: top right;

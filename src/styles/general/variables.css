@@ -24,8 +24,11 @@
   --grey-60: #98989a;
   --grey-70: #b3b3b3;
   --grey-75: #bfbfbf;
+
   --font-family: 'Lexend';
+
   --border-radius: 40px;
   --border-radius-small: 12px;
+
   --transition-duration: 0.2s;
 }

@@ -9,12 +9,16 @@
         "resolveNestedSelectors": true
       }
     ],
-    "color-no-hex": true
+    "color-no-hex": true,
+    "custom-property-empty-line-before": null,
+    "declaration-empty-line-before": null
   },
   "overrides": [
     {
       "files": ["src/styles/general/variables.css"],
-      "rules": { "color-no-hex": null }
+      "rules": {
+        "color-no-hex": null
+      }
     }
   ]
 }
